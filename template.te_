@@ -1,0 +1,28 @@
+\documentclass[web-recipes.tex]{subfiles}
+\begin{document}
+
+    \renewcommand{\mytitle}{} % TODO:
+    \renewcommand{\myurl}{} %TODO:
+    \begin{mdframed}[nobreak]
+      \section{\mytitle}
+      \begin{tabular}{l}
+        \begin{minipage}[t]{0.35\textwidth}
+          {\sffamily\bfseries Ingredients}\vspace{0.5ex}
+          \begin{description}
+            \item[part one] \hfill
+              \begin{itemize}
+                \item % TODO:
+              \end{itemize}
+          \end{description}
+        \end{minipage}
+        \qquad
+        \begin{minipage}[t]{0.55\textwidth}
+          {\sffamily\bfseries Method}\vspace{0.5ex}
+          \begin{enumerate}
+            \item % TODO:
+          \end{enumerate}
+        \end{minipage} \vspace{3ex}\\
+        \multicolumn{1}{c}{\small\ttfamily \myurl} \\
+      \end{tabular}
+    \end{mdframed}
+    \end{document}
