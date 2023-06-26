@@ -1,0 +1,26 @@
+% vim: ft=tex:
+\documentclass[../web-recipes.tex]{subfiles}
+\begin{document}
+
+    \renewcommand{\mytitle}{Hot Dog Onions}
+    \renewcommand{\myurl}{https://www.skinnytaste.com/hot-dog-onions/}
+
+    \begin{mdframed}[nobreak]
+      \section{\mytitle}
+      \begin{tabular}{l}
+      {\sffamily\footnotesize \textbf{keywords:}
+        condiment
+      } \vspace{0.5ex}\\
+        \begin{minipage}[t]{0.35\textwidth}
+          {\sffamily\bfseries Ingredients}\vspace{0.5ex}
+          \input{ingredients}
+        \end{minipage}
+        \qquad
+        \begin{minipage}[t]{0.55\textwidth}
+          {\sffamily\bfseries Method}\vspace{0.5ex}
+          \input{method}
+        \end{minipage} \vspace{3ex}\\
+        \multicolumn{1}{c}{\small\ttfamily \url{\myurl}} \\
+      \end{tabular}
+    \end{mdframed}
+    \end{document}
