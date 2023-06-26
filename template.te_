@@ -1,3 +1,4 @@
+% vim: ft=tex:
 \documentclass[web-recipes.tex]{subfiles}
 \begin{document}
 
@@ -6,6 +7,9 @@
     \begin{mdframed}[nobreak]
       \section{\mytitle}
       \begin{tabular}{l}
+      {\sffamily\footnotesize \textbf{keywords:}
+      % TODO:
+      } \vspace{0.5ex}\\
         \begin{minipage}[t]{0.35\textwidth}
           {\sffamily\bfseries Ingredients}\vspace{0.5ex}
           \begin{description}
