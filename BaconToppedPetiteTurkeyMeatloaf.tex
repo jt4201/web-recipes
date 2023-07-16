@@ -1,0 +1,50 @@
+% vim: ft=tex:
+\documentclass[web-recipes.tex]{subfiles}
+\begin{document}
+
+\renewcommand{\mytitle}{Bacon Topped Petite Turkey Meatloaf with BBQ Sauce} % TODO:
+\renewcommand{\myurl}{https://www.skinnytaste.com/bacon-topped-petite-turkey-meatloaf/} %TODO:
+
+\sbox{\ingredients}{%
+  \begin{minipage}[t]{0.32\textwidth}
+    {\sffamily\bfseries Ingredients}\vspace{0.5ex}
+    \begin{itemize}
+      \item \nicefrac{3}{4} cup grated zucchini, all moisture squeezed dry with paper towel
+      \item 2 tbsp onion, minced
+      \item 2 tbsp diced red pepper
+      \item \nicefrac{1}{2} cup seasoned breadcrumbs, you can use gluten-free crumbs too
+      \item \nicefrac{1}{4} cup Kansas City BBQ Sauce
+      \item 1 large egg
+      \item 1 tsp smoked paprika
+      \item 1 tsp kosher salt
+      \item 1.3 lb raw 93\% lean ground turkey
+      \item 5 slices center cut bacon, cut in half
+      \item 2 \nicefrac{1}{2} tbsp Kansas City BBQ Sauce
+    \end{itemize}
+    % TODO:
+  \end{minipage}
+}
+
+\sbox{\method}{%
+  \begin{minipage}[t]{0.55\textwidth}
+    {\sffamily\bfseries Method}\vspace{0.5ex}
+    \begin{enumerate}
+      \item Preheat the oven to 350°. Lightly spray the petite loaf pan with cooking spray.
+      \item In a large bowl, mix the zucchini, onion, red pepper, breadcrumbs, BBQ sauce, egg,
+        paprika and salt. Add the turkey and combine until mixed through.
+      \item Create 5 equal loafs and place them into the loaf pan. Place the 2 bacon halves over
+        each loaf and top each with \nicefrac{1}{2} tbsp additional BBQ sauce.
+      \item Bake about 25 minutes or until cooked through.
+    \end{enumerate}
+    % TODO:
+  \end{minipage}
+}
+
+\begin{mdframed}[nobreak]
+  \section{\mytitle}
+  \begin{tabular}{l}
+    \usebox{\ingredients}\qquad\usebox{\method}\vspace{3ex}\\
+    \multicolumn{1}{c}{\small\ttfamily \url{\myurl}} \\
+  \end{tabular}
+\end{mdframed}
+\end{document}
