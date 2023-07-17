@@ -1,0 +1,43 @@
+% vim: ft=tex:
+\documentclass[web-recipes.tex]{subfiles}
+\begin{document}
+
+\renewcommand{\mytitle}{Homemade Ketchup (Skinny Taste)}
+\renewcommand{\myurl}{https://www.skinnytaste.com/homemade-ketchup/}
+
+\sbox{\ingredients}{%
+  \begin{minipage}[t]{0.32\textwidth}
+    {\sffamily\bfseries Ingredients}\vspace{0.5ex}
+    \begin{itemize}
+      \item 6 oz can tomato paste
+      \item \nicefrac{1}{4} cup honey, or agave
+      \item \nicefrac{1}{2} cup white vinegar
+      \item \nicefrac{1}{4} cup water
+      \item 1 tsp sugar
+      \item \nicefrac{3}{4} tsp salt
+      \item \nicefrac{1}{4} tsp onion powder
+      \item \nicefrac{1}{8} tsp garlic powder
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\method}{%
+  \begin{minipage}[t]{0.55\textwidth}
+    {\sffamily\bfseries Method}\vspace{0.5ex}
+    \begin{enumerate}
+      \item Combine all the ingredients in a medium saucepan over medium heat; whisk until smooth.
+      \item When it comes to a boil, reduce heat to low and simmer for 20 minutes, stirring often.
+      \item Remove from heat and cover until cool.
+      \item Chill and store refrigerated in a covered container.
+    \end{enumerate}
+  \end{minipage}
+}
+
+\begin{mdframed}[nobreak]
+  \section{\mytitle}
+  \begin{tabular}{l}
+    \usebox{\ingredients}\quad\usebox{\method}\vspace{3ex}\\
+    \multicolumn{1}{c}{\small\ttfamily \url{\myurl}} \\
+  \end{tabular}
+\end{mdframed}
+\end{document}
