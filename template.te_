@@ -6,7 +6,8 @@
 
 \renewcommand{\mytitle}{} % TODO:
 \renewcommand{\myurl}{} %TODO:
-\renewcommand{\mycourse}{} %TODO:
+
+\myRecipe{ }{\mytitle{}} %TODO:
 
 \sbox{\ingredients}{%
   \begin{minipage}[t]{\the\dimexpr 0.35\linewidth - 1em\relax}
@@ -26,7 +27,6 @@
   \end{minipage}
 }
 
-\myRecipe{\mycourse{}}{\mytitle{}}
 
   \begin{tabular}{l}
     \usebox{\ingredients}\hspace{1em}\usebox{\method}\vspace{3ex}\\
