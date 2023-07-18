@@ -1,0 +1,41 @@
+% vim: ft=tex:
+\documentclass[web-recipes.tex]{subfiles}
+\begin{document}
+
+\pagestyle{empty}
+
+\renewcommand{\mytitle}{5 Minute Honey Mustard Sauce (Pinch of Yum)}
+\renewcommand{\myurl}{https://pinchofyum.com/5-minute-honey-mustard-sauce}
+
+\sbox{\ingredients}{%
+  \begin{minipage}[t]{0.32\textwidth}
+    {\sffamily\bfseries Ingredients}\vspace{0.5ex}
+    \begin{itemize}
+      \item \nicefrac{1}{4} cup honey
+      \item \nicefrac{1}{4} cup mayonnaise
+      \item \nicefrac{1}{4} cup Dijon mustard
+      \item 1 tablespoon white distilled vinegar
+      \item \nicefrac{1}{4} teaspoon cayenne pepper
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\method}{%
+  \begin{minipage}[t]{0.55\textwidth}
+    {\sffamily\bfseries Method}\vspace{0.5ex}
+    \begin{enumerate}
+      \item Combine: Whisk all ingredients in a small dish until smooth.
+      \item Eat: Enjoy on chicken nuggets, as a marinade, tossed with tofu, and more!
+    \end{enumerate}
+  \end{minipage}
+}
+
+\myRecipe{Sauces!Mustard}{\mytitle{}}
+
+% \addcontentsline{toc}{subsubsection}{\mytitle}
+%   \subsubsection*{\mytitle}
+  \begin{tabular}{l}
+    \usebox{\ingredients}\quad\usebox{\method}\vspace{3ex}\\
+    \multicolumn{1}{c}{\small\ttfamily \url{\myurl}} \\
+  \end{tabular}
+\end{document}

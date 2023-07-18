@@ -1,0 +1,10 @@
+headings_flag 0
+heading_prefix "{\\large\\sffamily\\bfseries "
+heading_suffix "}\\nopagebreak\n"
+
+item_0 "\n \\item \\small\\sffamily "
+
+delim_0 " \\dotfill "
+delim_1 " \\dotfill "
+delim_2 " \\dotfill "
+

@@ -35,11 +35,13 @@
   \end{minipage}
 }
 
-\begin{mdframed}[nobreak]
-  \section{\mytitle}
-  \begin{tabular}{l}
-    \usebox{\ingredients}\quad\usebox{\method}\vspace{3ex}\\
-    \multicolumn{1}{c}{\small\ttfamily \url{\myurl}} \\
-  \end{tabular}
-\end{mdframed}
+\myRecipe{Sauces!Mustard}{\mytitle{}}
+
+% \addcontentsline{toc}{subsubsection}{\mytitle}
+% \subsubsection*{\mytitle}
+\begin{tabular}{l}
+  \usebox{\ingredients}\quad\usebox{\method}\vspace{3ex}\\
+  \multicolumn{1}{c}{\small\ttfamily \url{\myurl}} \\
+\end{tabular}
+
 \end{document}

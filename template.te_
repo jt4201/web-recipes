@@ -6,9 +6,10 @@
 
 \renewcommand{\mytitle}{} % TODO:
 \renewcommand{\myurl}{} %TODO:
+\renewcommand{\mycourse}{} %TODO:
 
 \sbox{\ingredients}{%
-  \begin{minipage}[t]{0.32\textwidth}
+  \begin{minipage}[t]{\the\dimexpr 0.35\linewidth - 1em\relax}
     {\sffamily\bfseries Ingredients}\vspace{0.5ex}
     \begin{itemize}
       \item % TODO:
@@ -17,7 +18,7 @@
 }
 
 \sbox{\method}{%
-  \begin{minipage}[t]{0.55\textwidth}
+  \begin{minipage}[t]{\the\dimexpr 0.6\linewidth - 1em\relax}
     {\sffamily\bfseries Method}\vspace{0.5ex}
     \begin{enumerate}
       \item % TODO:
@@ -25,11 +26,11 @@
   \end{minipage}
 }
 
-\begin{mdframed}[nobreak]
-  \section{\mytitle}
+\myRecipe{\mycourse{}}{\mytitle{}}
+
   \begin{tabular}{l}
-    \usebox{\ingredients}\quad\usebox{\method}\vspace{3ex}\\
+    \usebox{\ingredients}\hspace{1em}\usebox{\method}\vspace{3ex}\\
     \multicolumn{1}{c}{\small\ttfamily \url{\myurl}} \\
   \end{tabular}
-\end{mdframed}
+
 \end{document}
