@@ -1,0 +1,36 @@
+% vim: ft=tex:
+\documentclass[web-recipes.tex]{subfiles}
+\begin{document}
+
+\pagestyle{empty}
+
+\renewcommand{\mytitle}{} % TODO:
+\renewcommand{\myurl}{} %TODO:
+
+\myRecipe{ }{\mytitle{}} %TODO:
+
+\sbox{\ingredients}{%
+  \begin{minipage}[t]{\the\dimexpr 0.35\linewidth - 1em\relax}
+    {\sffamily\bfseries Ingredients}\vspace{0.5ex}
+    \begin{itemize}
+      \item % TODO:
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\method}{%
+  \begin{minipage}[t]{\the\dimexpr 0.6\linewidth - 1em\relax}
+    {\sffamily\bfseries Method}\vspace{0.5ex}
+    \begin{enumerate}
+      \item % TODO:
+    \end{enumerate}
+  \end{minipage}
+}
+
+
+  \begin{tabular}{l}
+    \usebox{\ingredients}\hspace{1em}\usebox{\method}\vspace{3ex}\\
+    \multicolumn{1}{c}{\small\ttfamily \url{\myurl}} \\
+  \end{tabular}
+
+\end{document}
