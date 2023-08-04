@@ -2,118 +2,11 @@
 % arara: makeindex: { files: [recipelist], style: index_style.ist}
 % arara: xelatex
 % arara: xelatex
-\documentclass{article}
-\usepackage[nonewpage]{imakeidx}
-
-\makeindex[name=recipelist,title=Recipes,columns=2, intoc=true, program=makeindex]
-
-\usepackage[vcentering,landscape,noheadfoot, top=1cm,bottom=2cm,left=5mm,right=5mm]{geometry}
-\usepackage{microtype}
-\usepackage{xfrac}
-\usepackage[nice]{nicefrac}
-\usepackage[noindentafter]{titlesec}
-\usepackage{enumitem}
-
-\usepackage{subfiles}
-\usepackage{hyperref}
-\hypersetup{
-  colorlinks,
-  urlcolor=blue,
-  citecolor=black,
-  linkcolor=green
-}
-
-
-\usepackage{fontspec}
-% % \setmainfont{TeX Gyre Schola}
-% % \setsansfont{TeX Gyre Heros}[Scale=MatchLowercase]
-% % \setmonofont{Inconsolata}[Scale=MatchLowercase]
-% \setmainfont{Minion Pro}
-% \setsansfont{Myriad Pro}
-% \setmonofont{Courier Std}
-\setmainfont{Kalam}
-\setsansfont{Kalam}
-\setmonofont{Courier Std}[Scale=MatchLowercase]
-
-\newsavebox{\ingredients}
-\newsavebox{\method}
-\newsavebox{\notes}
-\newcommand{\mytitle}{}
-\newcommand{\myurl}{}
-\newcommand{\mycourse}{}
-
-\titleformat{\subsubsection}[hang]{\bfseries\Large}{}{0pt}{}
-% \titlespacing*{\subsubsection}{0pt}{0pt}{1ex}
-\titlespacing*{\subsubsection}{0pt}{*1}{*1.5}
-
-\setlist{%
-  before=\raggedright\small\sffamily, font=\sffamily,
-  labelindent = 0.5em, labelsep = 0.5em,
-  leftmargin=1em, nosep, itemsep=0.5ex,
-}
-\pagestyle{empty}
-\setlength{\parindent}{0pt}
-
-\newcommand{\mainlist}[2]{\index[recipelist]{#1!#2}}
-\newcommand{\myRecipe}[2]{%
-\textbf{\Large #2}\index[recipelist]{#1!#2}}
-
+\documentclass{myRecipe}
 \begin{document}
 
 \printindex[recipelist]
 
 \input{recipeList}
-
-% \clearpage\subfile{indian-butter-chicken-burrito}
-% \clearpage\subfile{lasagna-pie}
-% \clearpage\subfile{betty-crocker-american-goulash}
-% \clearpage\subfile{the-candid-cooks-black-bean-and-rice-bake}
-% \clearpage\subfile{betty-crocker-ground-beef-stroganoff}
-% \clearpage\subfile{BaconToppedPetiteTurkeyMeatloaf}
-% \clearpage\subfile{TheKitchnOvenRibs}
-% \clearpage\subfile{gift-of-hospitality-old-fashioned-sloppy-joes}
-% \clearpage\subfile{fotg-one-pot-red-lentil-sloppy-joes}
-% \clearpage\subfile{betty-crocker-sassy-sloppy-joes}
-% \clearpage\subfile{betty-crocker-sloppy-joes}
-% \clearpage\subfile{authentic-german-rouladen}
-% \clearpage\subfile{ChefJohnBeefRouladen}
-% \clearpage\subfile{QuickGermanAuthenticBeefRouladen}
-% \clearpage\subfile{3-easy-sausage-dips}
-% \clearpage\subfile{MeatheadBurgerGlop}
-% \clearpage\subfile{cheats-onion-gravy}
-% \clearpage\subfile{SkinnyTasteHotDogOnions}
-% \clearpage\subfile{SkinnyTasteKetchup}
-% \clearpage\subfile{recipetineats-nachos-cheese-dip}
-% \clearpage\subfile{seriouseats-cheese-sauce}
-% \clearpage\subfile{PinchOfYum5MinuteHoneyMustardSauce}
-% \clearpage\subfile{InspiredTasteHoneyMustardDressing}
-% \clearpage\subfile{BudgetBytesHoneyMustardSauce}
-% \clearpage\subfile{tomato-powder}
-% \clearpage\subfile{TheKitchnDryRub}
-% \clearpage\subfile{AmazingRibsAmericanChiliPowder}
-% \clearpage\subfile{MeatheadMemphisDust}
-% \clearpage\subfile{moms-bbq-sauce}
-% \clearpage\subfile{SkinnyTasteKansasCityStyleBBQSauce}
-% \clearpage\subfile{gimme-some-oven-quick-pickled-red-onions}
-% \clearpage\subfile{HealthfulIdeasQuickPickledRedOnions}
-% \clearpage\subfile{FranksCornAndBlackBeanSalsa}
-% \clearpage\subfile{APinchOfHealthyEasySalsa}
-% \clearpage\subfile{TheKitchenGirlBlenderSalsa}
-% \clearpage\subfile{MexicanMadeMeatlessFreshTomatoSalsa}
-% \clearpage\subfile{emily-enchanted-black-bean-and-corn-salsa}
-% \clearpage\subfile{HealthfulIdeasCannedSalmonSaladSandwich}
-% \clearpage\subfile{FoodNetworkCornAndBlackBeanQuesadillas}
-% \clearpage\subfile{FranksRedhotBuffaloChickenBurrito}
-% \clearpage\subfile{garlic-butter-rice}
-% \clearpage\subfile{FoodThinkersChickenStrips}
-% \clearpage\subfile{FoodThinkersLoadedPotatoBites}
-% \clearpage\subfile{Food52GarlickiestGarlicBread}
-% \clearpage\subfile{FoodThinkersCaramelAppleTurnovers}
-% \clearpage\subfile{AmazingRibsSmokyIndoorRibs}
-% \clearpage\subfile{TheKitchnBasicSweetAndTangyBBQSauce}
-% \clearpage\subfile{SkinnyTasteSpicyCannedSalmonRiceBowl}
-% \clearpage\subfile{DomesticateMeSpicyChickenQuesadillas}
-% \clearpage\subfile{AmazingRibsBrigitBinnsSteakSauce}
-% \clearpage\subfile{AmazingRibsKansasCityBBQSauce}
 
 \end{document}
