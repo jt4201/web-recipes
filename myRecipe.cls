@@ -16,15 +16,17 @@
 \RequirePackage{array}
 \RequirePackage{subfiles}
 \RequirePackage[noindentafter]{titlesec}
+\RequirePackage[dvipsnames]{xcolor}
+\RequirePackage{ifthen}
 
 \setsansfont{Alegreya Sans Black}
-\setmainfont{Alegreya Sans}
+\setmainfont{Alegreya Sans Medium}
 
 \hypersetup{
   colorlinks,
   urlcolor=blue,
   citecolor=black,
-  linkcolor=green
+  linkcolor=ForestGreen
 }
 
 \newsavebox{\Ingredients}
@@ -37,12 +39,14 @@
 \newcommand{\myurl}{}
 \newcommand{\mycourse}{}
 
+\newcommand{\myAuthor}{}
 \newcommand{\myTitle}[2]{%
 \textsf{\Large #2}%
 \index[recipelist]{#1!#2}}
 \newcommand{\myTitletext}{}
 \newcommand{\mySubtitle}[1]{{\sffamily #1}}
-\newcommand{\myServings}[1]{{\bfseries Servings:} #1}
+\newcommand{\myServings}[1]{%
+\ifthenelse{\equal{#1}{}}{}{{\bfseries Servings:} #1}}
 \newcommand{\myServingstext}{}
 \newcommand{\myUrl}[2]{{\bfseries Source:} \href{#1}{#2}}
 \newcommand{\myUrltext}{}

@@ -3,10 +3,16 @@
 
 \begin{document}
 
+\renewcommand{\myAuthor}{The Yummy Muffin}
 \renewcommand{\myTitletext}{Horseradish Cheddar Potato Salad}
 \renewcommand{\myUrltext}{https://www.theyummymuffin.com/single-post/horseradish-cheddar-potato-salad}
 \renewcommand{\myServingstext}{4}
 \renewcommand{\mycourse}{Salads}
+
+\hypersetup{
+  pdftitle = {\myTitletext},
+  pdfauthor = {\myAuthor}
+}
 
 \sbox{\Ingredients}{%
   \begin{minipage}[t]{\the\dimexpr 0.4\textwidth - 2em}
@@ -53,7 +59,7 @@
 }
 
 \begin{tabular}{ll}
-  \multicolumn{2}{l}{\myTitle{\mycourse}{\myTitletext}} \\ \addlinespace[1mm]
+  \multicolumn{2}{l}{\myTitle{\mycourse}{\myTitletext (\myAuthor)}} \\ \addlinespace[1mm]
 	\multicolumn{2}{l}{\myServings{\myServingstext}} \\
   \multicolumn{2}{l}{\myUrl{\myUrltext}{\myTitletext}} \\ \addlinespace[3mm]
   \usebox{\Ingredients} & \usebox{\Instructions} \\ \addlinespace[3mm]
