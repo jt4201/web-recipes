@@ -1,0 +1,52 @@
+% arara: xelatex
+\documentclass[web-recipes.tex]{subfiles}
+\begin{document}
+
+\renewcommand{\myAuthor}{Food Republic}
+\renewcommand{\myTitletext}{Nacho Cheese Sauce}
+\renewcommand{\myUrltext}{https://www.foodrepublic.com/recipes/take-modernist-cuisines-nacho-cheese-sauce-for-a-spin/}
+\renewcommand{\myServingstext}{4 cups}
+\renewcommand{\mycourse}{Sauces!Cheese}
+
+\hypersetup{
+  pdftitle = {\myTitletext},
+  pdfauthor = {\myAuthor}
+}
+
+\sbox{\Ingredients}{%
+  \begin{minipage}[t]{\the\dimexpr 0.4\textwidth - 2em}
+    \par\mySubtitle{Ingredients}
+    \par\begin{itemize}
+      \item 285 grams (about .625 pounds) sharp cheddar
+      \item 11 grams sodium citrate (or 2 teaspoons of citric acid + 2.5 teaspoons of
+        baking soda)
+      \item \nicefrac{1}{2} cup water
+      \item \nicefrac{3}{4} cup milk
+      \item 2 jalapeños
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\Instructions}{%
+  \begin{minipage}[t]{\the\dimexpr 0.6\textwidth - 2em}
+    \par\mySubtitle{Instructions}
+    \par\begin{enumerate}
+      \item Add sodium citrate or citric acid/baking soda mixture to water, and stir well
+        to dissolve completely.
+      \item Add in milk and bring liquids to a simmer over medium-low heat.
+      \item Add in cheese in small batches, whisking constantly. When all cheese is
+        incorporated and fully melted, add in jalapeños, stir well and serve! Cheese will
+        thicken slightly as it cools but will still be pourable at room temperature. This
+        will keep for a week in the fridge.
+    \end{enumerate}
+  \end{minipage}
+}
+
+\begin{tabular}{ll}
+  \multicolumn{2}{l}{\myTitle{\mycourse}{\myTitletext\quad (\myAuthor)}} \\ \addlinespace[1mm]
+	\multicolumn{2}{l}{\myServings{\myServingstext}} \\
+  \multicolumn{2}{l}{\myUrl{\myUrltext}{\myTitletext}} \\ \addlinespace[3mm]
+  \usebox{\Ingredients} & \usebox{\Instructions} \\ \addlinespace[3mm]
+\end{tabular}
+
+\end{document}

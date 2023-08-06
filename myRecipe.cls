@@ -4,7 +4,7 @@
 \LoadClass{article}
 
 \RequirePackage[nonewpage]{imakeidx}
-\makeindex[name=recipelist,title=Recipes,columns=2, intoc=true, program=makeindex]
+\makeindex[name=recipelist,title=Recipes,columns=3, intoc=true, program=makeindex]
 
 \RequirePackage[vcentering, noheadfoot, landscape, margin=1cm]{geometry}
 \RequirePackage{enumitem}
@@ -34,6 +34,7 @@
 \newsavebox{\ingredients}
 \newsavebox{\method}
 \newsavebox{\notes}
+\newsavebox{\tips}
 
 \newcommand{\mytitle}{}
 \newcommand{\myurl}{}

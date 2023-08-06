@@ -1,0 +1,69 @@
+\documentclass[web-recipes.tex]{subfiles}
+\begin{document}
+
+\renewcommand{\myAuthor}{Betty Crocker}
+\renewcommand{\myTitletext}{Cheesy Bacon Ranch Potato Foil Packs}
+\renewcommand{\myUrltext}{https://tinyurl.com/45wvvpfb}
+\renewcommand{\myServingstext}{6}
+\renewcommand{\mycourse}{Mains}
+
+\hypersetup{
+  pdftitle = {\myTitletext},
+  pdfauthor = {\myAuthor}
+}
+
+\sbox{\tips}{%
+  \begin{minipage}[t]{\the\dimexpr 0.9\textwidth - 2em}
+    \par\mySubtitle{Tips}
+    \par\begin{enumerate}
+      \item Regular Yukon gold potatoes can be substituted for the small potatoes in this
+        recipe. Cut them into \nicefrac{3}{4}-inch chunks.
+      \item To make in oven, place packs on cookie sheet. Bake at 375°F 40 to 45 minutes
+        or until potatoes are tender. 
+    \end{enumerate}
+  \end{minipage}
+}
+
+\sbox{\Ingredients}{%
+  \begin{minipage}[t]{\the\dimexpr 0.4\textwidth - 2em}
+    \par\mySubtitle{Ingredients}
+    \par\begin{itemize}
+      \item 1 \nicefrac{1}{2} lb small (two-bite) Yukon gold potatoes, halved
+      \item 4 teaspoons oil
+      \item 2 tablespoons ranch dip mix (from 1-oz package)
+      \item 1 jalapeño chile, seeded, finely chopped
+      \item 4 slices cooked bacon, coarsely chopped
+      \item 1 cup shredded Cheddar cheese (4 oz)
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\Instructions}{%
+  \begin{minipage}[t]{\the\dimexpr 0.6\textwidth - 2em}
+    \par\mySubtitle{Instructions}
+    \par\begin{enumerate}
+      \item Heat gas or charcoal grill. Cut 2 (18x12-inch) sheets of heavy-duty foil.
+        Spray with cooking spray.
+      \item Add cut potatoes to medium bowl. Drizzle with oil; sprinkle with ranch dip
+        mix. Add jalapeño chile; stir until evenly coated. Place equal amount of mixture
+        on center of each sheet of foil. Evenly sprinkle with bacon.
+      \item Bring up 2 sides of foil so edges meet. Seal edges, making tight \nicefrac{1}{2}-inch
+        fold; fold again, allowing space for heat circulation and expansion. Fold other
+        sides to seal.
+      \item Place packs on grill over medium heat. Cover grill; cook 12 minutes. Rotate
+        packs \nicefrac{1}{2} turn; cook 12 to 14 minutes longer or until potatoes are tender. Remove
+        packs from grill, cut large X across top of each pack. Carefully fold back foil,
+        and sprinkle potatoes with cheese. If desired, garnish with sliced jalapeño chile. 
+    \end{enumerate}
+  \end{minipage}
+}
+
+\begin{tabular}{ll}
+  \multicolumn{2}{l}{\myTitle{\mycourse}{\myTitletext\ (\myAuthor)}} \\ \addlinespace[1mm]
+	\multicolumn{2}{l}{\myServings{\myServingstext}} \\
+  \multicolumn{2}{l}{\myUrl{\myUrltext}{\myTitletext}} \\ \addlinespace[3mm]
+  \usebox{\Ingredients} & \usebox{\Instructions} \\ \addlinespace[3mm]
+  \multicolumn{2}{l}{\usebox{\tips}} \\ \addlinespace[3mm]
+\end{tabular}
+
+\end{document}
