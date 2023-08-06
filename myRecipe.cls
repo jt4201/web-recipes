@@ -6,7 +6,7 @@
 \RequirePackage[nonewpage]{imakeidx}
 \makeindex[name=recipelist,title=Recipes,columns=3, intoc=true, program=makeindex]
 
-\RequirePackage[vcentering, noheadfoot, landscape, margin=1cm]{geometry}
+\RequirePackage[vcentering, noheadfoot, landscape, margin=6mm]{geometry}
 \RequirePackage{enumitem}
 \RequirePackage{hyperref}
 \RequirePackage{fontspec}
