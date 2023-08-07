@@ -1,0 +1,50 @@
+% arara: xelatex
+\documentclass[web-recipes.tex]{subfiles}
+\begin{document}
+
+\renewcommand{\myAuthor}{Eating Well}
+\renewcommand{\myTitletext}{Veggie \& Hummus Sandwich}
+\renewcommand{\myUrltext}{https://www.eatingwell.com/recipe/259817/veggie-hummus-sandwich/}
+\renewcommand{\myServingstext}{1}
+\renewcommand{\mycourse}{Sandwiches}
+
+\hypersetup{
+  pdftitle = {\myTitletext},
+  pdfauthor = {\myAuthor}
+}
+
+\sbox{\Ingredients}{%
+  \begin{minipage}[t]{\the\dimexpr 0.4\textwidth - 2em}
+    \par\mySubtitle{Ingredients}
+    \par\begin{itemize}
+      \item 2 slices whole-grain bread
+      \item 3 tablespoons hummus
+      \item ¼ avocado, mashed
+      \item ½ cup mixed salad greens
+      \item ¼ medium red bell pepper, sliced
+      \item ¼ cup sliced cucumber
+      \item ¼ cup shredded carrot
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\Instructions}{%
+  \begin{minipage}[t]{\the\dimexpr 0.6\textwidth - 2em}
+    \par\mySubtitle{Instructions}
+    \par\begin{enumerate}
+      \item Spread 1 slice of bread with hummus and the other with avocado. Fill the
+        sandwich with greens, bell pepper, cucumber and carrot. Slice in half and serve. 
+    \end{enumerate}
+  \end{minipage}
+}
+
+\fbox{
+  \begin{tabular}{ll}
+    \multicolumn{2}{l}{\myTitle{\mycourse}{\myTitletext\ (\myAuthor)}} \\ \addlinespace[1mm]
+    \multicolumn{2}{l}{\myServings{\myServingstext}} \\
+    \multicolumn{2}{l}{\myUrl{\myUrltext}{\myTitletext}} \\ \addlinespace[3mm]
+    \usebox{\Ingredients} & \usebox{\Instructions} \\ \addlinespace[3mm]
+  \end{tabular}
+}
+
+\end{document}

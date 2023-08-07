@@ -12,3 +12,4 @@
 *.fdb_latexmk
 archive
 test
+.DS_Store

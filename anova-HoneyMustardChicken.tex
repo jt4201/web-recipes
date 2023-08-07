@@ -1,0 +1,67 @@
+% arara: xelatex
+\documentclass[web-recipes.tex]{subfiles}
+\begin{document}
+
+\renewcommand{\myAuthor}{Anova}
+\renewcommand{\myTitletext}{Sous Vide Honey Mustard Chicken Breast with Sweet Potato Mash}
+\renewcommand{\myUrltext}{https://recipes.anovaculinary.com/recipe/sous-vide-honey-mustard-chicken-breast-with-sweet-potato-mash}
+\renewcommand{\myServingstext}{2}
+\renewcommand{\mycourse}{Mains}
+
+\hypersetup{
+  pdftitle = {\myTitletext},
+  pdfauthor = {\myAuthor}
+}
+
+\sbox{\Ingredients}{%
+  \begin{minipage}[t]{\the\dimexpr 0.4\textwidth - 2em}
+    \par\mySubtitle{Ingredients}
+    \par\begin{itemize}
+      \item 2 tablespoons honey
+      \item 2 tablespoons distilled white vinegar
+      \item 1 tablespoon Dijon mustard
+      \item 1 tablespoon whole grain mustard
+      \item 1 tablespoon extra virgin olive oil
+      \item 2 (10- to 12-ounce) boneless, skinless chicken breasts
+      \item Salt and freshly ground black pepper
+      \item 4 sweet potatoes, peeled and sliced into 1-inch pieces
+      \item 2 tablespoons unsalted butter, divided
+      \item 1 clove garlic, minced
+      \item ⅔ cup (125 g) corn kernels
+      \item 2 tablespoons heavy cream
+      \item 3 tablespoons (10 g) minced chives, plus more for serving
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\Instructions}{%
+  \begin{minipage}[t]{\the\dimexpr 0.6\textwidth - 2em}
+    \par\mySubtitle{Instructions}
+    \par\begin{enumerate}
+      \item Set the Anova Sous Vide Precision Cooker to 140ºF (60ºC).
+      \item In a small bowl, whisk together the honey, vinegar, Dijon mustard, whole grain mustard, and olive oil.
+      \item Season the chicken with salt and pepper. Place in a large zipper lock or vacuum seal bag with the mustard sauce. Seal the bag using the water immersion technique or vacuum sealer on the moist setting.
+      \item Place the bag in the water bath and set the timer for 1 hour and 15 minutes.
+      \item Meanwhile, prepare the sweet potatoes: Bring a large pot of salted water to a boil over high heat. Add the sweet potatoes and boil until tender, 20 to 30 minutes. Drain.
+      \item Add 1 tablespoon butter to the pot and melt over medium heat. When the butter stops foaming, add the garlic and sauté until aromatic, about 30 seconds.
+      \item Add the corn and sauté until tender, about 1 minute. Add the sweet potatoes, cream, and chives. Mash using a potato masher until smooth. Season to taste with salt and pepper.
+      \item \textbf{Finishing Steps}
+        \begin{enumerate}
+          \item When the timer goes off, remove the bag from the water bath. Remove the chicken from the bag and pat dry with paper towels. Reserve the cooking liquid in the bag.
+          \item Melt the remaining tablespoon butter in a medium skillet over medium-high heat. When the butter stops foaming, add the chicken and sear until golden brown, about 20 seconds per side. Transfer to a cutting board and let rest for 5 minutes.
+          \item Return the skillet to medium-high heat and add the reserved cooking liquid. Bring to a rapid simmer and reduce just until it begins to change color, 10 to 30 seconds. Remove from the heat.
+          \item Divide the sweet potato mash between 2 serving plates, forming a rectangular shape with a depression in the center.
+          \item Slice the chicken into thin medallions and place the chicken in the center of the potatoes. Drizzle chicken with sauce and garnish with chives. Serve and enjoy!
+        \end{enumerate}
+    \end{enumerate}
+  \end{minipage}
+}
+
+\begin{tabular}{ll}
+  \multicolumn{2}{l}{\myTitle{\mycourse}{\myTitletext\ (\myAuthor)}} \\ \addlinespace[1mm]
+	\multicolumn{2}{l}{\myServings{\myServingstext}} \\
+  \multicolumn{2}{l}{\myUrl{\myUrltext}{\myTitletext}} \\ \addlinespace[3mm]
+  \usebox{\Ingredients} & \usebox{\Instructions} \\ \addlinespace[3mm]
+\end{tabular}
+
+\end{document}
