@@ -1,5 +1,7 @@
 % arara: xelatex
+% vim: ts=2:sw=4:ft=tex:tw=78 :
 \documentclass[web-recipes.tex]{subfiles}
+\usepackage{multicol}
 \begin{document}
 
 \renewcommand{\myAuthor}{}
@@ -31,11 +33,13 @@
   \end{minipage}
 }
 
+\fbox{
 \begin{tabular}{ll}
   \multicolumn{2}{l}{\myTitle{\mycourse}{\myTitletext\ (\myAuthor)}} \\ \addlinespace[1mm]
 	\multicolumn{2}{l}{\myServings{\myServingstext}} \\
   \multicolumn{2}{l}{\myUrl{\myUrltext}{\myTitletext}} \\ \addlinespace[3mm]
   \usebox{\Ingredients} & \usebox{\Instructions} \\ \addlinespace[3mm]
 \end{tabular}
+}
 
 \end{document}
