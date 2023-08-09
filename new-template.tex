@@ -4,11 +4,11 @@
 \usepackage{multicol}
 \begin{document}
 
-\renewcommand{\myAuthor}{}
-\renewcommand{\myTitletext}{}
-\renewcommand{\myUrltext}{}
-\renewcommand{\myServingstext}{}
-\renewcommand{\mycourse}{}
+\renewcommand{\myAuthor}{} %FIXME:
+\renewcommand{\myTitletext}{} %FIXME:
+\renewcommand{\myUrltext}{} %FIXME:
+\renewcommand{\myServingstext}{} %FIXME:
+\renewcommand{\mycourse}{} %FIXME:
 
 \hypersetup{
   pdftitle = {\myTitletext},
@@ -18,8 +18,7 @@
 \sbox{\Ingredients}{%
   \begin{minipage}[t]{\the\dimexpr 0.4\textwidth - 2em}
     \par\mySubtitle{Ingredients}
-    \par\begin{itemize}
-      \item % TODO:
+    \par\begin{itemize} %FIXME:
     \end{itemize}
   \end{minipage}
 }
@@ -27,8 +26,7 @@
 \sbox{\Instructions}{%
   \begin{minipage}[t]{\the\dimexpr 0.6\textwidth - 2em}
     \par\mySubtitle{Instructions}
-    \par\begin{enumerate}
-      \item % TODO:
+    \par\begin{enumerate} %FIXME:
     \end{enumerate}
   \end{minipage}
 }
