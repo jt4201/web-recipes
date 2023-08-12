@@ -1,0 +1,74 @@
+% arara: convert: { options: [ 'images/fotg-red-lentil-sloppy-joes.webp', 'images/fotg-red-lentil-sloppy-joes.jpg' ]}
+% arara: xelatex
+% vim: tw=120:
+\documentclass{newrecipe}
+\begin{document}
+
+\renewcommand{\myTitleText}{Red Lentil Sloppy Joes}
+\renewcommand{\myURLText}{https://www.freshoffthegrid.com/red-lentil-sloppy-joes/}
+\renewcommand{\myServings}{2 sandwiches}
+
+\sbox{\myIngred}{
+  \begin{minipage}[t]{\the\dimexpr 0.35\textwidth}\raggedright
+    \textbf{Ingredients}
+    \begin{itemize}
+      \item ½ tablespoon oil
+      \item 1 small onion, diced
+      \item 1 Anaheim pepper, diced
+      \item 2 tablespoons tomato paste
+      \item 3 cloves garlic, minced
+      \item ½ cup red lentils
+      \item 1 ½ cup water, or broth
+      \item 1 tablespoon mustard
+      \item 1 tablespoon maple syrup
+      \item 2 teaspoons apple cider vinegar
+      \item 1 teaspoon vegan Worcestershire
+      \item 1 teaspoon chili powder
+      \item ½ teaspoon salt
+      \item \textbf{To serve}
+        \begin{itemize}
+          \item 2 buns
+        \end{itemize}
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\myMethod}{
+  \begin{minipage}[t]{\the\dimexpr 0.55\textwidth - 2em}\raggedright
+    \textbf{Method}
+    \begin{enumerate}
+      \item In a medium pot, heat the oil over medium heat and add the chopped
+        onions and Anaheim pepper. Saut\'e until soft and the onions just begin to
+        turn golden, 3--4 minutes. Add tomato paste and saut\'e for a minute, then
+        add the garlic and cook 1 minute.
+      \item Add the red lentils and 1 ½ cup water to the pot. Bring to a boil,
+        then reduce to a simmer. Cook 10--15 minutes, stirring occasionally,
+        until the lentils are pretty tender but not falling apart.
+      \item Add mustard, maple syrup, apple cider vinegar, Worcestershire, chili
+        powder, and salt. Stir to combine. Simmer until the sauce thickens a
+        bit, 3--5 minutes more.
+      \item Serve on toasted buns with whatever toppings and sides you love!
+    \end{enumerate}
+  \end{minipage}
+}
+
+\begin{tabular}{ll}
+  \begin{minipage}[t]{0.6\textwidth}\raggedright
+    \textbf{\Large\bfseries \myTitleText} \vspace{3mm} \\
+    \textbf{Servings:} \myServings \\
+    \textbf{Source:} \href{\myURLText}{\myTitleText} \vspace{2mm} \\
+    A plant-based approach to a classic camping recipe, these easy one-pot Red Lentil Sloppy Joes are a nutritious,
+    protein-packed addition to your camp menu.
+\end{minipage} &
+\begin{minipage}[t]{0.35\textwidth}
+  \adjustbox{valign=t}{\includegraphics[width=\textwidth]{red-lentil-sloppy-joes.jpg}}
+\end{minipage} \\
+\end{tabular}\vspace{5mm}
+
+\par\noindent\rule{0.95\textwidth}{0.4pt}\vspace{5mm}
+
+\begin{tabular}{ll}
+  \usebox{\myIngred} & \usebox{\myMethod} \\
+\end{tabular}
+
+\end{document}

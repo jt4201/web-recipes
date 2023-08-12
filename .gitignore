@@ -13,3 +13,5 @@
 archive
 test
 .DS_Store
+*png
+*jpg

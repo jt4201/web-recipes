@@ -1,0 +1,87 @@
+% arara: xelatex
+% arara: xelatex
+% vim: tw=86:
+\documentclass{newRecipe}
+\begin{document}
+
+% FIXME:
+\renewcommand{\myTitleText}{Perfect French Toast}
+\renewcommand{\myURLText}{https://www.freshoffthegrid.com/camping-french-toast/}
+\renewcommand{\myFilename}{fotg-perfect-french-toast.png}
+\renewcommand{\myServings}{8 slices}
+\renewcommand{\myAuthor}{Fresh Off The Grid}
+\renewcommand{\myCookTime}{20 minutes}
+\renewcommand{\myPrepTime}{10 minutes}
+\renewcommand{\myTotalTime}{30 minutes}
+\renewcommand{\myPreamble}{
+  This recipe for classic French Toast is one you'll return to again and again!
+}
+
+\sbox{\myIngred}{
+  \begin{minipage}[t]{\the\dimexpr 0.35\textwidth}\raggedright
+    \textbf{Ingredients}
+    \begin{itemize}
+      \item ½ lb loaf bread
+      \item 3 eggs
+      \item 1 cup milk
+      \item 2 tablespoons sugar plus more for sprinkling
+      \item 1 teaspoon cinnamon
+      \item 1 teaspoon vanilla extract optional
+      \item ¼ teaspoon nutmeg optional
+      \item 4 tablespoons butter for pan
+      \item Maple syrup \& berries to top
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\myMethod}{
+  \begin{minipage}[t]{\the\dimexpr 0.55\textwidth - 2em}\raggedright
+    \textbf{Method}
+    \begin{enumerate}
+      \item Cut the bread into 3/4" - 1” thick slices.
+      \item Beat the eggs first in a bowl large enough to accommodate a slice of the
+        bread. Then add milk, cinnamon, nutmeg, vanilla, and sugar together, until
+        thoroughly mixed.
+      \item Heat 4 tablespoon butter in a skillet over medium heat.
+      \item Dip a slice of bread in the egg and milk mixture and let it soak for about
+        10 seconds on each side. Let the excess drip off, sprinkle each side with
+        additional sugar, and then fry it in the skillet until golden and crispy on
+        each side, about 3 minutes per side.
+      \item Repeat with the rest of the bread, adding more butter to the skillet as
+        needed.
+      \item Serve with maple syrup, fresh fruit, and a cup of hot coffee. Enjoy!
+    \end{enumerate}
+  \end{minipage}
+}
+
+\begin{tabular}{ll}
+  \begin{minipage}[t]{0.6\textwidth}\raggedright
+    \ifthenelse{\equal{\myTitleText}{}} {}%
+    {\textbf{\LARGE\bfseries \myTitleText} \vspace{2ex} \\ }
+    \ifthenelse{ \equal{\myPrepTime}{} } {}%
+      {\cmdSubtitle{PREP~TIME}{\myPrepTime}\quad}
+      \ifthenelse{ \equal{\myCookTime}{} } {}%
+      {\cmdSubtitle{COOK~TIME}{\myCookTime} \\ }
+      \ifthenelse{ \equal{\myTotalTime}{} } {}%
+    {\cmdSubtitle{TOTAL~TIME}{\myTotalTime}\quad}
+      \ifthenelse{ \equal{\myServings}{} } {}%
+      {\cmdSubtitle{SERVINGS}{\myServings} \\ }
+      \ifthenelse{ \equal{\myAuthor}{} } {}%
+      {\cmdSubtitle{AUTHOR}{\myAuthor} \\ }
+      \ifthenelse{ \equal{\myURLText}{} } {}%
+      {\cmdSubtitle{SOURCE}{\href{\myURLText}{\myTitleText} \vspace{1ex}} \\ }
+    \ifthenelse{ \equal{\myPreamble}{}} {}%
+      {\myPreamble}
+\end{minipage} &
+\begin{minipage}[t]{0.35\textwidth}
+  \adjustbox{valign=t}{\includegraphics[width=\textwidth]{\myFilename}}
+\end{minipage} \\
+\end{tabular}\vspace{5mm}
+
+\par\noindent\rule{0.95\textwidth}{0.4pt}\vspace{5mm}
+
+\begin{tabular}{ll}
+  \usebox{\myIngred} & \usebox{\myMethod} \\
+\end{tabular}
+
+\end{document}
