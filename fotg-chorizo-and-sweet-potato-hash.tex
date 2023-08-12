@@ -1,0 +1,90 @@
+% arara: testing
+% arara: xelatex
+% arara: xelatex
+% arara: latexmk: { options: ['-c'] }
+% vim: tw=86:
+\documentclass{newRecipe}
+\begin{document}
+
+\renewcommand{\myTitleText}{Chorizo and Sweet Potato Hash}
+\renewcommand{\myURLText}{https://www.freshoffthegrid.com/sweet-potato-chorizo-hash/}
+\renewcommand{\myFilename}{fotg-chorizo-and-sweet-potato-hash}
+\renewcommand{\myServings}{2 servings}
+\renewcommand{\myAuthor}{Fresh Off The Grid}
+\renewcommand{\myCookTime}{15 minutes}
+\renewcommand{\myPrepTime}{5 minutes}
+\renewcommand{\myTotalTime}{20 minutes}
+\renewcommand{\myPreamble}{
+  Sweet potato breakfast hash with crumbled chorizo sausage and diced scallions—this
+  super satisfying one skillet breakfast is a perfect way to greet a crisp autumn
+  morning.
+}
+
+\sbox{\myIngred}{
+  \begin{minipage}[t]{\the\dimexpr 0.35\textwidth}\raggedright
+    \textbf{Ingredients}
+    \begin{itemize}
+      \item 1 medium-size sweet potato peeled if desired
+      \item 2 green onions
+      \item 1 tablespoon oil
+      \item 2 oz crumbly chorizo or Soyrizo
+      \item 1 teaspoon maple syrup
+      \item ⅛ teaspoon cinnamon
+      \item 2 eggs
+      \item Salt to taste
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\myMethod}{
+  \begin{minipage}[t]{\the\dimexpr 0.55\textwidth - 2em}\raggedright
+    \textbf{Method}
+    \begin{enumerate}
+      \item Cut the sweet potato into ¼--½ inch dice and finely chop the green onions
+        (green + light green parts).
+      \item Heat the oil in a skillet over medium-high heat. Once the oil is
+        shimmering, add the sweet potato. Toss to coat, then cook for 5 minutes,
+        stirring occasionally, until just beginning to soften.
+      \item Add the green onions and cook for an additional 5 minutes.
+      \item Once the potatoes are tender, add the chorizo. Cook for 2 minutes or until
+        cooked through. Add the maple syrup and cinnamon, and season with salt as
+        needed. Stir to combine.
+      \item Make two wells in the hash and crack an egg into each. Cook the eggs to
+        your liking - we cover our skillet with a lid for about 2 minutes to make
+        sunny side up eggs.
+      \item Serve \& enjoy!
+    \end{enumerate}
+  \end{minipage}
+}
+
+\begin{tabular}{ll}
+  \begin{minipage}[t]{0.6\textwidth}\raggedright
+    \ifthenelse{\equal{\myTitleText}{}} {}%
+    {\textbf{\LARGE\bfseries \myTitleText} \vspace{2ex} \\ }
+    \ifthenelse{ \equal{\myPrepTime}{} } {}%
+      {\cmdSubtitle{PREP~TIME}{\myPrepTime}\quad}
+      \ifthenelse{ \equal{\myCookTime}{} } {}%
+      {\cmdSubtitle{COOK~TIME}{\myCookTime} \\ }
+      \ifthenelse{ \equal{\myTotalTime}{} } {}%
+    {\cmdSubtitle{TOTAL~TIME}{\myTotalTime}\quad}
+      \ifthenelse{ \equal{\myServings}{} } {}%
+      {\cmdSubtitle{SERVINGS}{\myServings} \\ }
+      \ifthenelse{ \equal{\myAuthor}{} } {}%
+      {\cmdSubtitle{AUTHOR}{\myAuthor} \\ }
+      \ifthenelse{ \equal{\myURLText}{} } {}%
+      {\cmdSubtitle{SOURCE}{\href{\myURLText}{\myTitleText} \vspace{1ex}} \\ }
+    \ifthenelse{ \equal{\myPreamble}{}} {}%
+      {\myPreamble}
+\end{minipage} &
+\begin{minipage}[t]{0.35\textwidth}
+  \adjustbox{valign=t}{\includegraphics[width=\textwidth]{images/\myFilename}}
+\end{minipage} \\
+\end{tabular}\vspace{5mm}
+
+\par\noindent\rule{0.95\textwidth}{0.4pt}\vspace{5mm}
+
+\begin{tabular}{ll}
+  \usebox{\myIngred} & \usebox{\myMethod} \\
+\end{tabular}
+
+\end{document}

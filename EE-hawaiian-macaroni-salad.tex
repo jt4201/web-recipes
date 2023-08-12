@@ -6,23 +6,28 @@
 \documentclass{newRecipe}
 \begin{document}
 
-% FIXME:
-\renewcommand{\myTitleText}{}
-\renewcommand{\myURLText}{}
-\renewcommand{\myFilename}{}
-\renewcommand{\myServings}{}
-\renewcommand{\myAuthor}{}
-\renewcommand{\myCookTime}{}
-\renewcommand{\myPrepTime}{}
-\renewcommand{\myTotalTime}{}
+\renewcommand{\myTitleText}{Hawaiian Macaroni Salad}
+\renewcommand{\myURLText}{https://www.emilyenchanted.com/hawaiian-macaroni-salad/}
+\renewcommand{\myFilename}{EE-hawaiian-macaroni-salad}
+\renewcommand{\myServings}{8 servings}
+\renewcommand{\myAuthor}{Emily Enchanted}
+\renewcommand{\myCookTime}{10 minutes}
+\renewcommand{\myPrepTime}{10 minutes}
+\renewcommand{\myTotalTime}{2 hours 20 minutes}
 \renewcommand{\myPreamble}{
+  If you're looking to add a touch of tropical flavor to your next meal, then look no
+  further than a classic Hawaiian Macaroni Salad.
 }
 
 \sbox{\myIngred}{
   \begin{minipage}[t]{\the\dimexpr 0.35\textwidth}\raggedright
     \textbf{Ingredients}
     \begin{itemize}
-      \item % TODO: 
+      \item 16 ounces macaroni
+      \item 2 ½ cups shredded carrots
+      \item 2 tablespoons shredded yellow onion
+      \item 2 tablespoons apple cider vinegar
+      \item 1 tablespoon green onions, chopped
     \end{itemize}
   \end{minipage}
 }
@@ -31,7 +36,11 @@
   \begin{minipage}[t]{\the\dimexpr 0.55\textwidth - 2em}\raggedright
     \textbf{Method}
     \begin{enumerate}
-      \item % TODO: 
+      \item 2 cups mayonnaise
+      \item ¼ cup milk
+      \item 1 tablespoon granulated sugar
+      \item ¼ teaspoon salt
+      \item ¼ teaspoon ground black pepper
     \end{enumerate}
   \end{minipage}
 }
@@ -44,8 +53,9 @@
       {\cmdSubtitle{PREP~TIME}{\myPrepTime}\quad}
       \ifthenelse{ \equal{\myCookTime}{} } {}%
       {\cmdSubtitle{COOK~TIME}{\myCookTime} \\ }
+      \cmdSubtitle{CHILL~TIME}{2 hours}\quad
       \ifthenelse{ \equal{\myTotalTime}{} } {}%
-    {\cmdSubtitle{TOTAL~TIME}{\myTotalTime}\quad}
+    {\cmdSubtitle{TOTAL~TIME}{\myTotalTime}\\}
       \ifthenelse{ \equal{\myServings}{} } {}%
       {\cmdSubtitle{SERVINGS}{\myServings} \\ }
       \ifthenelse{ \equal{\myAuthor}{} } {}%

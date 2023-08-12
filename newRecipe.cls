@@ -13,6 +13,7 @@
 \RequirePackage{adjustbox}
 \RequirePackage{hyperref}
 \RequirePackage{enumitem}
+\RequirePackage{xfrac}
 
 \pagestyle{empty}
 \setlength{\parindent}{0em}
@@ -40,7 +41,7 @@
 \setsansfont{Alegreya Sans Medium}
 \setmainfont{Alegreya Sans Medium}
 
-\graphicspath{ {./images/} }
+% \graphicspath{ {./images/} }
 
 \hypersetup{
   colorlinks,

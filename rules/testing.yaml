@@ -7,12 +7,18 @@ commands:
 - name: default conversion
   command: >
     @{
-      prefix = [ 'magick' ];
+      prefix = [ 'convert' ];
       idir = 'images/';
       ifile = idir.concat(getBasename(reference.fileName).concat('.webp'));
       if (missing(toFile(ifile))) {
-        ifile = 'images/blank.webp';
+        ifile = idir.concat(getBasename(reference.fileName).concat('.jpg'));
+        if (missing(toFile(ifile))) {
+          ifile = 'images/blank.webp';
+        };
       };
-      ofile = idir.concat(getBasename(reference.fileName).concat('.jpg'));
-      return getCommand(prefix, ifile, ofile);
+      ofile = idir.concat(getBasename(reference.fileName).concat('.pdf'));
+      if (missing(toFile(ofile))) {
+        return getCommand([ 'magick', 'convert', ifile, '-compress', 'jpeg',ofile] );
+      }
+      return true;
     }
