@@ -1,0 +1,18 @@
+!config
+identifier: testing
+name: testing
+authors:
+- John A Tucker
+commands:
+- name: default conversion
+  command: >
+    @{
+      prefix = [ 'magick' ];
+      idir = 'images/';
+      ifile = idir.concat(getBasename(reference.fileName).concat('.webp'));
+      if (missing(toFile(ifile))) {
+        ifile = 'images/blank.webp';
+      };
+      ofile = idir.concat(getBasename(reference.fileName).concat('.jpg'));
+      return getCommand(prefix, ifile, ofile);
+    }

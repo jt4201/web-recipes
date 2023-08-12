@@ -35,7 +35,8 @@
 \newcommand{\cmdSubtitle}[2]{%
 {\sffamily {\color{Gray} #1:} #2}}
 
-\setmainfont{TeX Gyre Bonum}
+% \setmainfont{TeX Gyre Bonum}
+\setmainfont{Alegreya Sans Medium}
 
 \graphicspath{ {./images/} }
 
