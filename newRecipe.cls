@@ -33,9 +33,11 @@
 
 
 \newcommand{\cmdSubtitle}[2]{%
-{\sffamily {\color{Gray} #1:} #2}}
+{{\color{Gray} #1:} #2}}
 
 % \setmainfont{TeX Gyre Bonum}
+% \setmainfont{Myriad Pro}
+\setsansfont{Alegreya Sans Medium}
 \setmainfont{Alegreya Sans Medium}
 
 \graphicspath{ {./images/} }
@@ -45,5 +47,10 @@
   urlcolor=blue,
   citecolor=black,
   linkcolor=ForestGreen
+}
+
+\setlist{%
+  nosep
+  ,itemsep=0.5ex
 }
 

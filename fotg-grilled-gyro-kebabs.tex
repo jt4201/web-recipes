@@ -1,0 +1,113 @@
+% arara: testing
+% arara: xelatex
+% arara: xelatex
+% vim: tw=86:
+\documentclass{newRecipe}
+\begin{document}
+
+% FIXME:
+\renewcommand{\myTitleText}{Grilled Gyro Kebabs}
+\renewcommand{\myURLText}{https://www.freshoffthegrid.com/grilled-gyro-kebabs/}
+\renewcommand{\myFilename}{fotg-grilled-gyro-kebabs.jpg}
+\renewcommand{\myServings}{2 people}
+\renewcommand{\myAuthor}{Fresh Off The Grid}
+\renewcommand{\myCookTime}{15 minutes}
+\renewcommand{\myPrepTime}{}
+\renewcommand{\myTotalTime}{}
+\renewcommand{\myPreamble}{
+}
+
+\sbox{\myIngred}{
+  \begin{minipage}[t]{\the\dimexpr 0.35\textwidth}\raggedright
+    \textbf{Ingredients}
+    \begin{itemize}
+      \item ½ pound lamb cut into bite sized pieces
+      \item 4 oz halloumi
+      \item 10 cherry tomatoes
+      \item 2 teaspoons oil
+      \item salt to taste
+      \item 4 flatbreads or large pitas
+      \item \textbf{Marinade}
+        \begin{itemize}
+          \item juice of ½ lemon (about 2 tablespoons)
+          \item 1 tablespoon olive oil
+          \item 1 teaspoon dried oregano
+          \item 1 clove garlic finely minced
+        \end{itemize}
+      \item \textbf{Lemon yogurt sauce}
+        \begin{itemize}
+          \item ½ cup plain Greek yogurt
+          \item juice of ½ lemon *
+          \item 1 clove garlic finely minced
+          \item ¼ teaspoon salt
+        \end{itemize}
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\myMethod}{
+  \begin{minipage}[t]{\the\dimexpr 0.55\textwidth - 2em}\raggedright
+    \textbf{Method}
+    \begin{enumerate}
+      \item \textbf{At home (or at least an hour before dinner)}
+        \begin{enumerate}
+          \item Stir together all marinade ingredients in a small bowl. Place the lamb
+            in a large zip-top bag or resealable container and pour in the marinade,
+            making sure the meat is completely coated. Meat should marinate at least
+            an hour and up to 48 hours.
+        \end{enumerate}
+      \item \textbf{At camp}
+        \begin{enumerate}
+          \item Fire up your grill or get your campfire going. You’ll be cooking the
+            kebabs over medium-high to high heat.
+          \item Build your skewers by threading the lamb, tomatoes, and halloumi on
+            their own skewers. Brush the tomato and cheese skewers with oil, and
+            season the lamb skewers with salt.
+          \item Once the grill has reached a medium-high heat, place all the skewers
+            on the grate. Grill, turning often, until the lamb has cooked through
+            (about 10 minutes), the tomatoes are soft and beginning to blister (about
+            4 minutes), and the halloumi is soft and grill marks form (about 3 minutes
+            on each side). Heat the flatbreads over the grill until warm.
+
+            \textit{If you'd like, you can also grill the lemon half until it begins to brown
+            and caramelize a bit before juicing for the marinade.}
+          \item In the meantime, make the yogurt sauce by combining the yogurt, lemon
+            juice, garlic, and salt.
+          \item Build your gyros by spreading some of the sauce on each flatbread and
+            topping with the lamb, tomatoes, and halloumi. Enjoy!
+        \end{enumerate}
+    \end{enumerate}
+  \end{minipage}
+}
+
+\begin{tabular}{ll}
+  \begin{minipage}[t]{0.6\textwidth}\raggedright
+    \ifthenelse{\equal{\myTitleText}{}} {}%
+    {\textbf{\LARGE\bfseries \myTitleText} \vspace{2ex} \\ }
+    \ifthenelse{ \equal{\myPrepTime}{} } {}%
+    {\cmdSubtitle{PREP~TIME}{\myPrepTime}\quad}
+      \ifthenelse{ \equal{\myCookTime}{} } {}%
+      {\cmdSubtitle{COOK~TIME}{\myCookTime} \\ }
+      \ifthenelse{ \equal{\myTotalTime}{} } {}%
+    {\cmdSubtitle{TOTAL~TIME}{\myTotalTime}\quad}
+      \ifthenelse{ \equal{\myServings}{} } {}%
+      {\cmdSubtitle{SERVINGS}{\myServings} \\ }
+      \ifthenelse{ \equal{\myAuthor}{} } {}%
+      {\cmdSubtitle{AUTHOR}{\myAuthor} \\ }
+      \ifthenelse{ \equal{\myURLText}{} } {}%
+      {\cmdSubtitle{SOURCE}{\href{\myURLText}{\myTitleText} \vspace{1ex}} \\ }
+    \ifthenelse{ \equal{\myPreamble}{}} {}%
+      {\myPreamble}
+\end{minipage} &
+\begin{minipage}[t]{0.35\textwidth}
+  \adjustbox{valign=t}{\includegraphics[width=\textwidth]{\myFilename}}
+\end{minipage} \\
+\end{tabular}\vspace{5mm}
+
+\par\noindent\rule{0.95\textwidth}{0.4pt}\vspace{5mm}
+
+\begin{tabular}{ll}
+  \usebox{\myIngred} & \usebox{\myMethod} \\
+\end{tabular}
+
+\end{document}

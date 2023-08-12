@@ -1,0 +1,98 @@
+% arara: testing
+% arara: xelatex
+% arara: xelatex
+% arara: latexmk: { options: ['-c'] }
+% vim: tw=86:
+\documentclass{newRecipe}
+\begin{document}
+
+% FIXME:
+\renewcommand{\myTitleText}{One Pot Chili Mac}
+\renewcommand{\myURLText}{https://www.freshoffthegrid.com/one-pot-chili-mac/}
+\renewcommand{\myFilename}{fotg-one-pot-chili-mac.jpg}
+\renewcommand{\myServings}{4 Servings}
+\renewcommand{\myAuthor}{Fresh Off The Grid}
+\renewcommand{\myCookTime}{15 minutes}
+\renewcommand{\myPrepTime}{5 minutes}
+\renewcommand{\myTotalTime}{20 minutes}
+\renewcommand{\myPreamble}{
+  Blending the best of both worlds, chili mac combines the smoky and spicy flavor of
+  chilli with the rich and creamy texture of mac \& cheese. It’s an all-American
+  camping classic and using this recipe, you can make it using just a single pot!
+}
+
+\sbox{\myIngred}{
+  \begin{minipage}[t]{\the\dimexpr 0.35\textwidth}\raggedright
+    \textbf{Ingredients}
+    \begin{itemize}
+      \item 1 tablespoon oil
+      \item 1 onion diced
+      \item ½ pound ground beef or Impossible plant-based ground
+      \item 2 tablespoons tomato paste
+      \item 2 tablespoons chili powder*
+      \item 1 tablespoon cumin
+      \item 1 teaspoon smoked paprika
+      \item 1 teaspoon sea salt
+      \item 2 cloves garlic minced
+      \item 8 oz elbow noodles
+      \item 1 (14.5oz) can kidney beans drained
+      \item 1 ½ cup broth beef or vegetable
+      \item ½ cup shredded cheddar cheese
+      \item \textbf{To serve}
+        \begin{itemize}
+          \item minced red onion, jalapeño, scallions
+        \end{itemize}
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\myMethod}{
+  \begin{minipage}[t]{\the\dimexpr 0.55\textwidth - 2em}\raggedright
+    \textbf{Method}
+    \begin{enumerate}
+      \item In a Dutch oven or other large pot with a lid, heat the oil over medium
+        heat. Add the onion and saute until translucent, 3-5 minutes.
+      \item Add the ground beef, tomato paste, chili powder, cumin, smoked paprika,
+        and salt. Using your spoon or spatula, break apart the meat and stir to coat
+        with the tomato paste and spices. Once browned, add the garlic and sauté for
+        30-60 seconds.
+      \item Add the noodles, kidney beans, and broth and stir. Cover with the lid and
+        cook for 5-6 minutes (unless the noodle packaging denotes a different cooking
+        time).
+      \item Remove the lid and stir in the cheese. Serve with your favorite chili
+        toppings.
+    \end{enumerate}
+  \end{minipage}
+}
+
+\begin{tabular}{ll}
+  \begin{minipage}[t]{0.6\textwidth}\raggedright
+    \ifthenelse{\equal{\myTitleText}{}} {}%
+    {\textbf{\LARGE\bfseries \myTitleText} \vspace{2ex} \\ }
+    \ifthenelse{ \equal{\myPrepTime}{} } {}%
+      {\cmdSubtitle{PREP~TIME}{\myPrepTime}\quad}
+      \ifthenelse{ \equal{\myCookTime}{} } {}%
+      {\cmdSubtitle{COOK~TIME}{\myCookTime} \\ }
+      \ifthenelse{ \equal{\myTotalTime}{} } {}%
+    {\cmdSubtitle{TOTAL~TIME}{\myTotalTime}\quad}
+      \ifthenelse{ \equal{\myServings}{} } {}%
+      {\cmdSubtitle{SERVINGS}{\myServings} \\ }
+      \ifthenelse{ \equal{\myAuthor}{} } {}%
+      {\cmdSubtitle{AUTHOR}{\myAuthor} \\ }
+      \ifthenelse{ \equal{\myURLText}{} } {}%
+      {\cmdSubtitle{SOURCE}{\href{\myURLText}{\myTitleText} \vspace{1ex}} \\ }
+    \ifthenelse{ \equal{\myPreamble}{}} {}%
+      {\myPreamble}
+\end{minipage} &
+\begin{minipage}[t]{0.35\textwidth}
+  \adjustbox{valign=t}{\includegraphics[width=\textwidth]{\myFilename}}
+\end{minipage} \\
+\end{tabular}\vspace{5mm}
+
+\par\noindent\rule{0.95\textwidth}{0.4pt}\vspace{5mm}
+
+\begin{tabular}{ll}
+  \usebox{\myIngred} & \usebox{\myMethod} \\
+\end{tabular}
+
+\end{document}
