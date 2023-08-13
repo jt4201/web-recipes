@@ -21,6 +21,8 @@
 \newsavebox{\myIngred}
 \newsavebox{\myMethod}
 \newsavebox{\myNotes}
+\newsavebox{\myTitle}
+\newsavebox{\myImage}
 
 \newcommand{\myTitleText}{}
 \newcommand{\myURLText}{}
@@ -52,6 +54,7 @@
 
 \setlist{%
   nosep
+  ,before=\raggedright
   ,itemsep=0.5ex
 }
 
