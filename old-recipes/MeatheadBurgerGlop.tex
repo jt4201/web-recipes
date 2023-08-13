@@ -1,0 +1,41 @@
+% vim: ft=tex:
+\documentclass[../web-recipes.tex]{subfiles}
+\begin{document}
+
+\pagestyle{empty}
+
+\renewcommand{\mytitle}{Meathead's Burger Glop (Amazing Ribs)}
+\renewcommand{\myurl}{https://amazingribs.com/tested-recipes/ground-meat/hamburger-secret-sauce/}
+
+\sbox{\ingredients}{%
+  \begin{minipage}[t]{0.35\linewidth}
+    {\sffamily\bfseries Ingredients}\vspace{0.5ex}
+    \begin{itemize}
+      \item \nicefrac{1}{2} cup mayonnaise
+      \item \nicefrac{1}{2} cup Kansas City Style Barbecue Sauce or ketchup
+      \item 3 tablespoons yellow ballpark style mustard
+      \item 1 tablespoon hot sauce (I use Tabasco Chipotle)
+      \item \nicefrac{1}{2} teaspoon  Morton Coarse Kosher Salt
+      \item \nicefrac{1}{4} teaspoon garlic powder
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\method}{%
+  \begin{minipage}[t]{0.55\linewidth}
+    {\sffamily\bfseries Method}\vspace{0.5ex}
+    \begin{enumerate}
+      \item Whisk everything together in a bowl until smooth.
+    \end{enumerate}
+  \end{minipage}
+}
+
+\myRecipe{Sauces}{\mytitle{}}
+
+% \addcontentsline{toc}{subsubsection}{\mytitle}
+%   \subsubsection*{\mytitle}
+  \begin{tabular}{l}
+    \usebox{\ingredients}\hspace{1.0em}\usebox{\method}\vspace{3ex}\\
+    \multicolumn{1}{c}{\small\ttfamily \url{\myurl}} \\
+  \end{tabular}
+\end{document}

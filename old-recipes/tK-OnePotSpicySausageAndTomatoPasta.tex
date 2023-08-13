@@ -1,0 +1,59 @@
+% arara: xelatex
+\documentclass[../web-recipes.tex]{subfiles}
+\begin{document}
+
+\renewcommand{\myAuthor}{theKitchn}
+\renewcommand{\myTitletext}{One-Pot Spicy Sausage and Tomato Pasta}
+\renewcommand{\myUrltext}{https://www.thekitchn.com/one-pot-spicy-sausage-and-tomato-pasta-23077666}
+\renewcommand{\myServingstext}{3 to 4}
+\renewcommand{\mycourse}{Mains}
+
+\hypersetup{
+  pdftitle = {\myTitletext},
+  pdfauthor = {\myAuthor}
+}
+
+\sbox{\Ingredients}{%
+  \begin{minipage}[t]{\the\dimexpr 0.4\textwidth - 2em}
+    \par\mySubtitle{Ingredients}
+    \par\begin{itemize}
+      \item 12 ounces smoked andouille sausage
+      \item \nicefrac{1}{2} medium fennel bulb
+      \item 4 \nicefrac{1}{2} cups water
+      \item 1 (14.5-ounce) can fire-roasted diced tomatoes
+      \item 12 ounces dried linguine pasta
+      \item 2 tablespoons olive oil
+      \item 2 teaspons kosher salt
+      \item \nicefrac{1}{2} teaspoon freshly ground black pepper
+      \item 1 cup fresh basil leaves, plus more for garnish
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\Instructions}{%
+  \begin{minipage}[t]{\the\dimexpr 0.6\textwidth - 2em}
+    \par\mySubtitle{Instructions}
+    \par\begin{enumerate}
+      \item Cut 12 ounces andouille sausage crosswise into \nicefrac{1}{2}-inch thick rounds and
+        thinly slice \nicefrac{1}{2} medium fennel bulb. Place both in a large, straight-sided
+        skillet. Add 4 \nicefrac{1}{2} cups water, 1 can fire-roasted diced tomatoes and their juices,
+        12 ounces dried linguine, 2 tablespoons olive oil, 2 teaspoons kosher salt, and
+        \nicefrac{1}{2} teaspoon black pepper.
+      \item Bring to a boil over high heat. Boil the mixture, stirring and turning the
+        pasta with tongs to prevent sticking, until the pasta is al dente and almost all
+        the liquid has evaporated, 8 to 10 minutes. Meanwhile, tear 1 cup fresh basil
+        leaves in half. In the last 2 minutes of cooking, add the basil.
+      \item Remove from the heat. Taste and season with more salt as needed. Garnish with
+        more fresh basil. 
+    \end{enumerate}
+  \end{minipage}
+}
+
+\begin{tabular}{ll}
+  \multicolumn{2}{l}{\myTitle{\mycourse}{\myTitletext\quad (\myAuthor)}} \\ \addlinespace[1mm]
+	\multicolumn{2}{l}{\myServings{\myServingstext}} \\
+  \multicolumn{2}{l}{\myUrl{\myUrltext}{\myTitletext}} \\ \addlinespace[3mm]
+  \usebox{\Ingredients} & \usebox{\Instructions} \\ \addlinespace[3mm]
+\end{tabular}
+
+\end{document}

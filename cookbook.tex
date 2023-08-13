@@ -1,0 +1,11 @@
+% arara: xelatex
+% arar: makeindex: { files: [recipelist], style: index_style.ist}
+% arara: xelatex
+% arara: xelatex
+% arara: latexmk: { options: ['-c'] }
+\documentclass{newRecipe}
+\begin{document}
+
+\clearpage\subfile{new-recipes/ByB-spicy-teriyaki-grilled-steak-kebabs}
+
+\end{document}

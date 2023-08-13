@@ -1,0 +1,52 @@
+\documentclass[../web-recipes.tex]{subfiles}
+\begin{document}
+
+\renewcommand{\myAuthor}{Taste of Home}
+\renewcommand{\myTitletext}{Jerk Chicken Wraps}
+\renewcommand{\myUrltext}{https://www.tasteofhome.com/recipes/jerk-chicken-wraps}
+\renewcommand{\myServingstext}{2}
+\renewcommand{\mycourse}{Mains}
+
+\hypersetup{
+  pdftitle = {\myTitletext},
+  pdfauthor = {\myAuthor}
+}
+
+\sbox{\Ingredients}{%
+  \begin{minipage}[t]{\the\dimexpr 0.4\textwidth - 2em}
+    \par\mySubtitle{Ingredients}
+    \par\begin{itemize}
+      \item \nicefrac{1}{2} pound boneless skinless chicken breast, cut into strips
+      \item \nicefrac{3}{4} teaspoon Caribbean jerk seasoning, divided
+      \item 2 teaspoons olive oil
+      \item \nicefrac{1}{4} cup cream cheese, softened
+      \item 2 flour tortillas (8 inches), warmed
+      \item \nicefrac{1}{4} cup mango chutney
+      \item 2 lettuce leaves
+      \item \nicefrac{1}{4} cup julienned sweet red pepper
+      \item 4 thin slices red onion
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\Instructions}{%
+  \begin{minipage}[t]{\the\dimexpr 0.6\textwidth - 2em}
+    \par\mySubtitle{Instructions}
+    \par\begin{enumerate}
+      \item Sprinkle chicken with \nicefrac{1}{2} teaspoon jerk seasoning. In a nonstick skillet over
+        medium heat, cook chicken in oil for 5-6 minutes or until meat is no longer pink.
+      \item In a small bowl, combine cream cheese and remaining jerk seasoning; spread
+        over tortillas. Spread chutney over cream cheese. Layer with the lettuce, chicken,
+        red pepper and onion. Roll up tightly.
+    \end{enumerate}
+  \end{minipage}
+}
+
+\begin{tabular}{ll}
+  \multicolumn{2}{l}{\myTitle{\mycourse}{\myTitletext\quad (\myAuthor)}} \\ \addlinespace[1mm]
+	\multicolumn{2}{l}{\myServings{\myServingstext}} \\
+  \multicolumn{2}{l}{\myUrl{\myUrltext}{\myTitletext}} \\ \addlinespace[3mm]
+  \usebox{\Ingredients} & \usebox{\Instructions} \\ \addlinespace[3mm]
+\end{tabular}
+
+\end{document}

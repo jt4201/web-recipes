@@ -1,0 +1,60 @@
+% vim: ft=tex:
+\documentclass[../web-recipes.tex]{subfiles}
+\begin{document}
+
+\pagestyle{empty}
+
+\renewcommand{\mytitle}{Quick Pickled Red Onions (Healthful Ideas)}
+\renewcommand{\myurl}{https://thehealthfulideas.com/quick-pickled-red-onions/}
+
+\sbox{\ingredients}{%
+  \begin{minipage}[t]{\the\dimexpr 0.35\linewidth - 1em\relax}
+    {\sffamily\bfseries Ingredients}\vspace{0.5ex}
+    \begin{itemize}
+      \item 2 medium red onions, peeled and thinly sliced
+      \item \nicefrac{1}{2} cup water
+      \item \nicefrac{1}{4} cup champagne vinegar
+      \item \nicefrac{1}{4} cup sherry vinegar
+      \item \nicefrac{1}{2} tsp sea salt or Himalayan pink salt
+      \item \textbf{optional}
+        \begin{itemize}
+          \item 1 tsp maple syrup
+          \item \nicefrac{1}{2} tsp crushed red pepper flakes
+          \item \nicefrac{1}{2} tsp mustard seeds
+        \end{itemize}
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\method}{%
+  \begin{minipage}[t]{\the\dimexpr 0.6\linewidth - 1em\relax}
+    {\sffamily\bfseries Method}\vspace{0.5ex}
+    \begin{enumerate}
+      \item Start by peeling and slicing your onions. I like to slice them very thin but it’s up to
+        you, if you have thicker slices, they will have a nice crunch.
+      \item Slice your onion in half and thinly slice them vertically not horizontally, this will
+        give you shorter pieces. I like to cut out the middle part to avoid having big chunks of
+        pickle but this is optional. See post for photos.
+      \item Tightly pack the sliced onions into a 2 cup heat proof mason jar and set aside.
+      \item Add the water, champagne vinegar, sherry vinegar, maple syrup, sea salt, crushed red
+        pepper flakes, and mustard seeds into a small pot. Stir and bring to a boil. Once it’s
+        boiling, take it off the heat and pour it over the onion to the top.
+      \item Some of the onions might stick out, use a spoon to gently push them down to get them
+        into the liquid, careful not to spill over, it’s very hot. The onions will shrink and wilt
+        down a little as they sit so don’t stress it if some are sticking out too much.
+      \item Let the onions sit in the liquid on the counter until they’ve cooled down or for at
+        least 30 mins.
+      \item Once completely cool, cover with a tight lid and store in the fridge for up to 2 weeks.
+    \end{enumerate}
+  \end{minipage}
+}
+
+\myRecipe{Condiments}{\mytitle{}}
+
+% \addcontentsline{toc}{subsubsection}{\mytitle}
+%   \subsubsection*{\mytitle}
+  \begin{tabular}{l}
+    \usebox{\ingredients}\hspace{1em}\usebox{\method}\vspace{3ex}\\
+    \multicolumn{1}{c}{\small\ttfamily \url{\myurl}} \\
+  \end{tabular}
+\end{document}

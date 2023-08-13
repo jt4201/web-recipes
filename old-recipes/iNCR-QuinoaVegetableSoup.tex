@@ -1,0 +1,60 @@
+% arara: xelatex
+\documentclass[../web-recipes.tex]{subfiles}
+\begin{document}
+
+\renewcommand{\myAuthor}{It's Not Complicated}
+\renewcommand{\myTitletext}{Quinoa Vegetable Soup}
+\renewcommand{\myUrltext}{https://itsnotcomplicatedrecipes.com/quinoa-vegetable-soup/}
+\renewcommand{\myServingstext}{4}
+\renewcommand{\mycourse}{Soups}
+
+\hypersetup{
+  pdftitle = {\myTitletext},
+  pdfauthor = {\myAuthor}
+}
+
+\sbox{\Ingredients}{%
+  \begin{minipage}[t]{\the\dimexpr 0.4\textwidth - 2em}
+    \par\mySubtitle{Ingredients}
+    \par\begin{itemize}
+      \item 1 tablespoon extra virgin olive oil
+      \item 1 medium red onion – finely chopped
+      \item 3 medium carrots – finely chopped
+      \item 2 ribs celery – finely chopped
+      \item 2 cloves garlic – finely chopped
+      \item 2 teaspoon ground cumin
+      \item 2 teaspoon smoked paprika
+      \item 2 teaspoon chipotle in adobo sauce
+      \item 400 g (14 oz) crushed tinned tomatoes
+      \item \nicefrac{1}{3} cup (70 g) quinoa – rinsed
+      \item 420 g (15 oz) canned black beans – rinsed and drained
+      \item 4 cups (1 litre) vegetable stock
+      \item 1 cup (150 g) corn kernels – fresh, frozen or canned
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\Instructions}{%
+  \begin{minipage}[t]{\the\dimexpr 0.6\textwidth - 2em}
+    \par\mySubtitle{Instructions}
+    \par\begin{enumerate}
+      \item In a large saucepan, heat the olive oil over low to medium heat. Cook onion,
+        carrot and celery for 5-7 minutes, until soft.
+      \item Add the garlic, ground cumin, smoked paprika and chipotle in adobo sauce.
+      \item Cook, stirring for a minute or two until fragrant. Add tomatoes, quinoa, black
+        beans and corn to the pan.
+      \item Add the stock and increase the heat and bring the mixture to a boil.
+      \item Lower the heat and simmer for about 15 minutes, or until the quinoa is tender.
+      \item Serve the Quinoa and Vegetable Soup with your choice of toppings.
+    \end{enumerate}
+  \end{minipage}
+}
+
+\begin{tabular}{ll}
+  \multicolumn{2}{l}{\myTitle{\mycourse}{\myTitletext\quad (\myAuthor)}} \\ \addlinespace[1mm]
+	\multicolumn{2}{l}{\myServings{\myServingstext}} \\
+  \multicolumn{2}{l}{\myUrl{\myUrltext}{\myTitletext}} \\ \addlinespace[3mm]
+  \usebox{\Ingredients} & \usebox{\Instructions} \\ \addlinespace[3mm]
+\end{tabular}
+
+\end{document}

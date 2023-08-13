@@ -1,0 +1,42 @@
+% vim: ft=tex:
+\documentclass[../web-recipes.tex]{subfiles}
+\begin{document}
+
+\renewcommand{\mytitle}{Meathead's Memphis Dust (Amazing Ribs)}
+\renewcommand{\myurl}{https://amazingribs.com/tested-recipes/spice-rubs-and-pastes/meatheads-memphis-dust-rub-recipe/}
+
+\sbox{\ingredients}{%
+  \begin{minipage}[t]{0.32\textwidth}
+    {\sffamily\bfseries Ingredients}\vspace{0.5ex}
+    \begin{itemize}
+      \item \nicefrac{3}{4} cup firmly packed dark brown sugar
+      \item \nicefrac{3}{4} cup white sugar
+      \item \nicefrac{1}{2} cup American paprika
+      \item \nicefrac{1}{4} cup garlic powder
+      \item 2 tablespoons ground black pepper
+      \item 2 tablespoons ground ginger powder
+      \item 2 tablespoons onion powder
+      \item 2 teaspoons rosemary powder
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\method}{%
+  \begin{minipage}[t]{0.55\textwidth}
+    {\sffamily\bfseries Method}\vspace{0.5ex}
+    \begin{enumerate}
+      \item Add all spices to your large bowl and add sugars. Combine with a whisk, or toss all
+        ingredients into a large zip top bag and shake, shake, shake!
+    \end{enumerate}
+  \end{minipage}
+}
+
+\myRecipe{Spice Blends}{\mytitle{}}
+
+% \addcontentsline{toc}{subsubsection}{\mytitle}
+%   \subsubsection*{\mytitle}
+  \begin{tabular}{l}
+    \usebox{\ingredients}\quad\usebox{\method}\vspace{3ex}\\
+    \multicolumn{1}{c}{\small\ttfamily \url{\myurl}} \\
+  \end{tabular}
+\end{document}

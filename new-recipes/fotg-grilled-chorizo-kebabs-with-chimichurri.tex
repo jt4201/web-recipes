@@ -1,0 +1,103 @@
+% arara: testing
+% arara: xelatex
+% arara: xelatex
+% arara: latexmk: { options: ['-c'] }
+% vim: tw=86:
+\documentclass{newRecipe}
+\begin{document}
+
+\renewcommand{\myTitleText}{Grilled Chorizo Kebabs with Chimichurri}
+\renewcommand{\myURLText}{https://www.freshoffthegrid.com/grilled-chorizo-kebabs/}
+\renewcommand{\myFilename}{fotg-grilled-chicken-skewers-with-veggies}
+\renewcommand{\myServings}{2 servings}
+\renewcommand{\myAuthor}{Fresh Off The Grid}
+\renewcommand{\myCookTime}{10 minutes}
+\renewcommand{\myPrepTime}{5 minutes}
+\renewcommand{\myTotalTime}{15 minutes}
+\renewcommand{\myPreamble}{
+  Inspired by Argentine flavors, this grilled chorizo kebab is a quick and easy
+  camping dinner that’s best enjoyed over an open fire.
+}
+
+\hypersetup{
+  pdfauthor={\myAuthor},
+  pdftitle={\myTitleText}
+}
+
+\sbox{\myIngred}{
+  \begin{minipage}[t]{\the\dimexpr0.35\textwidth}
+    \textbf{Ingredients}
+    \begin{itemize}
+      \item ½ pound chorizo cut into bite sized pieces *see note below
+      \item 10 cherry tomatoes
+      \item 1 medium bell pepper cut into bite sized pieces
+      \item 1 small onion cut into bite sized pieces
+      \item ½ baguette sliced in half lengthwise
+      \item olive oil
+      \item Chimichurri
+        \begin{itemize}
+          \item ⅓ cup fresh flat-leaf (Italian) parsley
+          \item 2 teaspoons dried oregano
+          \item 1 clove garlic
+          \item 1 teaspoon salt
+          \item ½ teaspoon red pepper flakes
+          \item 1 tablespoon red wine vinegar
+          \item ¼ cup olive oil
+        \end{itemize}
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\myMethod}{
+  \begin{minipage}[t]{\the\dimexpr0.6\textwidth-2em}
+    \textbf{Method}
+    \begin{enumerate}
+      \item FOR THE CHIMICHURRI (AT HOME)
+        \begin{enumerate}
+          \item Place the parsley, oregano, garlic, salt, red pepper flakes, and red wine vinegar into the bowl of a small food processor and pulse a few times. Then, with the food processor running, add the olive oil through the top in a steady stream until the chimichurri reaches the consistency you'd like. Taste and season as necessary - there are no rules to chimichurri so feel free to play around with it to make it more herby, spicier, or tangier as you feel fit!
+        \end{enumerate}
+      \item FOR THE KEBABS (AT CAMP)
+        \begin{enumerate}
+          \item Fire up your grill or get your campfire going. You’ll be cooking the kebabs over medium-high to high heat.
+          \item Build your skewers by threading the chorizo and tomatoes on their own skewers, and the bell pepper and onion together onto a skewer. Brush the skewers with a touch of olive oil and season with salt.
+          \item Once the grill has reached a medium-high heat, place all the skewers on the grate. Grill, turning often, until the chorizo has cooked through (about 10 minutes), the onions and bell peppers are cooked through (about 10 minutes), and the tomatoes are soft and beginning to blister (about 4 minutes). Brush cut sides of the baguette slices with olive oil and place over the fire until toasted and grill marks form (about 5 minutes).
+          \item Remove skewers from the grill and serve with the chimichurri sauce.
+        \end{enumerate}
+    \end{enumerate}
+  \end{minipage}
+}
+
+\newcommand{\cmdSubText}[2]{%
+  \ifthenelse{\equal{#2}{}} {} {\cmdSubtitle{#1}{#2}}
+}
+
+\sbox{\myTitle}{
+  \begin{minipage}[t]{0.6\textwidth}\raggedright%
+    \textbf{\LARGE\bfseries \myTitleText} \vspace{2ex} \\
+    \cmdSubText{PREP~TIME}{\myPrepTime\quad}
+    \cmdSubText{COOK~TIME}{\myCookTime\quad}
+    \cmdSubText{TOTAL~TIME}{\myTotalTime\quad \\}
+    \cmdSubText{SERVINGS}{\myServings\vspace{0.5ex} \\}
+    \cmdSubText{AUTHOR}{\myAuthor\\}
+    \cmdSubText{SOURCE}{\href{\myURLText}{\myTitleText} \vspace{1ex} \\}
+    \myPreamble{}
+  \end{minipage}
+}
+
+\sbox{\myImage}{
+  \begin{minipage}[t]{0.35\textwidth}
+    \adjustbox{valign=t}{\includegraphics[width=\textwidth]{images/\myFilename}}
+  \end{minipage}
+}
+
+\framebox{
+\begin{tabular}{@{}llllll@{}}
+  \multicolumn{4}{@{}l@{}}{\usebox{\myTitle}} &
+  \multicolumn{2}{@{}l@{}}{\usebox{\myImage}} \\
+  \multicolumn{6}{@{}l@{}}{} \rule{0.95\linewidth}{0.4pt}\vspace{2ex} \\ 
+  \multicolumn{2}{@{}l@{}}{\usebox{\myIngred}} &
+  \multicolumn{4}{@{}l@{}}{\usebox{\myMethod}} \\
+\end{tabular}
+}
+
+\end{document}

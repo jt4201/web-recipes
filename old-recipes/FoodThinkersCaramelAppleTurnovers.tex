@@ -1,0 +1,69 @@
+% vim: ft=tex:
+\documentclass[../web-recipes.tex]{subfiles}
+\begin{document}
+
+\pagestyle{empty}
+
+\renewcommand{\mytitle}{Caramel Apple Turnovers (Food Thinkers)}
+\renewcommand{\myurl}{https://www.foodthinkers.com/caramel-apple-turnovers/}
+
+\sbox{\ingredients}{%
+  \begin{minipage}[t]{0.35\textwidth}
+    {\sffamily\bfseries Ingredients}\vspace{0.5ex}
+    \begin{description}
+      \item[For filling]\hfill
+        \begin{itemize}
+          \item 2 medium Granny Smith apples, peeled and diced (about 3 cups)
+          \item 3 tablespoons unsalted butter
+          \item \nicefrac{1}{2} cup dark brown sugar
+          \item 1 teaspoon vanilla extract
+          \item 1 teaspoon lemon juice
+          \item \nicefrac{3}{4} teaspoon ground cinnamon
+          \item \nicefrac{1}{4} teaspoon kosher salt
+        \end{itemize}
+      \item[For turnovers]\hfill
+        \begin{itemize}
+          \item 2 sheets frozen puff pastry (17 ounce package), thawed (keep cold until use)
+          \item 1 egg
+          \item 1 tablespoon water
+          \item Turbinado sugar for sprinkling
+        \end{itemize}
+    \end{description}
+  \end{minipage}
+}
+
+\sbox{\method}{%
+  \begin{minipage}[t]{0.55\textwidth}
+    {\sffamily\bfseries Method}\vspace{0.5ex}
+    \begin{enumerate}
+      \item Combine filling ingredients in a medium saucepan and cook over medium heat, stirring
+        occasionally, until apples are tender and syrup is thick, about 10 minutes.
+      \item Transfer apple mixture to a plate and chill in the refrigerator until cool to the touch,
+        20-30 minutes.
+      \item Scramble egg and water in a small bowl.
+      \item Place 1 sheet of puff pastry on a clean cutting board; reserve second sheet in the
+        refrigerator.
+      \item Divide pastry into 4 equal squares. Spoon 2 tablespoons apple mixture onto the center of
+        each square.
+      \item Brush the edges of each square with egg wash. Fold pastry diagonally over apple mixture
+        and seal the edges with a fork.
+      \item Place turnovers on a plate and refrigerate while preparing remaining turnovers. Repeat
+        steps 4-6 with second sheet of puff pastry.
+      \item Select AIRFRY/325°F/SUPER CONVECTION/20 minutes and press START to preheat oven.
+      \item Place turnovers on airfry rack. Brush tops with egg wash and sprinkle with turbinado
+        sugar. Make 3 small slits in each turnover.
+      \item Cook in rack position 4 until puffed and golden brown, about 20 minutes. Serve warm or
+        at room temperature.
+    \end{enumerate}
+  \end{minipage}
+}
+
+\myRecipe{Desserts}{\mytitle{}}
+
+% \addcontentsline{toc}{subsubsection}{\mytitle}
+%   \subsubsection*{\mytitle}
+  \begin{tabular}{l}
+    \usebox{\ingredients}\qquad\usebox{\method}\vspace{3ex}\\
+    \multicolumn{1}{c}{\small\ttfamily \url{\myurl}} \\
+  \end{tabular}
+\end{document}

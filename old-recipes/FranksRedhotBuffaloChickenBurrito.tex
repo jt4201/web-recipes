@@ -1,0 +1,52 @@
+% vim: ft=tex:
+\documentclass[../web-recipes.tex]{subfiles}
+\begin{document}
+
+\renewcommand{\mytitle}{Frank's RedHot® Buffalo Chicken Burrito (Franks)}
+\renewcommand{\myurl}{https://www.franksredhot.com/en-us/recipes/franks-redhot-buffalo-chicken-burrito}
+
+\sbox{\ingredients}{%
+  \begin{minipage}[t]{0.32\textwidth}
+    {\sffamily\bfseries Ingredients}\vspace{0.5ex}
+    \begin{itemize}
+      \item \nicefrac{2}{3} cup Frank's RedHot® Buffalo Wings Hot Sauce, divided
+      \item 4 boneless skinless chicken breasts
+      \item 2 cups cooked Spanish rice
+      \item 1 cup shredded Monterey Jack cheese
+      \item 1 cup shredded lettuce
+      \item \nicefrac{1}{4} cup blue cheese crumbles
+      \item 4 (10-inch) flour tortillas, warmed
+      \item Corn \& Black Bean Salsa
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\method}{%
+  \begin{minipage}[t]{0.55\textwidth}
+    {\sffamily\bfseries Method}\vspace{0.5ex}
+    \begin{enumerate}
+      \item PLACE chicken and \nicefrac{1}{3} cup of the RedHot Buffalo Wing Sauce in large
+        resealable plastic bag. Refrigerate at least 30 minutes or overnight
+        for more flavor. Remove from marinade and discard any remaining
+        marinade in bag.
+      \item GRILL chicken 6 to 8 minutes per side or until cooked through.
+        Slice chicken into thin strips; toss with remaining \nicefrac{1}{3} cup Buffalo
+        Wings Sauce.
+      \item ARRANGE chicken, rice, Monterey Jack cheese, lettuce and blue
+        cheese down center of tortillas, dividing evenly. Top each with about
+        \nicefrac{1}{3} cup of the Corn and Black Bean Salsa. Fold top and bottom of each
+        tortilla over filling. Fold sides over tightly to enclose filling. Cut
+        in half to serve.
+    \end{enumerate}
+  \end{minipage}
+}
+
+\myRecipe{Sandwiches}{\mytitle{}}
+
+% \addcontentsline{toc}{subsubsection}{\mytitle}
+%   \subsubsection*{\mytitle}
+  \begin{tabular}{l}
+    \usebox{\ingredients}\quad\usebox{\method}\vspace{3ex}\\
+    \multicolumn{1}{c}{\small\ttfamily \url{\myurl}} \\
+  \end{tabular}
+\end{document}

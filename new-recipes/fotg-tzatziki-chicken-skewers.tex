@@ -1,0 +1,111 @@
+% arara: testing
+% arara: xelatex
+% arara: xelatex
+% arara: latexmk: { options: ['-c'] }
+% vim: tw=86:
+\documentclass{newRecipe}
+\begin{document}
+
+\renewcommand{\myTitleText}{Tzatziki Chicken Skewers}
+\renewcommand{\myURLText}{https://www.freshoffthegrid.com/tzatziki-chicken-skewers/}
+\renewcommand{\myFilename}{fotg-tzatziki-chicken-skewers}
+\renewcommand{\myServings}{2 servings}
+\renewcommand{\myAuthor}{Fresh Off The Grid}
+\renewcommand{\myCookTime}{10 minutes}
+\renewcommand{\myPrepTime}{30 minutes}
+\renewcommand{\myTotalTime}{40 minutes}
+\renewcommand{\myPreamble}{
+  These Grilled Chicken Skewers with Tzatziki Sauce are an easy camping meal to grill
+  over the campfire! Many of the components can be prepped ahead of time so that the
+  meal comes together without any fuss.
+}
+
+\hypersetup{
+  pdfauthor={\myAuthor},
+  pdftitle={\myTitleText}
+}
+
+\sbox{\myIngred}{
+  \begin{minipage}[t]{\the\dimexpr0.35\textwidth}
+    \textbf{Ingredients}
+    \begin{itemize}
+      \item 2 tablespoons olive oil
+      \item 1 lemon juiced
+      \item 1 tablespoon dried oregano
+      \item ½ teaspoon garlic powder
+      \item ½ teaspoon salt
+      \item 4 boneless skinless chicken thighs cut into 1-inch pieces
+      \item 1 small zucchini sliced into ¼-inch moons
+      \item 1 red onion chopped
+      \item 14 cherry tomatoes
+      \item ½ cup prepared tzatziki store-bought or recipe as follows
+      \item Tzatziki Sauce
+        \begin{itemize}
+          \item ½ cup Greek yogurt
+          \item ¼ cucumber seeds removed \& chopped fine
+          \item 1 tablespoon chopped fresh mint
+          \item 2 cloves garlic finely minced
+          \item ¼ teaspoon salt
+        \end{itemize}
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\myMethod}{
+  \begin{minipage}[t]{\the\dimexpr0.6\textwidth-2em}
+    \textbf{Method}
+    \begin{enumerate}
+      \item Mix the olive oil, lemon juice, oregano, garlic powder, and ½ teaspoon
+        salt together in a bowl. Add the chicken and toss to coat. Set aside for 30
+        minutes (up to 2 hours) to marinate, tossing occasionally.
+      \item To make the tzatziki (can be made ahead):
+        \begin{enumerate}
+          \item Remove excess moisture from the chopped cucumber by blotting with a towel.
+            Place the cucumber, Greek yogurt, mint, garlic, and salt in a small bowl and
+            mix to combine.
+          \item Cover \& store in your cooler if making ahead of time.
+        \end{enumerate}
+      \item Prepare a grill or campfire for grilling.
+      \item Thread the chicken and vegetables onto skewers.
+      \item Once the grill is ready, place the skewers on the grill grate and grill,
+        turning every few minutes so all sides cook evenly. The chicken will need to
+        cook 3--5 minutes per side, and the veggies will need roughly 10--12 minutes.
+      \item Remove skewers. Serve with tzatziki for dipping. Enjoy!
+    \end{enumerate}
+  \end{minipage}
+}
+
+\newcommand{\cmdSubText}[2]{%
+  \ifthenelse{\equal{#2}{}} {} {\cmdSubtitle{#1}{#2}}
+}
+
+\sbox{\myTitle}{
+  \begin{minipage}[t]{0.6\textwidth}\raggedright%
+    \textbf{\LARGE\bfseries \myTitleText} \vspace{2ex} \\
+    \cmdSubText{PREP~TIME}{\myPrepTime\quad}
+    \cmdSubText{COOK~TIME}{\myCookTime\quad}
+    \cmdSubText{TOTAL~TIME}{\myTotalTime\quad \\}
+    \cmdSubText{SERVINGS}{\myServings\vspace{0.5ex} \\}
+    \cmdSubText{AUTHOR}{\myAuthor\\}
+    \cmdSubText{SOURCE}{\href{\myURLText}{\myTitleText} \vspace{1ex} \\}
+    \myPreamble{}
+  \end{minipage}
+}
+
+\sbox{\myImage}{
+  \begin{minipage}[t]{0.35\textwidth}
+    \adjustbox{valign=t}{\includegraphics[width=\textwidth]{images/\myFilename}}
+  \end{minipage}
+}
+
+\framebox{
+\begin{tabular}{@{}llllll@{}}
+  \multicolumn{4}{@{}l@{}}{\usebox{\myTitle}} &
+  \multicolumn{2}{@{}l@{}}{\usebox{\myImage}} \\
+  \multicolumn{6}{@{}l@{}}{} \rule{0.95\linewidth}{0.4pt}\vspace{2ex} \\ 
+  \multicolumn{2}{@{}l@{}}{\usebox{\myIngred}} &
+  \multicolumn{4}{@{}l@{}}{\usebox{\myMethod}} \\
+\end{tabular}
+}
+
+\end{document}

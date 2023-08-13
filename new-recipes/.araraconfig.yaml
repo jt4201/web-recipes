@@ -1,0 +1,4 @@
+!config
+paths:
+  - '@{application.workingDirectory}/rules'
+  - '../rules'

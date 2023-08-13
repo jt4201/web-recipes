@@ -1,0 +1,60 @@
+% vim: ft=tex:
+\documentclass[../web-recipes.tex]{subfiles}
+\begin{document}
+
+\pagestyle{empty}
+
+\renewcommand{\mytitle}{Basic Sweet \& Tangy BBQ Sauce (The Kitchn)}
+\renewcommand{\myurl}{https://www.thekitchn.com/recipe-basic-sweet-tangy-bbq-sauce-recipes-from-the-kitchn-83487}
+
+\myRecipe{Sauces!BBQ}{\mytitle{}}
+
+\sbox{\ingredients}{%
+  \begin{minipage}[t]{\the\dimexpr 0.35\linewidth - 1em\relax}
+    {\sffamily\bfseries Ingredients}\vspace{0.5ex}
+    \begin{itemize}
+      \item \nicefrac{1}{2} tablespoon olive oil
+      \item \nicefrac{1}{4} medium red onion, diced
+      \item 1 clove garlic, minced
+      \item 1 tablespoon tomato paste
+      \item \nicefrac{1}{2} teaspoon cumin
+      \item 1 can (8-ounce) can tomato puree or sauce (no spices)
+      \item 2 tablespoons packed brown sugar
+      \item 1 tablespoon cider vinegar
+      \item 1 tablespoon molasses
+      \item 2 teaspoons Worcestershire sauce
+      \item 1 teaspoon Dijon or brown mustard
+      \item 1 teaspoon salt
+      \item Freshly ground pepper
+      \item \textbf{optional}
+        \begin{itemize}
+          \item 1 teaspoon liquid smoke
+          \item A few dashes hot sauce
+        \end{itemize}
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\method}{%
+  \begin{minipage}[t]{\the\dimexpr 0.6\linewidth - 1em\relax}
+    {\sffamily\bfseries Method}\vspace{0.5ex}
+    \begin{enumerate}
+      \item Heat a splash of olive oil in a medium sauce pan over medium heat. Add the onions and
+        cook until soft, about 5 minutes. Add the garlic and cook for another minute or two.
+      \item Reduce the heat to low and mix in the tomato paste and cumin. Add the tomato puree and
+        all remaining ingredients. Stir until combined and simmer for 5 to 10 minutes, until
+        thickened to your liking. Taste and adjust salt, pepper, or other seasonings as you see fit.
+      \item Transfer the sauce to a blender or use an immersion blender to blend until smooth. Add
+        more water, a tablespoon or two at a time, if you prefer a thinner sauce.
+      \item This sauce will keep refrigerated for about 2 weeks or can be frozen for up to 3 months.
+    \end{enumerate}
+  \end{minipage}
+}
+
+
+  \begin{tabular}{l}
+    \usebox{\ingredients}\hspace{1em}\usebox{\method}\vspace{3ex}\\
+    \multicolumn{1}{c}{\small\ttfamily \url{\myurl}} \\
+  \end{tabular}
+
+\end{document}

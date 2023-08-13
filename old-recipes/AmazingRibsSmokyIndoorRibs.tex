@@ -1,0 +1,43 @@
+% vim: ft=tex:
+\documentclass[../web-recipes.tex]{subfiles}
+\begin{document}
+
+\pagestyle{empty}
+
+\renewcommand{\mytitle}{Smoky Indoor Ribs (Amazing Ribs)}
+\renewcommand{\myurl}{https://amazingribs.com/tested-recipes/pork-ribs-recipes/smoky-indoor-ribs-recipe/}
+\renewcommand{\mycourse}{Mains!Ribs}
+
+\sbox{\ingredients}{%
+  \begin{minipage}[t]{\the\dimexpr 0.35\linewidth - 1em\relax}
+    {\sffamily\bfseries Ingredients}\vspace{0.5ex}
+    \begin{itemize}
+      \item 1 slab ribs (any cut)
+      \item \nicefrac{1}{2} cup liquid smoke
+      \item 2 teaspoons Morton Coarse Kosher Salt
+      \item 3 tablespoons smoked Meathead's Memphis Dust
+      \item 1 cup smoky barbecue sauce
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\method}{%
+  \begin{minipage}[t]{\the\dimexpr 0.6\linewidth - 1em\relax}
+    {\sffamily\bfseries Method}\vspace{0.5ex}
+    \begin{enumerate}
+      \item \textbf{Prep}. Remove the membrane from the back of the ribs and trim excess fat. Mix \nicefrac{1}{2} cup (118.3 ml) water with the liquid smoke, and marinate the meat in this for an hour. I usually cut the slab in half, put each half in a 1 gallon (1.9 L) zipper bag, and divide the marinade between the two.
+      \item \textbf{Cook}. Season both sides with salt and then Meathead's Memphis Dust. Wrap the meat in foil. Put it in a pan (to catch leaks) and cook in 225°F (107.2°C) oven for 2 hours. This makes the meat very tender, but not mushy.
+      \item \textbf{Roast}. Now take the meat out of the foil, then put it back in the oven, meaty side up, without the foil to dry roast for another 2 hours at 225°F (107.2°C). This will firm the bark.
+      \item \textbf{Broil}. Read this article to see how to tell when the meat is ready. I use the bend test to make sure it is done. When it is, turn the slab meaty side down. Slather the bone side with the sauce, turn the oven to broil and put the meat under the broiler so it is aligned with the heat source. Broil for 5 minutes with the oven door partially open or until the sauce bubbles, watching closely to make sure it doesn't burn. Leave the door open so the oven cools a bit and to make sure the thermostat doesn't turn off the broiler. Repeat for the meaty side. This direct concentrated heat caramelizes the sugar and creates more deeper flavor. Serve.
+    \end{enumerate}
+  \end{minipage}
+}
+
+\myRecipe{Mains!Ribs}{\mytitle{}}
+
+  \begin{tabular}{l}
+    \usebox{\ingredients}\hspace{1em}\usebox{\method}\vspace{3ex}\\
+    \multicolumn{1}{c}{\small\ttfamily \url{\myurl}} \\
+  \end{tabular}
+
+\end{document}

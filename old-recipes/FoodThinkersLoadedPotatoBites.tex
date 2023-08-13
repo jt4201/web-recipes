@@ -1,0 +1,65 @@
+% vim: ft=tex:
+\documentclass[../web-recipes.tex]{subfiles}
+\begin{document}
+
+\pagestyle{empty}
+
+\renewcommand{\mytitle}{Loaded Potato Bites (Food Thinkers)}
+\renewcommand{\myurl}{https://www.foodthinkers.com/air-fry-recipes-loaded-potato-bites/}
+
+\sbox{\ingredients}{%
+  \begin{minipage}[t]{0.32\textwidth}
+    {\sffamily\bfseries Ingredients}\vspace{0.5ex}
+    \begin{itemize}
+      \item 2 large russet potatoes (about 1\nicefrac{1}{2} pounds)
+      \item \nicefrac{1}{4} cup sour cream + \nicefrac{1}{4} cup for dipping
+      \item 1 egg
+      \item \nicefrac{1}{4} cup (1 ounce) shredded cheddar cheese
+      \item 4 slices bacon, cooked and finely chopped
+      \item 2 tablespoons chopped chives
+      \item 2 teaspoons kosher salt
+      \item \nicefrac{1}{2} teaspoon freshly ground black pepper
+      \item {\bfseries To bread}
+        \begin{itemize}
+          \item 1 egg
+          \item 1 tablespoon water
+          \item 1 cup fresh breadcrumbs
+        \end{itemize}
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\method}{%
+  \begin{minipage}[t]{0.55\textwidth}
+    {\sffamily\bfseries Method}\vspace{0.5ex}
+    \begin{enumerate}
+      \item Place steamer basket in a medium pot and add enough water to come just below the basket.
+        Bring water to a boil. Place potatoes in the steamer basket and cover pot with lid. Steam
+        potatoes for 35-40 minutes or until a knife inserted into the center comes out easily.
+      \item While potatoes are cooking, whisk together sour cream, egg, cheese, bacon, chives, salt
+        and pepper in a large bowl.
+      \item Allow potatoes to cool slightly then carefully remove peels. Use a potato ricer to rice
+        into a medium bowl.
+      \item Add potatoes to sour cream mixture and stir to combine. Taste and adjust seasoning.
+      \item Divide potato mixture into 30 portions, about 2 tablespoons each. Roll each portion into
+        a ball.
+      \item Scramble egg and water in a medium bowl. Place breadcrumbs in a second medium bowl.
+      \item Working in batches, roll the balls in the egg. Allow excess egg to drain off then dredge
+        balls in breadcrumbs, ensuring they are completely coated.
+      \item Arrange balls in a single layer on the airfry basket, leaving space between each piece.
+      \item Select AIRFRY/375°F/CONVECTION/20 minutes and press START to preheat oven.
+      \item Cook in rack position 4 until brown and crispy, about 20 minutes.
+      \item Serve immediately with sour cream for dipping.
+    \end{enumerate}
+  \end{minipage}
+}
+
+\myRecipe{Appetizers}{\mytitle{}}
+
+% \addcontentsline{toc}{subsubsection}{\mytitle}
+%   \subsubsection*{\mytitle}
+  \begin{tabular}{l}
+    \usebox{\ingredients}\quad\usebox{\method}\vspace{3ex}\\
+    \multicolumn{1}{c}{\small\ttfamily \url{\myurl}} \\
+  \end{tabular}
+\end{document}

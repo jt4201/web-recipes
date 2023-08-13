@@ -1,0 +1,41 @@
+% arara: xelatex
+\documentclass[../web-recipes.tex]{subfiles}
+\begin{document}
+
+\renewcommand{\myTitletext}{Bacon Cheddar Mashed Potatoes (Idaho Potatoes)}
+\renewcommand{\myUrltext}{https://idahopotato.com/recipes/bacon-cheddar-mashed-potatoes}
+\renewcommand{\myServingstext}{10}
+\renewcommand{\mycourse}{Sides}
+
+\sbox{\Ingredients}{%
+  \begin{minipage}[t]{\the\dimexpr 0.4\textwidth - 2em}
+    \par\mySubtitle{Ingredients}
+    \par\begin{itemize}
+      \item 8 servings Instant Mashed Idaho Potatoes-prepared
+      \item 10 oz. Mild Cheddar Cheese-shredded
+      \item 8 oz. Bacon-diced, fully cooked
+      \item \nicefrac{1}{4} cup Parsley-fresh, chopped
+      \item \nicefrac{1}{4} tsp. White Pepper
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\Instructions}{%
+  \begin{minipage}[t]{\the\dimexpr 0.6\textwidth - 2em}
+    \par\mySubtitle{Instructions}
+    \par\begin{enumerate}
+      \item Prepare Instant Mashed Idaho Potatoes, fully cooked and drain bacon, shred
+        cheddar cheese. Mix ingredients thoroughly. Bake at 350° F for 15 minutes,
+        covered.
+    \end{enumerate}
+  \end{minipage}
+}
+
+\begin{tabular}{ll}
+  \multicolumn{2}{l}{\myTitle{\mycourse}{\myTitletext}} \\ \addlinespace[1mm]
+	\multicolumn{2}{l}{\myServings{\myServingstext}} \\
+  \multicolumn{2}{l}{\myUrl{\myUrltext}{\myTitletext}} \\ \addlinespace[3mm]
+  \usebox{\Ingredients} & \usebox{\Instructions} \\ \addlinespace[3mm]
+\end{tabular}
+
+\end{document}

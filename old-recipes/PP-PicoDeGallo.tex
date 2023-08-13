@@ -1,0 +1,54 @@
+% arara: xelatex
+\documentclass[../web-recipes.tex]{subfiles}
+\begin{document}
+
+\renewcommand{\myAuthor}{Posh Plate}
+\renewcommand{\myTitletext}{Pico De Gallo}
+\renewcommand{\myUrltext}{https://poshplate.us/salsa-no-cilantro/}
+\renewcommand{\myServingstext}{12}
+\renewcommand{\mycourse}{Sauces!Salsa}
+
+\hypersetup{
+  pdftitle = {\myTitletext},
+  pdfauthor = {\myAuthor}
+}
+
+\sbox{\Ingredients}{%
+  \begin{minipage}[t]{\the\dimexpr 0.4\textwidth - 2em}
+    \par\mySubtitle{Ingredients}
+    \par\begin{itemize}
+      \item 3 large beefsteak tomatoes or heirloom tomatoes medium dice (about 3 cups)
+      \item 1 large serrano roughly chopped (remove the seeds and stems for less heat)
+      \item 1 large garlic clove minced
+      \item \nicefrac{1}{2} cup red onion small dice
+      \item 2 limes 2 tbsp of juice
+      \item \nicefrac{1}{4} tsp cumin
+      \item \nicefrac{1}{4} tsp kosher salt 
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\Instructions}{%
+  \begin{minipage}[t]{\the\dimexpr 0.6\textwidth - 2em}
+    \par\mySubtitle{Instructions}
+    \par\begin{enumerate}
+      \item In a large bowl, add the roughly chopped serrano pepper, minced garlic, diced
+        red onion, lime juice, cumin, and kosher salt. Mix to incorporate. While the
+        ingredients are marinating, dice the tomatoes. 
+      \item Add the diced tomatoes over a strainer (of some sort) to help drain off excess
+        liquid. When ready, add it to the rest of the ingredients. Give a toss and place
+        it into the forge and allow it to chill for 30- minutes before serving. 
+      \item If you are absolutely too eager and cannot wait, feel free to enjoy right
+        away. 
+    \end{enumerate}
+  \end{minipage}
+}
+
+\begin{tabular}{ll}
+  \multicolumn{2}{l}{\myTitle{\mycourse}{\myTitletext\quad (\myAuthor)}} \\ \addlinespace[1mm]
+	\multicolumn{2}{l}{\myServings{\myServingstext}} \\
+  \multicolumn{2}{l}{\myUrl{\myUrltext}{\myTitletext}} \\ \addlinespace[3mm]
+  \usebox{\Ingredients} & \usebox{\Instructions} \\ \addlinespace[3mm]
+\end{tabular}
+
+\end{document}

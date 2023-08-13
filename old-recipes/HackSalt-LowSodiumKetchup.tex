@@ -1,0 +1,57 @@
+% arara: xelatex
+\documentclass[../web-recipes.tex]{subfiles}
+\begin{document}
+
+\renewcommand{\myAuthor}{Hacking Salt}
+\renewcommand{\myTitletext}{Low Sodium Ketchup}
+\renewcommand{\myUrltext}{https://www.hackingsalt.com/best-low-sodium-ketchup-recipe/}
+\renewcommand{\myServingstext}{1.5 cups}
+\renewcommand{\mycourse}{Sauces}
+
+\hypersetup{
+  pdftitle = {\myTitletext},
+  pdfauthor = {\myAuthor}
+}
+
+\sbox{\Ingredients}{%
+  \begin{minipage}[t]{\the\dimexpr 0.4\textwidth - 2em}
+    \par\mySubtitle{Ingredients}
+    \par\begin{itemize}
+      \item 1 6 oz can Tomato Paste - No salt Added Hunt's is 25 mg sodium
+      \item \nicefrac{1}{2} cup Cider Vinegar
+      \item 2 Tbsp Honey
+      \item 1 tsp Liquid Smoke
+      \item 1 Tbsp Onion Powder
+      \item 1 Tbsp Garlic Powder
+      \item \nicefrac{1}{2} tsp Ground Black Pepper
+      \item \nicefrac{1}{2} tsp Cayenne Pepper more or less to control heat
+      \item \nicefrac{1}{2} tsp Ground Ginger
+      \item \nicefrac{1}{2} tsp Ground Oregano
+      \item \nicefrac{1}{2} tsp Smoked Paprika
+      \item \nicefrac{1}{2} tsp Ground Cloves
+      \item 1 cup Water
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\Instructions}{%
+  \begin{minipage}[t]{\the\dimexpr 0.6\textwidth - 2em}
+    \par\mySubtitle{Instructions}
+    \par\begin{enumerate}
+      \item In a small bowl add all the ingredients except water and whisk together
+        completely.
+      \item Add \nicefrac{1}{2} of the water and fully incorporate it.
+      \item Add the remaining water in small amounts until you achieve the thickness of
+        ketchup you love. I like mine more on the thick side as opposed to runny.
+    \end{enumerate}
+  \end{minipage}
+}
+
+\begin{tabular}{ll}
+  \multicolumn{2}{l}{\myTitle{\mycourse}{\myTitletext\quad (\myAuthor)}} \\ \addlinespace[1mm]
+	\multicolumn{2}{l}{\myServings{\myServingstext}} \\
+  \multicolumn{2}{l}{\myUrl{\myUrltext}{\myTitletext}} \\ \addlinespace[3mm]
+  \usebox{\Ingredients} & \usebox{\Instructions} \\ \addlinespace[3mm]
+\end{tabular}
+
+\end{document}
