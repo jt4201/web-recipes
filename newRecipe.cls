@@ -53,8 +53,8 @@
 }
 
 \setlist{%
-  nosep
-  ,before=\raggedright
-  ,itemsep=0.5ex
+  nosep,
+  before=\raggedright,
+  itemsep=0.5ex
 }
 
