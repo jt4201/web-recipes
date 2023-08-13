@@ -36,24 +36,20 @@
   \end{minipage}
 }
 
+\newcommand{\cmdSubText}[2]{%
+  \ifthenelse{\equal{#2}{}} {} {\cmdSubtitle{#1}{#2}}
+}
+
 \sbox{\myTitle}{
   \begin{minipage}[t]{0.6\textwidth}\raggedright
-    \ifthenelse{\equal{\myTitleText}{}} {}%
-    {\textbf{\LARGE\bfseries \myTitleText} \vspace{2ex} \\ }
-    \ifthenelse{ \equal{\myPrepTime}{} } {}%
-    {\cmdSubtitle{PREP~TIME}{\myPrepTime}\quad}
-    \ifthenelse{ \equal{\myCookTime}{} } {}%
-    {\cmdSubtitle{COOK~TIME}{\myCookTime} \\ }
-    \ifthenelse{ \equal{\myTotalTime}{} } {}%
-    {\cmdSubtitle{TOTAL~TIME}{\myTotalTime}\quad}
-    \ifthenelse{ \equal{\myServings}{} } {}%
-    {\cmdSubtitle{SERVINGS}{\myServings} \\ }
-    \ifthenelse{ \equal{\myAuthor}{} } {}%
-    {\cmdSubtitle{AUTHOR}{\myAuthor} \\ }
-    \ifthenelse{ \equal{\myURLText}{} } {}%
-    {\cmdSubtitle{SOURCE}{\href{\myURLText}{\myTitleText} \vspace{1ex}} \\ }
-    \ifthenelse{ \equal{\myPreamble}{}} {}%
-    {\myPreamble}
+    \textbf{\LARGE\bfseries \myTitleText} \vspace{2ex} \\
+    \cmdSubText{PREP~TIME}{\myPrepTime\quad}
+    \cmdSubText{COOK~TIME}{\myCookTime\quad}
+    \cmdSubText{TOTAL~TIME}{\myTotalTime\quad \\}
+    \cmdSubText{SERVINGS}{\myServings \vspace{0.5ex} \\}
+    \cmdSubText{AUTHOR}{\myAuthor \\}
+    \cmdSubText{SOURCE}{\href{\myURLText}{\myTitleText} \vspace{1ex} \\}
+    \myPreamble{}
   \end{minipage}
 }
 
