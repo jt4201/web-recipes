@@ -1,0 +1,103 @@
+% arara: testing
+% arara: xelatex
+% arara: xelatex
+% arara: latexmk: { options: ['-c'] }
+% vim: tw=86:
+\documentclass{newRecipe}
+\begin{document}
+
+\renewcommand{\myTitleText}{Grilled Chicken Skewers with Veggies}
+\renewcommand{\myURLText}{https://www.freshoffthegrid.com/grilled-chicken-veggie-skewers/}
+\renewcommand{\myFilename}{fotg-grilled-chicken-skewers-with-veggies}
+\renewcommand{\myServings}{6 skewers}
+\renewcommand{\myAuthor}{Fresh Off The Grid}
+\renewcommand{\myCookTime}{10 minutes}
+\renewcommand{\myPrepTime}{5 minutes}
+\renewcommand{\myTotalTime}{45 minutes}
+\renewcommand{\myPreamble}{
+  Like a bright and cheerful summer afternoon, these Grilled Chicken Skewers with
+  Veggies are a quick and easy dinner for the next time you go camping.
+}
+
+\hypersetup{
+  pdfauthor={\myAuthor},
+  pdftitle={\myTitleText}
+}
+
+\sbox{\myIngred}{
+  \begin{minipage}[t]{\the\dimexpr0.35\textwidth}
+    \textbf{Ingredients}
+    \begin{itemize}
+      \item \textbf{For the Marinade}
+        \begin{itemize}
+          \item ¼ cup olive oil
+          \item ¼ cup chopped basil
+          \item ¼ cup chopped parsley
+          \item 2 cloves garlic minced
+          \item 1 lemon juiced
+          \item 1 teaspoon salt
+        \end{itemize}
+      \item \textbf{To Build the Skewers}
+        \begin{itemize}
+          \item ½ lb chicken (boneless, skinless thighs work best) cut into 1 inch pieces
+          \item 8 oz whole mushrooms stems removed
+          \item 8 oz cherry tomatoes
+          \item 2--3 green onions cut into 1 inch pieces
+        \end{itemize}
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\myMethod}{
+  \begin{minipage}[t]{\the\dimexpr0.6\textwidth-2em}
+    \textbf{Method}
+    \begin{enumerate}
+      \item Combine the ingredients for the marinade in a large bowl or ziplock bag.
+        Add the chicken pieces and thoroughly coat. Cover the bowl or seal the bag and
+        marinate for at least 30 minutes, up to two hours
+      \item Fire up your grill or get your campfire going. You’ll be cooking the
+        kebabs over medium-high to high heat.
+      \item Build the kabobs by threading the chicken and vegetables onto your
+        skewers.
+      \item Grill the kabobs over medium-high to high heat, turning occasionally so
+        they cook evenly until the chicken is cooked through - about 10 minutes total.
+      \item Remove from the grill and enjoy!
+    \end{enumerate}
+  \end{minipage}
+}
+
+\newcommand{\cmdSubText}[2]{%
+  \ifthenelse{\equal{#2}{}} {} {\cmdSubtitle{#1}{#2}}
+}
+
+\sbox{\myTitle}{
+  \begin{minipage}[t]{0.6\textwidth}\raggedright%
+    \textbf{\LARGE\bfseries \myTitleText} \vspace{2ex} \\
+    \cmdSubText{PREP~TIME}{\myPrepTime\quad}
+    \cmdSubText{MARINATION`~TIME}{30 minutes\quad}
+    \cmdSubText{COOK~TIME}{\myCookTime\quad}
+    \cmdSubText{TOTAL~TIME}{\myTotalTime\quad \\}
+    \cmdSubText{SERVINGS}{\myServings\vspace{0.5ex} \\}
+    \cmdSubText{AUTHOR}{\myAuthor\\}
+    \cmdSubText{SOURCE}{\href{\myURLText}{\myTitleText} \vspace{1ex} \\}
+    \myPreamble{}
+  \end{minipage}
+}
+
+\sbox{\myImage}{
+  \begin{minipage}[t]{0.35\textwidth}
+    \adjustbox{valign=t}{\includegraphics[width=\textwidth]{images/\myFilename}}
+  \end{minipage}
+}
+
+\framebox{
+\begin{tabular}{@{}llllll@{}}
+  \multicolumn{4}{@{}l@{}}{\usebox{\myTitle}} &
+  \multicolumn{2}{@{}l@{}}{\usebox{\myImage}} \\
+  \multicolumn{6}{@{}l@{}}{} \rule{0.95\linewidth}{0.4pt}\vspace{2ex} \\ 
+  \multicolumn{2}{@{}l@{}}{\usebox{\myIngred}} &
+  \multicolumn{4}{@{}l@{}}{\usebox{\myMethod}} \\
+\end{tabular}
+}
+
+\end{document}
