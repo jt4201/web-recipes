@@ -1,9 +1,10 @@
-% arara: testing
+%
 % arara: xelatex
 % arara: xelatex
 % arara: latexmk: { options: ['-c'] }
 % vim: tw=86:
-\documentclass{newRecipe}
+\documentclass[../cookbook]{subfiles}
+\graphicspath{{\subfix{../images/}}}
 \begin{document}
 
 \renewcommand{\myTitleText}{Cast Iron Brats with Peppers and Onions}
@@ -52,6 +53,8 @@ and peppers.}
 
 \begin{tabular}{ll}
   \begin{minipage}[t]{0.6\textwidth}\raggedright
+  \cmdRecipe{recipelist}{Mains}{\myTitleText}
+  \cmdRecipe{authorlist}{\myAuthor}{\myTitleText}
     \ifthenelse{\equal{\myTitleText}{}} {}%
     {\textbf{\LARGE\bfseries \myTitleText} \vspace{2ex} \\ }
     \ifthenelse{ \equal{\myPrepTime}{} } {}%
@@ -70,7 +73,7 @@ and peppers.}
       {\myPreamble}
 \end{minipage} &
 \begin{minipage}[t]{0.35\textwidth}
-  \adjustbox{valign=t}{\includegraphics[width=\textwidth]{images/\myFilename}}
+  \adjustbox{valign=t}{\includegraphics[width=\textwidth]{\myFilename}}
 \end{minipage} \\
 \end{tabular}\vspace{5mm}
 

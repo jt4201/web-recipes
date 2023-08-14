@@ -1,11 +1,10 @@
-% arara: testing
 % arara: xelatex
 % arara: xelatex
 % vim: tw=86:
-\documentclass{newRecipe}
+\documentclass[../cookbook]{subfiles}
+\graphicspath{{\subfix{../images/}}}
 \begin{document}
 
-% FIXME:
 \renewcommand{\myTitleText}{Grilled Gyro Kebabs}
 \renewcommand{\myURLText}{https://www.freshoffthegrid.com/grilled-gyro-kebabs/}
 \renewcommand{\myFilename}{fotg-grilled-gyro-kebabs.jpg}
@@ -81,6 +80,8 @@
 }
 
 \begin{tabular}{ll}
+  \cmdRecipe{recipelist}{Mains!Kebabs}{\myTitleText}
+  \cmdRecipe{authorlist}{\myAuthor}{\myTitleText}
   \begin{minipage}[t]{0.6\textwidth}\raggedright
     \ifthenelse{\equal{\myTitleText}{}} {}%
     {\textbf{\LARGE\bfseries \myTitleText} \vspace{2ex} \\ }

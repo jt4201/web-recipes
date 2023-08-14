@@ -1,14 +1,15 @@
-% arara: testing
 % arara: xelatex
 % arara: xelatex
 % arara: latexmk: { options: ['-c'] }
 % vim: tw=120:
-\documentclass{newRecipe}
+\documentclass[../cookbook]{subfiles}
+\graphicspath{{\subfix{../images/}}}
 \begin{document}
 
 \renewcommand{\myTitleText}{Red Lentil Sloppy Joes}
 \renewcommand{\myURLText}{https://www.freshoffthegrid.com/red-lentil-sloppy-joes/}
 \renewcommand{\myServings}{2 sandwiches}
+\renewcommand{\myAuthor}{Fresh Off The Grid}
 
 \sbox{\myIngred}{
   \begin{minipage}[t]{\the\dimexpr 0.35\textwidth}
@@ -66,11 +67,13 @@
 
 \sbox{\myImage}{
   \begin{minipage}[t]{0.35\linewidth}
-    \adjustbox{valign=t}{\includegraphics[width=\textwidth]{images/fotg-red-lentil-sloppy-joes}}
+    \adjustbox{valign=t}{\includegraphics[width=\textwidth]{fotg-red-lentil-sloppy-joes}}
   \end{minipage}
 }
 
 \framebox{
+  \cmdRecipe{recipelist}{Mains!Sloppy Joes}{\myTitleText}
+  \cmdRecipe{authorlist}{\myAuthor}{\myTitleText}
 \begin{tabular}{@{}llllll@{}}
   \multicolumn{4}{@{}l@{}}{\usebox{\myTitle}} &
   \multicolumn{2}{@{}l@{}}{\usebox{\myImage}} \\

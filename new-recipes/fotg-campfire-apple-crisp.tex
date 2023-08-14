@@ -1,9 +1,9 @@
-% arara: testing
 % arara: xelatex
 % arara: xelatex
 % arara: latexmk: { options: ['-c'] }
 % vim: tw=86:
-\documentclass{newRecipe}
+\documentclass[../cookbook]{subfiles}
+\graphicspath{{\subfix{../images/}}}
 \begin{document}
 
 \renewcommand{\myTitleText}{campfire Apple Crisp}
@@ -52,6 +52,8 @@
 
 \begin{tabular}{ll}
   \begin{minipage}[t]{0.6\textwidth}\raggedright
+  \cmdRecipe{recipelist}{Dessert}{\myTitleText}
+  \cmdRecipe{authorlist}{\myAuthor}{\myTitleText}
     \ifthenelse{\equal{\myTitleText}{}} {}%
     {\textbf{\LARGE\bfseries \myTitleText} \vspace{2ex} \\ }
     \ifthenelse{ \equal{\myPrepTime}{} } {}%

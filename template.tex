@@ -1,12 +1,12 @@
-% arara: testing
+% nop
 % arara: xelatex
 % arara: xelatex
 % arara: latexmk: { options: ['-c'] }
 % vim: tw=86:
-\documentclass{newRecipe}
+\documentclass[../cookbook]{subfiles}
+\graphicspath{{\subfix{../images/}}}
 \begin{document}
 
-% FIXME:
 \renewcommand{\myTitleText}{}
 \renewcommand{\myURLText}{}
 \renewcommand{\myFilename}{}
@@ -15,6 +15,7 @@
 \renewcommand{\myCookTime}{}
 \renewcommand{\myPrepTime}{}
 \renewcommand{\myTotalTime}{}
+\renewcommand{\myIndexEntry}{}
 \renewcommand{\myPreamble}{
 }
 
@@ -60,11 +61,13 @@
 
 \sbox{\myImage}{
   \begin{minipage}[t]{0.35\textwidth}
-    \adjustbox{valign=t}{\includegraphics[width=\textwidth]{images/\myFilename}}
+    \adjustbox{valign=t}{\includegraphics[width=\textwidth]{\myFilename}}
   \end{minipage}
 }
 
 \framebox{
+  \cmdRecipe{recipelist}{\myIndexEntry}{\myTitleText}
+  \cmdRecipe{authorlist}{\myAuthor}{\myTitleText}
 \begin{tabular}{@{}llllll@{}}
   \multicolumn{4}{@{}l@{}}{\usebox{\myTitle}} &
   \multicolumn{2}{@{}l@{}}{\usebox{\myImage}} \\

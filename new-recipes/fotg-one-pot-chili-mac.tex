@@ -1,12 +1,11 @@
-% arara: testing
 % arara: xelatex
 % arara: xelatex
 % arara: latexmk: { options: ['-c'] }
 % vim: tw=86:
-\documentclass{newRecipe}
+\documentclass[../cookbook]{subfiles}
+\graphicspath{{\subfix{../images/}}}
 \begin{document}
 
-% FIXME:
 \renewcommand{\myTitleText}{One Pot Chili Mac}
 \renewcommand{\myURLText}{https://www.freshoffthegrid.com/one-pot-chili-mac/}
 \renewcommand{\myFilename}{fotg-one-pot-chili-mac.jpg}
@@ -67,6 +66,8 @@
 
 \begin{tabular}{ll}
   \begin{minipage}[t]{0.6\textwidth}\raggedright
+  \cmdRecipe{recipelist}{Mains}{\myTitleText}
+  \cmdRecipe{authorlist}{\myAuthor}{\myTitleText}
     \ifthenelse{\equal{\myTitleText}{}} {}%
     {\textbf{\LARGE\bfseries \myTitleText} \vspace{2ex} \\ }
     \ifthenelse{ \equal{\myPrepTime}{} } {}%

@@ -1,4 +1,4 @@
-% arara: testing
+% nop
 % arara: xelatex
 % arara: xelatex
 % arara: latexmk: { options: ['-c'] }
@@ -101,13 +101,15 @@
 }
 
 \framebox{
-\begin{tabular}{@{}llllll@{}}
-  \multicolumn{4}{@{}l@{}}{\usebox{\myTitle}} &
-  \multicolumn{2}{@{}l@{}}{\usebox{\myImage}} \\
-  \multicolumn{6}{@{}l@{}}{} \rule{0.95\linewidth}{0.4pt}\vspace{2ex} \\ 
-  \multicolumn{2}{@{}l@{}}{\usebox{\myIngred}} &
-  \multicolumn{4}{@{}l@{}}{\usebox{\myMethod}} \\
-\end{tabular}
+  \cmdRecipe{recipelist}{Mains!Kebabs}{\myTitleText}
+  \cmdRecipe{authorlist}{\myAuthor}{\myTitleText}
+  \begin{tabular}{@{}llllll@{}}
+    \multicolumn{4}{@{}l@{}}{\usebox{\myTitle}} &
+    \multicolumn{2}{@{}l@{}}{\usebox{\myImage}} \\
+    \multicolumn{6}{@{}l@{}}{} \rule{0.95\linewidth}{0.4pt}\vspace{2ex} \\ 
+    \multicolumn{2}{@{}l@{}}{\usebox{\myIngred}} &
+    \multicolumn{4}{@{}l@{}}{\usebox{\myMethod}} \\
+  \end{tabular}
 }
 
 \end{document}

@@ -1,12 +1,13 @@
-% arara: testing
+%
 % arara: xelatex
 % arara: xelatex
 % arara: latexmk: { options: ['-c'] }
 % vim: tw=86:
-\documentclass{newRecipe}
+\documentclass[../cookbook]{subfiles}
+\graphicspath{{\subfix{../images/}}}
 \begin{document}
 
-renewcommand{\myTitleText}{Grilled Honey Mustard Chicken Skewers}
+\renewcommand{\myTitleText}{Grilled Honey Mustard Chicken Skewers}
 \renewcommand{\myURLText}{https://www.saltandlavender.com/grilled-honey-mustard-chicken-skewers/}
 \renewcommand{\myFilename}{SaL-grilled-honey-mustard-chicken-skewers}
 \renewcommand{\myServings}{4}
@@ -75,11 +76,13 @@ renewcommand{\myTitleText}{Grilled Honey Mustard Chicken Skewers}
 
 \sbox{\myImage}{
   \begin{minipage}[t]{0.35\textwidth}
-    \adjustbox{valign=t}{\includegraphics[width=\textwidth]{images/\myFilename}}
+    \adjustbox{valign=t}{\includegraphics[width=\textwidth]{\myFilename}}
   \end{minipage}
 }
 
 \framebox{
+  \cmdRecipe{recipelist}{Mains!Kebabs}{\myTitleText}
+  \cmdRecipe{authorlist}{\myAuthor}{\myTitleText}
 \begin{tabular}{@{}llllll@{}}
   \multicolumn{4}{@{}l@{}}{\usebox{\myTitle}} &
   \multicolumn{2}{@{}l@{}}{\usebox{\myImage}} \\

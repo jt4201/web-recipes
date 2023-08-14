@@ -1,9 +1,10 @@
-% arara: testing
+% 
 % arara: xelatex
 % arara: xelatex
 % arara: latexmk: { options: ['-c'] }
 % vim: tw=86:
-\documentclass{newRecipe}
+\documentclass[../cookbook]{subfiles}
+\graphicspath{{\subfix{../images/}}}
 \begin{document}
 
 \renewcommand{\myTitleText}{Hawaiian Macaroni Salad}
@@ -46,6 +47,8 @@
 }
 
 \begin{tabular}{ll}
+  \cmdRecipe{recipelist}{Salad}{\myTitleText}
+  \cmdRecipe{authorlist}{\myAuthor}{\myTitleText}
   \begin{minipage}[t]{0.6\textwidth}\raggedright
     \ifthenelse{\equal{\myTitleText}{}} {}%
     {\textbf{\LARGE\bfseries \myTitleText} \vspace{2ex} \\ }
@@ -66,7 +69,7 @@
       {\myPreamble}
 \end{minipage} &
 \begin{minipage}[t]{0.35\textwidth}
-  \adjustbox{valign=t}{\includegraphics[width=\textwidth]{images/\myFilename}}
+  \adjustbox{valign=t}{\includegraphics[width=\textwidth]{\myFilename}}
 \end{minipage} \\
 \end{tabular}\vspace{5mm}
 
