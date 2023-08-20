@@ -1,0 +1,140 @@
+% nop
+% arara: xelatex
+% arara: xelatex
+% arara: latexmk: { options: ['-c'] }
+% vim: tw=86:
+\documentclass[../cookbook]{subfiles}
+\graphicspath{{\subfix{../images/}}}
+\begin{document}
+
+\renewcommand{\myTitleText}{Roasted Sweet Potato Black Bean Bowl}
+\renewcommand{\myURLText}{https://www.skinnytaste.com/sweet-potato-black-bean-bowls/}
+\renewcommand{\myFilename}{skinnytaste-sweet-potato-black-bean-bowl.jpg}
+\renewcommand{\myServings}{4 bowls}
+\renewcommand{\myAuthor}{skinnytaste}
+\renewcommand{\myCookTime}{30 mins}
+\renewcommand{\myPrepTime}{15 mins}
+\renewcommand{\myTotalTime}{1 hr 15 mins}
+\renewcommand{\myIndexEntry}{Mains}
+\renewcommand{\myPreamble}{
+These Roasted Sweet Potato and Chipotle Black Bean Bowls are a filling vegetarian
+lunch or dinner, perfect for meal prep.}
+
+\hypersetup{%
+  pdfauthor={\myAuthor},
+  pdftitle={\myTitleText}
+}
+
+\sbox{\myIngred}{%
+  \begin{minipage}[t]{\the\dimexpr0.35\textwidth}\raggedright
+    \textbf{Ingredients}
+    \begin{itemize}[label=,before=\bfseries]
+      \item FOR THE KALE:
+        \begin{itemize}[before=\mdseries]
+          \item 2 cups de-stemmed and chopped kale
+          \item 2 teaspoons extra-virgin olive oil
+          \item ⅛ teaspoon kosher salt
+        \end{itemize}
+      \item FOR THE ROASTED SWEET POTATOES:
+        \begin{itemize}[before=\mdseries]
+          \item 4 medium sweet potatoes, peeled and quartered lengthwise (28 oz peeled)
+          \item 2 tablespoons extra-virgin olive oil
+          \item 1 teaspoon kosher salt
+          \item 1 teaspoon chili powder
+          \item 1 teaspoon chipotle powder
+          \item 1 teaspoon ground cumin
+          \item ½ teaspoon ground coriander
+          \item ½ teaspoon garlic powder
+        \end{itemize}
+      \item FOR THE CREAMY CHIPOTLE SAUCE:
+        \begin{itemize}[before=\mdseries]
+          \item 1 cup plain 0\% Greek yogurt, or dairy-free yogurt for vegan or DF
+          \item 1 chipotle pepper in adobo sauce
+          \item 2 tablespoons lime juice
+          \item 2 cloves garlic, peeled
+          \item Kosher salt
+        \end{itemize}
+      \item FOR THE BOWLS:
+        \begin{itemize}[before=\mdseries]
+          \item 1 15-ounce can black beans, drained and rinsed
+          \item 2 cups cooked brown rice
+          \item 4 ounces avocado, from 1 small pitted, peeled, and diced
+          \item 1 cup Quick-Pickled Red Onions
+          \item 1 cup fresh cilantro leaves
+          \item 1 lime, sliced into wedges
+        \end{itemize}
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\myMethod}{%
+  \begin{minipage}[t]{\the\dimexpr0.6\textwidth-2em}
+    \textbf{Method}
+    \begin{enumerate}[label=,left=1em,before=\bfseries]
+      \item Prepare the kale:
+        \begin{enumerate}[label=\arabic*.,before=\mdseries]
+          \item Place the kale, olive oil, and salt in a bowl. Massage the kale for 1 minute. It will shrink in volume.
+          \item Let sit at room temperature while making the rest.
+      \end{enumerate}
+      \item Prepare the sweet potatoes:
+        \begin{enumerate}[label=\arabic*.,before=\mdseries]
+          \item Preheat the oven to 400°F with a rack placed in the center of the oven.
+          \item While the oven preheats, place the peeled and quartered sweet potatoes in a large saucepan and cover with water.
+          \item Bring to a boil over high heat. Boil the sweet potatoes just until the edges give a bit to pressure from a fork, about 8 minutes. You don’t want to overcook them, or they could turn mushy.
+          \item Drain the sweet potatoes and pat dry with a paper towel then cut them into bite-sized pieces.
+          \item In a large bowl, toss the sweet potatoes with 2 tablespoons of the olive oil.
+          \item In a small bowl, mix together the salt, chili powder, chipotle powder, cumin, coriander, and garlic powder.
+          \item Sprinkle the spice blend onto the sweet potatoes and toss to evenly coat.
+          \item Scatter the sweet potatoes on a sheet pan and roast for 15 to 20 minutes, flipping once halfway through, until browned and fork-tender.
+        \end{enumerate}
+      \item Make the creamy chipotle sauce:
+        \begin{enumerate}[label=\arabic*.,before=\mdseries]
+          \item Place the yogurt, chipotle pepper, lime juice, garlic cloves, and a pinch of salt in a blender or small food processor. Blend or process until smooth.
+          \item Season to taste with salt. Set aside until ready to assemble the bowls, or store in the refrigerator.
+        \end{enumerate}
+      \item Assemble the bowls:
+        \begin{enumerate}[label=\arabic*.,before=\mdseries]
+          \item Fill serving bowls with the kale, roasted sweet potatoes, black beans, brown rice, and avocado.
+          \item Garnish with the pickled red onions, creamy chipotle sauce, and cilantro. Serve with lime wedges.
+        \end{enumerate}
+    \end{enumerate}
+  \end{minipage}
+}
+
+\newcommand{\cmdSubText}[2]{%
+  \ifthenelse{\equal{#2}{}} {} {\cmdSubtitle{#1}{#2}}
+}
+
+\sbox{\myTitle}{%
+  \begin{minipage}[t]{0.6\textwidth}\raggedright%
+    \textbf{\LARGE\bfseries \myTitleText} \vspace{2ex} \\
+    \cmdSubText{PREP~TIME}{\myPrepTime}\quad
+    \cmdSubText{COOK~TIME}{\myCookTime}\quad
+    \cmdSubText{TOTAL~TIME}{\myTotalTime}\quad \\
+    \cmdSubText{SERVINGS}{\myServings}\vspace{0.5ex} \\
+    \cmdSubText{AUTHOR}{\myAuthor}\\
+    \cmdSubText{SOURCE}{\href{\myURLText}{\myTitleText} \vspace{1ex} \\}
+    \myPreamble{}
+  \end{minipage}
+}
+
+\sbox{\myImage}{%
+  \begin{minipage}[t]{0.35\textwidth}
+    \ifthenelse{\equal{\myFilename}{}}{}%
+    {\adjustbox{valign=t}{\includegraphics[width=2in]{\myFilename}}}
+  \end{minipage}
+}
+
+\framebox{%
+  \cmdRecipe{recipelist}{\myIndexEntry}{\myTitleText}
+  \cmdRecipe{authorlist}{\myAuthor}{\myTitleText}
+\begin{tabular}{@{}llllll@{}}
+  \multicolumn{4}{@{}l@{}}{\usebox{\myTitle}} &
+  \multicolumn{2}{@{}l@{}}{\usebox{\myImage}} \\
+  \multicolumn{6}{@{}l@{}}{} \rule{0.95\linewidth}{0.4pt}\vspace{2ex} \\ 
+  \multicolumn{2}{@{}l@{}}{\usebox{\myIngred}} &
+  \multicolumn{4}{@{}l@{}}{\usebox{\myMethod}} \\
+\end{tabular}
+}
+
+\end{document}

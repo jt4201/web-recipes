@@ -1,0 +1,126 @@
+% nop
+% arara: xelatex
+% arara: xelatex
+% arara: latexmk: { options: ['-c'] }
+% vim: tw=86:
+\documentclass[../cookbook]{subfiles}
+\graphicspath{{\subfix{../images/}}}
+\begin{document}
+
+\renewcommand{\myTitleText}{Greek Chicken Rice Bowl}
+\renewcommand{\myURLText}{https://www.skinnytaste.com/greek-chicken-meal-prep-rice-bowls/}
+\renewcommand{\myFilename}{skinnytaste-greek-chicken-rice-bowl.jpg}
+\renewcommand{\myServings}{4 bowls}
+\renewcommand{\myAuthor}{skinnytaste}
+\renewcommand{\myCookTime}{30 mins}
+\renewcommand{\myPrepTime}{30 mins}
+\renewcommand{\myTotalTime}{1 hr}
+\renewcommand{\myIndexEntry}{Mains!Rice Bowls}
+\renewcommand{\myPreamble}{
+  Bring the flavors of the Mediterranean to work with these Greek Chicken Meal Prep
+  Rice Bowls – the perfect recipe to make ahead!
+}
+
+\hypersetup{%
+  pdfauthor={\myAuthor},
+  pdftitle={\myTitleText}
+}
+
+\sbox{\myIngred}{%
+  \begin{minipage}[t]{\the\dimexpr0.35\textwidth}
+    \textbf{Ingredients}
+    \begin{jsubitem}
+      \item 1 ½ pounds boneless, skinless chicken breasts (2 large or 3 small)
+      \item 2 tablespoons fresh lemon juice
+      \item 2 tablespoons red wine vinegar
+      \item 1 tablespoon extra virgin olive oil
+      \item 3 cloves garlic, minced
+      \item 2 teaspoons dried oregano
+      \item 1-¼ cups quick cooking brown rice, such as Uncle Bens 10 min rice
+      \item 2 cups low sodium chicken broth
+      \item 1 dry pint cherry or grape tomatoes
+      \item 1 medium cucumber, peeled, seeded and cut into bite-sized pieces
+      \item 1 small orange bell pepper, cut into 1-inch pieces
+      \item 20 pitted Kalamata olives, sliced
+      \item 4 teaspoons extra virgin olive oil
+      \item 1 medium lemon, quartered
+      \item ¼ cup crumbled feta cheese
+    \end{jsubitem}
+  \end{minipage}
+}
+
+\sbox{\myMethod}{%
+  \begin{minipage}[t]{\the\dimexpr0.6\textwidth-2em}
+    \textbf{Method}
+    \begin{jitem}
+    \item For the chicken
+      \begin{jnum}
+      \item Combine lemon juice, vinegar, olive oil, garlic and oregano in a small
+        bowl.
+      \item Place the chicken breasts, 1 at a time, in a Ziploc bag. Pound with a
+        mallet or rolling pin to an even thickness, about ½ inch thick, being careful
+        not to puncture the bag.
+      \item Add marinade to the bag. Allow to marinate for at least 30 minutes or up
+        to overnight in the refrigerator.
+      \item Bring the rice and broth to a boil. Reduce heat to simmer, cover and cook
+        10 to 12 minutes (or until rice is tender and broth is absorbed).
+      \item Meanwhile preheat a grill, grill pan or heavy skillet over medium heat.
+        Spray with oil and add the chicken, discard the marinade.
+      \item Cook 5 to 6 minutes per side or until chicken is cooked through. Allow
+        chicken to rest while you make the rest of the bowl.
+      \end{jnum}
+      \item To assemble bowls and eat immediately
+      \begin{jnum}
+      \item Slice the chicken breasts. Place ¾ cup rice in each bowl, top with
+        chicken, ¼ of the tomatoes, cucumbers, pepper and olives.
+      \item Drizzle with 1 teaspoon oil, lemon juice from 1 wedge, 1 tablespoon feta
+        cheese and a sprinkle of parsley.
+      \end{jnum}
+      \item For meal prep
+      \begin{jnum}
+      \item Slice the chicken breasts. In 4 meal containers, layer ¾ cup rice and
+        ¼ of the chicken, in separate containers or baggies pack ¼ of the tomatoes,
+        cucumbers, bell pepper, olives and feta.
+      \item When ready to eat, heat the chicken and rice, top with veggies, olives and
+        cheese and drizzle with 1 teaspoon olive oil and lemon juice from 1 wedge.
+      \end{jnum}
+    \end{jitem}
+  \end{minipage}
+}
+
+\newcommand{\cmdSubText}[2]{%
+  \ifthenelse{\equal{#2}{}} {} {\cmdSubtitle{#1}{#2}}
+}
+
+\sbox{\myTitle}{%
+  \begin{minipage}[t]{0.6\textwidth}\raggedright%
+    \textbf{\LARGE\bfseries \myTitleText} \vspace{2ex} \\
+    \cmdSubText{PREP~TIME}{\myPrepTime}\quad
+    \cmdSubText{COOK~TIME}{\myCookTime}\quad
+    \cmdSubText{TOTAL~TIME}{\myTotalTime}\quad \\
+    \cmdSubText{SERVINGS}{\myServings}\vspace{0.5ex} \\
+    \cmdSubText{AUTHOR}{\myAuthor}\\
+    \cmdSubText{SOURCE}{\href{\myURLText}{\myTitleText} \vspace{1ex} \\}
+    \myPreamble{}
+  \end{minipage}
+}
+
+\sbox{\myImage}{%
+  \begin{minipage}[t]{0.35\textwidth}
+    \ifthenelse{\equal{\myFilename}{}}{}{\adjustbox{valign=t}{\includegraphics[width=\textwidth]{\myFilename}}}
+  \end{minipage}
+}
+
+\framebox{%
+  \cmdRecipe{recipelist}{\myIndexEntry}{\myTitleText}
+  \cmdRecipe{authorlist}{\myAuthor}{\myTitleText}
+\begin{tabular}{@{}llllll@{}}
+  \multicolumn{4}{@{}l@{}}{\usebox{\myTitle}} &
+  \multicolumn{2}{@{}l@{}}{\usebox{\myImage}} \\
+  \multicolumn{6}{@{}l@{}}{} \rule{0.95\linewidth}{0.4pt}\vspace{2ex} \\ 
+  \multicolumn{2}{@{}l}{\usebox{\myIngred}} &
+  \multicolumn{4}{@{}l}{\usebox{\myMethod}} \\
+\end{tabular}
+}
+
+\end{document}

@@ -19,8 +19,8 @@
   time you go camping.
 }
 
-\sbox{\myIngred}{
-  \begin{minipage}[t]{\the\dimexpr 0.35\textwidth}\raggedright
+\sbox{\myIngred}{%
+  \begin{minipage}[t]{\the\dimexpr 0.35\textwidth}\raggedright % chktex 1
     \textbf{Ingredients}
     \begin{itemize}
       \item 7 oz halloumi cheese (to equal 6 slices)
@@ -41,8 +41,9 @@
   \end{minipage}
 }
 
-\sbox{\myMethod}{
-  \begin{minipage}[t]{\the\dimexpr 0.55\textwidth - 2em}\raggedright
+\sbox{\myMethod}{%
+  \begin{minipage}[t]{\the\dimexpr 0.55\textwidth - 2em}\raggedright % chktex 1 chktex 8
+    
     \textbf{Method}
     \begin{enumerate}
       \item Pre-heat the grill.
@@ -61,24 +62,24 @@
 }
 
 \begin{tabular}{ll}
-  \begin{minipage}[t]{0.6\textwidth}\raggedright
+  \begin{minipage}[t]{0.6\textwidth}\raggedright % chktex 1
   \cmdRecipe{recipelist}{Mains!Tacos}{\myTitleText}
   \cmdRecipe{authorlist}{\myAuthor}{\myTitleText}
     \ifthenelse{\equal{\myTitleText}{}} {}%
     {\textbf{\LARGE\bfseries \myTitleText} \vspace{2ex} \\ }
-    \ifthenelse{ \equal{\myPrepTime}{} } {}%
+    \ifthenelse{\equal{\myPrepTime}{} } {}%
       {\cmdSubtitle{PREP~TIME}{\myPrepTime}\quad}
-      \ifthenelse{ \equal{\myCookTime}{} } {}%
+      \ifthenelse{\equal{\myCookTime}{} } {}%
       {\cmdSubtitle{COOK~TIME}{\myCookTime} \\ }
-      \ifthenelse{ \equal{\myTotalTime}{} } {}%
+      \ifthenelse{\equal{\myTotalTime}{} } {}%
     {\cmdSubtitle{TOTAL~TIME}{\myTotalTime}\quad}
-      \ifthenelse{ \equal{\myServings}{} } {}%
+      \ifthenelse{\equal{\myServings}{} } {}%
       {\cmdSubtitle{SERVINGS}{\myServings} \\ }
-      \ifthenelse{ \equal{\myAuthor}{} } {}%
+      \ifthenelse{\equal{\myAuthor}{} } {}%
       {\cmdSubtitle{AUTHOR}{\myAuthor} \\ }
-      \ifthenelse{ \equal{\myURLText}{} } {}%
+      \ifthenelse{\equal{\myURLText}{} } {}%
       {\cmdSubtitle{SOURCE}{\href{\myURLText}{\myTitleText} \vspace{1ex}} \\ }
-    \ifthenelse{ \equal{\myPreamble}{}} {}%
+    \ifthenelse{\equal{\myPreamble}{}} {}%
       {\myPreamble}
 \end{minipage} &
 \begin{minipage}[t]{0.35\textwidth}

@@ -7,17 +7,18 @@
 \graphicspath{{\subfix{../images/}}}
 \begin{document}
 
-\renewcommand{\myTitleText}{}
-\renewcommand{\myURLText}{}
-\renewcommand{\myFilename}{}
-\renewcommand{\myServings}{}
-\renewcommand{\myAuthor}{}
-\renewcommand{\myCookTime}{}
-\renewcommand{\myPrepTime}{}
-\renewcommand{\myTotalTime}{}
-\renewcommand{\myIndexEntry}{}
+\renewcommand{\myTitleText}{Spicy Canned Salmon Rice Bowl}
+\renewcommand{\myURLText}{https://www.skinnytaste.com/spicy-canned-salmon-rice-bowl/}
+\renewcommand{\myFilename}{skinnytaste-spicy-canned-salmon-rice-bowl.jpg}
+\renewcommand{\myServings}{1 bowl}
+\renewcommand{\myAuthor}{skinnytaste}
+\renewcommand{\myCookTime}{0 min}
+\renewcommand{\myPrepTime}{5 mins}
+\renewcommand{\myTotalTime}{5 mins}
+\renewcommand{\myIndexEntry}{Mains!Rice Bowls}
 \renewcommand{\myPreamble}{
-}
+This quick and easy Sushi-inspired Spicy Canned Salmon Rice Bowl makes a great
+budget-friendly, high protein lunch!}
 
 \hypersetup{%
   pdfauthor={\myAuthor},
@@ -27,18 +28,29 @@
 \sbox{\myIngred}{%
   \begin{minipage}[t]{\the\dimexpr0.35\textwidth}
     \textbf{Ingredients}
-    \begin{jsubitem}
-      \item % TODO: 
-    \end{jsubitem}
+    \begin{itemize}
+      \item 1 5-ounce can skinless wild pink or red salmon, in water drained
+      \item 1 tablespoons light mayonnaise
+      \item 2 teaspoons sriracha sauce, plus more for topping
+      \item 2 scallions, white and greens separated
+      \item Pinch kosher salt
+      \item ¾ cup cooked brown rice, heated
+      \item ½ cup chopped cucumber, I use Persian cucumbers
+      \item Furikake or chopped nori and sesame seeds, for garnish
+    \end{itemize}
   \end{minipage}
 }
 
 \sbox{\myMethod}{%
   \begin{minipage}[t]{\the\dimexpr0.6\textwidth-2em}
     \textbf{Method}
-    \begin{jnum}
-      \item % TODO: 
-    \end{jnum}
+    \begin{enumerate}
+      \item In a small bowl, combine the salmon, mayonnaise, sriracha, scallion whites
+        and pinch of salt and mix well.
+      \item In the bowl you plan to serve in, add the rice.
+      \item Top it with the salmon salad, chopped cucumber, furikake and scallion
+        greens plus more sriracha if desired.
+    \end{enumerate}
   \end{minipage}
 }
 
@@ -72,8 +84,8 @@
   \multicolumn{4}{@{}l@{}}{\usebox{\myTitle}} &
   \multicolumn{2}{@{}l@{}}{\usebox{\myImage}} \\
   \multicolumn{6}{@{}l@{}}{} \rule{0.95\linewidth}{0.4pt}\vspace{2ex} \\ 
-  \multicolumn{2}{@{}l}{\usebox{\myIngred}} &
-  \multicolumn{4}{@{}l}{\usebox{\myMethod}} \\
+  \multicolumn{2}{@{}l@{}}{\usebox{\myIngred}} &
+  \multicolumn{4}{@{}l@{}}{\usebox{\myMethod}} \\
 \end{tabular}
 }
 
