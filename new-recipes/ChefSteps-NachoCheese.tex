@@ -1,0 +1,58 @@
+% arara: xelatex
+\documentclass[../cookbook]{subfiles}
+\begin{document}
+
+\renewcommand{\myAuthor}{ChefSteps}
+\renewcommand{\myTitletext}{Nacho Cheese}
+\renewcommand{\myUrltext}{https://www.chefsteps.com/activities/nacho-cheese}
+\renewcommand{\myServingstext}{12}
+\renewcommand{\mycourse}{Sauces\&Condiments!Cheese}
+
+\hypersetup{
+  pdftitle = {\myTitletext},
+  pdfauthor = {\myAuthor}
+}
+
+\sbox{\Ingredients}{%
+  \begin{minipage}[t]{\the\dimexpr 0.4\textwidth - 2em}
+    \par\mySubtitle{Ingredients}
+    \par\begin{itemize}
+      \item 300 g Tillamook extra sharp cheddar
+      \item 300 g Milk
+      \item 12 g Sodium citrate
+      \item 4 g Salt
+      \item 1.5 g Sodium hexametaphosphate , SHMP
+      \item 50 g Pickled jalapeños 
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\Instructions}{%
+  \begin{minipage}[t]{\the\dimexpr 0.6\textwidth - 2em}
+    \par\mySubtitle{Instructions}
+    \par\begin{enumerate}
+      \item Preheat Joule to 167 °F / 75 °C
+      \item Cut cheese into small pieces
+      \item Place milk and salts in a ziplock-style bag, and agitate slightly to dissolve.
+        Add cheese, and seal bag. Drape the bag over the side of the pot, taking care not
+        to let any water leak into the bag.
+      \item Place bag in the heated water for 15 minutes to melt the cheese.
+      \item Pour nacho cheese into an insulated container (like a cocotte or other pot
+        with a lid), and serve warm.lace melted cheese and pickled jalapeños in blender,
+        and blend until smooth. If you want larger chunks of jalapeños, chop them by hand
+        and fold them in after you blend.
+    \end{enumerate}
+  \end{minipage}
+}
+
+\framebox{
+  \cmdRecipe{recipelist}{\mycourse}{\myTitletext}
+  \begin{tabular}{ll}
+    \multicolumn{2}{l}{\LARGE\bfseries \myTitletext (\myAuthor)} \\ \addlinespace[1mm]
+    \multicolumn{2}{l}{Servings: \myServings{\myServingstext}} \\
+  \multicolumn{2}{l}{\myUrl{\myUrltext}{\myTitletext}} \\ \addlinespace[3mm]
+  \usebox{\Ingredients} & \usebox{\Instructions} \\ \addlinespace[3mm]
+\end{tabular}
+}
+
+\end{document}

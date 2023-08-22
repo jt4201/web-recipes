@@ -1,0 +1,58 @@
+% vim: ft=tex:
+\documentclass[../cookbook]{subfiles}
+\begin{document}
+
+\pagestyle{empty}
+
+\renewcommand{\mytitle}{Quick-Pickled Onions (TheKitchn)}
+\renewcommand{\myurl}{https://www.thekitchn.com/how-to-make-quickpickled-red-onions-cooking-lessons-from-the-kitchn-193247}
+
+\myRecipe{Sauces\&Condiments!Pickles}{\mytitle{}}
+
+\sbox{\ingredients}{%
+  \begin{minipage}[t]{\the\dimexpr 0.35\linewidth - 1em\relax}
+    {\sffamily\bfseries Ingredients}\vspace{0.5ex}
+    \begin{itemize}
+      \item 1 medium red onion, about 5 ounces
+      \item \nicefrac{1}{2} teaspoon sugar
+      \item \nicefrac{1}{2} teaspoon salt
+      \item \nicefrac{3}{4} cup rice vinegar, white vinegar, or apple cider vinegar
+      \item \textbf{optional}
+        \begin{itemize}
+          \item 1 small clove of garlic, halved
+          \item 5 black peppercorns
+          \item 5 allspice berries
+          \item 3 small sprigs of thyme
+          \item 1 small dried chili
+        \end{itemize}
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\method}{%
+  \begin{minipage}[t]{\the\dimexpr 0.6\linewidth - 1em\relax}
+    {\sffamily\bfseries Method}\vspace{0.5ex}
+    \begin{enumerate}
+      \item \textbf{Slice the onions} Start 2 or 3 cups of water on to boil in a kettle. Peel and
+        thinly slice the onion into approximately \nicefrac{1}{4}-inch moons. Peel and cut the garlic clove in
+        half.
+      \item \textbf{Dissolve the sugar and salt} In the container you will be using to store the
+        onions, add the sugar, salt, vinegar, and flavorings. Stir to dissolve.
+      \item \textbf{Par-blanch the onions} Place the onions in the sieve and place the sieve in the
+        sink. Slowly pour the boiling water over the onions and let them drain.
+      \item \textbf{Add the onions to the jar} Add the onions to the jar and stir gently to evenly
+        distribute the flavorings.
+      \item \textbf{Store} The onions will be ready in about 30 minutes, but are better after a few
+        hours. Store in the refrigerator. They will keep for several weeks, but are best in the
+        first week.
+    \end{enumerate}
+  \end{minipage}
+}
+
+
+  \begin{tabular}{l}
+    \usebox{\ingredients}\hspace{1em}\usebox{\method}\vspace{3ex}\\
+    \multicolumn{1}{c}{\small\ttfamily \url{\myurl}} \\
+  \end{tabular}
+
+\end{document}

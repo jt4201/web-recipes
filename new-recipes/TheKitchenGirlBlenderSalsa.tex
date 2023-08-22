@@ -1,0 +1,49 @@
+% vim: ft=tex:
+\documentclass[../cookbook]{subfiles}
+\begin{document}
+
+\pagestyle{empty}
+
+\renewcommand{\mytitle}{Blender Salsa (The Kitchen Girl)}
+\renewcommand{\myurl}{https://thekitchengirl.com/restaurant-style-salsa/}
+
+\sbox{\ingredients}{%
+  \begin{minipage}[t]{0.32\textwidth}\raggedright\sffamily\small
+    {\sffamily\bfseries Ingredients}\vspace{0.5ex}
+    \begin{itemize}
+      \item 1 (14.5-ounce can) Diced Tomatoes don't drain
+      \item \nicefrac{1}{4} small Red Onion about \nicefrac{1}{3} cup coarsely chopped
+      \item \nicefrac{1}{4} cup Cilantro
+      \item 1 Lime zested and juiced
+      \item 1 jalapeño Pepper (or Serrano Pepper) seeded and coarsely chopped
+      \item 2 cloves Garlic coarsely chopped
+      \item \nicefrac{1}{4} teaspoon Ground Cumin
+      \item Sea Salt to taste
+      \item Black Pepper to taste
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\method}{%
+  \begin{minipage}[t]{0.55\textwidth}\raggedright\sffamily\small
+    {\sffamily\bfseries Method}\vspace{0.5ex}
+    \begin{enumerate}
+      \item Place Tomatoes, Onions, Cilantro, Lime, Jalapeño, Garlic, Cumin, Salt, and Pepper In a food
+        processor or blender.
+
+        *If using a stick blender, place everything in a tall-sided container to avoid splattering.
+      \item Blend ingredients on medium or high speed until well-combined.
+      \item Serve immediately or refrigerate in an airtight container up to 5 days.
+    \end{enumerate}
+  \end{minipage}
+}
+
+\myRecipe{Sauces\&Condiments!Salsa}{\mytitle{}}
+
+% \addcontentsline{toc}{subsubsection}{\mytitle}
+%   \subsubsection*{\mytitle}
+  \begin{tabular}{l}
+    \usebox{\ingredients}\quad\usebox{\method}\vspace{3ex}\\
+    \multicolumn{1}{c}{\small\ttfamily \url{\myurl}} \\
+  \end{tabular}
+\end{document}

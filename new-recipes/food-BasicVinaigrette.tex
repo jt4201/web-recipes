@@ -1,0 +1,110 @@
+% arara: xelatex: { options : "--output-directory=pdf" }
+\documentclass[../cookbook]{subfiles}
+\usepackage{multicol}
+\begin{document}
+
+\renewcommand{\myAuthor}{Food}
+\renewcommand{\myTitletext}{Vinaigrette Dressing}
+\renewcommand{\myUrltext}{https://www.food.com/recipe/basic-vinaigrette-dressing-with-8-variations-213989}
+\renewcommand{\myServingstext}{¼ cup}
+\renewcommand{\mycourse}{Sauces\&Condiments!Dressing}
+
+\hypersetup{
+  pdftitle = {\myTitletext},
+  pdfauthor = {\myAuthor}
+}
+
+\sbox{\Ingredients}{%
+  \begin{minipage}[t]{\the\dimexpr 0.9\textwidth - 2em}\raggedright\sffamily\small
+    \begin{multicols}{3}
+    \par\begin{description}
+      \item[Basic Vinaigrette] \hfill
+        \begin{itemize}
+          \item 3 tablespoons oil (I prefer extra-virgin olive oil) 
+          \item 2 tablespoons vinegar (white, cider, wine, ..., not balsamic) 
+          \item salt 
+          \item black pepper (I prefer fresh-ground)
+        \end{itemize}
+      \item[Italian Vinaigrette] \hfill
+        \begin{itemize}
+          \item basic vinaigrette (use EVOO and red wine vinegar) 
+          \item ½ teaspoon minced garlic 
+          \item ½ teaspoon italian seasoning 
+          \item 1 pinch crushed red pepper flakes (optional)
+        \end{itemize}
+      \item[Lighter Bacon Dressing] \hfill
+        \begin{itemize}
+          \item basic vinaigrette (use canola or corn oil and cider vinegar) 
+          \item 1 tablespoon crumbled bacon 
+          \item ½ tablespoon finely minced onion 
+          \item 1 pinch celery seed (optional) 
+          \item ¼ teaspoon prepared mustard (optional) 
+          \item 1 -3 teaspoon brown sugar or 1 -3 teaspoon another sweetener, to taste
+        \end{itemize}
+      \item[Mustard Dressing] \hfill
+        \begin{itemize}
+          \item italian vinaigrette 
+          \item 1 teaspoon prepared mustard (I recommend Dijon or spicy brown)
+          \item 1 -3 teaspoon honey (optional) or 1 -3 teaspoon another sweetener, to taste (optional)
+        \end{itemize}
+      \item[Basic Creamy Vinaigrette Dressing] \hfill
+        \begin{itemize}
+          \item basic vinaigrette
+          \item 2 -3 tablespoons sour cream or 2 -3 tablespoons plain yogurt
+        \end{itemize}
+      \item[Parmesan-Pepper Dressing] \hfill
+        \begin{itemize}
+          \item basic creamy vinaigrette dressing 
+          \item 1 tablespoon grated parmesan cheese 
+          \item ⅛ teaspoon fresh ground black pepper (to taste)
+        \end{itemize}
+      \item[Creamy Garlic Dressing] \hfill
+        \begin{itemize}
+          \item basic creamy vinaigrette dressing 
+          \item 1 garlic clove, put through press 
+          \item fresh ground black pepper 
+          \item 1 pinch italian seasoning (optional)
+        \end{itemize}
+      \item[Lemon Dressing] \hfill
+        \begin{itemize}
+          \item 3 tablespoons olive oil (I prefer extra-virgin) 
+          \item 3 tablespoons lemon juice 
+          \item ½ teaspoon oregano 
+          \item ½ teaspoon minced garlic
+        \end{itemize}
+      \item[Balsamic Vinaigrette] \hfill
+        \begin{itemize}
+          \item 3 tablespoons oil (I prefer extra-virgin olive oil) 
+          \item 1 tablespoon balsamic vinegar 
+          \item ½ teaspoon minced garlic 
+          \item 1 pinch italian seasoning (optional) 
+        \end{itemize}
+    \end{description}
+  \end{multicols}
+  \end{minipage}
+}
+
+\sbox{\Instructions}{%
+  \begin{minipage}[t]{\the\dimexpr 0.6\textwidth - 2em}\raggedright\sffamily\small
+    \par\mySubtitle{\bfseries\large Instructions}
+    \par\begin{enumerate}
+      \item Shake all ingredients for your chosen variation together in a tightly-lidded
+        container OR whisk together in a small bowl.
+      \item Let stand 10 minutes to rehydrate dried herbs and blend flavors.
+      \item Shake again then dress salad as desired.
+    \end{enumerate}
+  \end{minipage}
+}
+
+\framebox{
+  \cmdRecipe{recipelist}{\mycourse}{\myTitletext}
+  \begin{tabular}{ll}
+    \multicolumn{2}{l}{\LARGE\bfseries \myTitletext (\myAuthor)} \\ \addlinespace[1mm]
+    \multicolumn{2}{l}{Servings: \myServings{\myServingstext}} \\
+  \multicolumn{2}{l}{\myUrl{\myUrltext}{\myTitletext}} \\ \addlinespace[3mm]
+  \multicolumn{2}{l}{\usebox{\Ingredients}} \\ \addlinespace[3mm]
+  \multicolumn{2}{l}{\usebox{\Instructions}} \\ \addlinespace[3mm]
+\end{tabular}
+}
+
+\end{document}

@@ -1,0 +1,65 @@
+% arara: xelatex
+\documentclass[../cookbook]{subfiles}
+\begin{document}
+
+\renewcommand{\myAuthor}{Cook Report}
+\renewcommand{\myTitletext}{Potato Curry with Creamy Tomato Sauce}
+\renewcommand{\myUrltext}{https://thecookreport.co.uk/potato-curry/}
+\renewcommand{\myServingstext}{4}
+\renewcommand{\mycourse}{Mains}
+
+\hypersetup{
+  pdftitle = {\myTitletext},
+  pdfauthor = {\myAuthor}
+}
+
+\sbox{\Ingredients}{%
+  \begin{minipage}[t]{\the\dimexpr 0.4\textwidth - 2em}
+    \par\mySubtitle{Ingredients}
+    \par\begin{itemize}
+      \item 3 tablespoon Olive Oil
+      \item 1 Red Onion
+      \item 1 teaspoon Ginger grated
+      \item 4 cloves Garlic crushed
+      \item 1 tablespoon Garam Masala
+      \item 1 Bay Leaf
+      \item Pinch Chilli Flakes
+      \item 2 tablespoon Honey
+      \item 2 400g tins Chopped Tomatoes
+      \item 1 400g tin Coconut Milk
+      \item 800 g Baby Potatoes big ones halved
+      \item 4 tablespoon Greek Yoghurt
+      \item Coriander to serve
+      \item Salt
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\Instructions}{%
+  \begin{minipage}[t]{\the\dimexpr 0.6\textwidth - 2em}
+    \par\mySubtitle{Instructions}
+    \par\begin{enumerate}
+      \item Heat the olive oil in a large pot over a medium heat and add the onion. Cook
+        for a couple of minutes then add the garlic and ginger, sprinkle with salt and
+        cook for another few minutes. Add the garam masala, bay leaf and chilli flakes,
+        stir to coat then add the honey and cook for another minute.
+      \item Pour in the tomatoes and bring to a simmer, cook for 10 minutes until
+        thickened slightly. Add the coconut milk and the potatoes and cook for another
+        20-25 minutes until the potatoes are cooked through. Add salt to taste.
+      \item Mix the yoghurt with 1-2 tablespoon water and a pinch of salt. Serve the curry
+        with rice, naan and a drizzle of yoghurt sauce.
+    \end{enumerate}
+  \end{minipage}
+}
+
+\framebox{
+  \cmdRecipe{recipelist}{\mycourse}{\myTitletext}
+  \begin{tabular}{ll}
+    \multicolumn{2}{l}{\LARGE\bfseries \myTitletext (\myAuthor)} \\ \addlinespace[1mm]
+    \multicolumn{2}{l}{Servings: \myServings{\myServingstext}} \\
+  \multicolumn{2}{l}{\myUrl{\myUrltext}{\myTitletext}} \\ \addlinespace[3mm]
+  \usebox{\Ingredients} & \usebox{\Instructions} \\ \addlinespace[3mm]
+\end{tabular}
+}
+
+\end{document}

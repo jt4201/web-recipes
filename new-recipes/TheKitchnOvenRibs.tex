@@ -1,0 +1,56 @@
+% vim: ft=tex:
+\documentclass[../cookbook]{subfiles}
+\begin{document}
+
+\renewcommand{\mytitle}{Oven Ribs (theKitchn)}
+\renewcommand{\myurl}{https://www.thekitchn.com/how-to-make-great-ribs-in-the-oven-cooking-lessons-from-the-kitchn-96973}
+
+\sbox{\ingredients}{%
+  \begin{minipage}[t]{0.32\textwidth}
+    {\sffamily\bfseries Ingredients}\vspace{0.5ex}
+    \begin{itemize}
+      \item 4 to 5 pounds pork spareribs or baby back ribs
+      \item \nicefrac{1}{4} cup Dijon mustard
+      \item 1 to 2 teaspoons liquid smoke (optional)
+      \item 1 cup spice rub
+      \item 1 cup barbecue sauce, plus more for serving
+    \end{itemize}
+  \end{minipage}
+}
+
+\sbox{\method}{%
+  \begin{minipage}[t]{0.55\textwidth}
+    {\sffamily\bfseries Method}\vspace{0.5ex}
+    \begin{description}
+      \item [Prepare the baking sheet] Line a rimmed baking sheet with aluminum foil. Fit a wire
+        cooling rack on top. Lay the ribs on top of the rack in a single layer. This arrangement
+        allows for heat circulation on all sides of the ribs.
+      \item [Season the ribs] Stir the mustard and the liquid smoke together, if using, and brush the
+        ribs on both sides. Sprinkle the ribs with the dry rub and pat gently to make sure the rub
+        adheres to the rib meat. (Note: This step can be done the day ahead for a deeper flavor.
+        Wrap the seasoned ribs in plastic wrap and refrigerate.)
+      \item [Broil the ribs] Arrange an oven rack a few inches below the heating element and heat the
+        broiler. Make sure the meaty side of the ribs is facing up. Broil until the sugar in the dry
+        rub is bubbling and the ribs are evenly browned, about 5 minutes.
+      \item [Bake the ribs] Set the oven to 300°F. Move the ribs to an oven rack in the middle of the
+        oven. Bake 2 \nicefrac{1}{2} to 3 hours for spareribs or 1 \nicefrac{1}{2} to 2 hours for baby back ribs. Halfway
+        through cooking, cover the ribs with aluminum foil to protect them from drying out.
+      \item [Brush with barbecue sauce] About 30 minutes before the end of cooking, brush the ribs
+        with barbecue sauce, re-cover with foil, and continue cooking.
+      \item [Rest the ribs and serve] The ribs are done when a knife slides easily into the thickest
+        part of the rib meat. Let them rest, covered, for about 10 minutes, and then cut between the
+        bones to separate the individual ribs. Serve immediately with extra barbecue sauce for
+        dipping.
+    \end{description}
+  \end{minipage}
+}
+
+\myRecipe{Mains!Ribs}{\mytitle{}}
+
+% \addcontentsline{toc}{subsubsection}{\mytitle}
+%   \subsubsection*{\mytitle}
+  \begin{tabular}{l}
+    \usebox{\ingredients}\quad\usebox{\method}\vspace{3ex}\\
+    \multicolumn{1}{c}{\small\ttfamily \url{\myurl}} \\
+  \end{tabular}
+\end{document}

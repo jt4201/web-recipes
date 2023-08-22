@@ -1,0 +1,73 @@
+% vim: ft=tex:
+\documentclass[../cookbook]{subfiles}
+\begin{document}
+
+\pagestyle{empty}
+
+\renewcommand{\mytitle}{Janet’s Easy Mustard Chicken (Kalyn's Kitchen)}
+\renewcommand{\myurl}{https://kalynskitchen.com/janets-mustard-chickenan-old-favorite/}
+
+\myRecipe{Mains}{\mytitle{}}
+
+\sbox{\ingredients}{%
+  \begin{minipage}[t]{\the\dimexpr 0.35\linewidth - 1em\relax}
+    {\sffamily\bfseries Ingredients}\vspace{0.5ex}
+    \begin{description}
+      \item[Chicken] \hfill
+        \begin{itemize}
+          \item 8 boneless, skinless chicken breasts
+          \item 1 - 2 T olive oil (will depend on your pan)
+          \item 2 tsp. poultry seasoning
+        \end{itemize}
+      \item[Sauce] \hfill
+        \begin{itemize}
+          \item \nicefrac{1}{2} cup mayo
+          \item \nicefrac{1}{2} cup sour cream
+          \item 2 T Dijon mustard
+          \item 1 tsp. dry mustard
+          \item \nicefrac{1}{2} tsp. ground ginger
+          \item 1 \nicefrac{1}{2} cups chicken stock (see notes)
+          \item salt and fresh-ground black pepper to taste
+          \item \textbf{optional}
+            \begin{itemize}
+              \item chopped parsley for garnish (optional)
+            \end{itemize}
+        \end{itemize}
+    \end{description}
+  \end{minipage}
+}
+
+\sbox{\method}{%
+  \begin{minipage}[t]{\the\dimexpr 0.6\linewidth - 1em\relax}
+    {\sffamily\bfseries Method}\vspace{0.5ex}
+    \begin{enumerate}
+      \item Trim all visible fat and undesirable parts from chicken breasts, then make
+        very small slits crosswise down the length of each breast. (This helps the chicken
+        to cook evenly. Be careful not to cut through too far.)
+      \item Season chicken with Poultry Seasoning on both sides.
+      \item Heat olive oil in large frying pan big enough to hold the chicken in a single
+        layer, add chicken and cook about 4 minutes on the first side, until chicken is
+        lightly browned.
+      \item Turn chicken over and cook 2-3 minutes on the second side, until chicken feels
+        almost, but not quite firm to the touch. (It will continue to cook in the sauce,
+        so don’t overcook.)
+      \item While chicken cooks, put all sauce ingredients in bowl or large measuring cup,
+        and whisk to combine.
+      \item When chicken is lightly browned, lower heat and pour sauce over.
+      \item Simmer 20 minutes, being sure to keep heat at a very low simmer.
+      \item After 20 minutes, remove chicken from pan and whisk the sauce a few times to
+        be sure it’s smooth.
+      \item Season to taste with a little salt and fresh-ground black pepper.
+      \item Serve hot, with a little sauce spooned over each piece of chicken, garnishing
+        with fresh parsley if desired.
+    \end{enumerate}
+  \end{minipage}
+}
+
+
+  \begin{tabular}{l}
+    \usebox{\ingredients}\hspace{1em}\usebox{\method}\vspace{3ex}\\
+    \multicolumn{1}{c}{\small\ttfamily \url{\myurl}} \\
+  \end{tabular}
+
+\end{document}
