@@ -1,0 +1,139 @@
+% nop
+% arara: xelatex
+% arara: xelatex
+% arara: latexmk: { options: ['-c'] }
+% vim: tw=86:
+\documentclass[../cookbook]{subfiles}
+\graphicspath{{\subfix{../images/}}}
+\begin{document}
+
+\renewcommand{\myTitleText}{Picadillo (Beef \& Potato) Tostada}
+\renewcommand{\myURLText}{https://www.ethanchlebowski.com/cooking-techniques-recipes/picadillo-beef-amp-potato-tostada}
+\renewcommand{\myFilename}{ethan-picadillo-tostada.jpg}
+\renewcommand{\myServings}{1 tostada}
+\renewcommand{\myAuthor}{Ethan Chlebowski}
+\renewcommand{\myCookTime}{}
+\renewcommand{\myPrepTime}{}
+\renewcommand{\myTotalTime}{}
+\renewcommand{\myIndexEntry}{Mains}
+\renewcommand{\myPreamble}{
+}
+
+\hypersetup{%
+  pdfauthor={\myAuthor},
+  pdftitle={\myTitleText}
+}
+
+\sbox{\myIngred}{%
+  \begin{minipage}[t]{\the\dimexpr0.35\textwidth}\sffamily\raggedright\small
+    \textbf{\large Ingredients}
+    \begin{itemize}[label=,leftmargin=1em,before=\bfseries]
+      \item Tostada Components
+        \begin{itemize}[label=\textbullet,leftmargin=1.5em,before=\mdseries]
+        \item Tostada
+        \item Picadillo
+        \item Drizzle of crema
+        \item Thinly shredded lettuce
+        \item Diced tomatoes
+        \item Pickled onions
+        \item Crumbled queso fresco
+        \end{itemize}
+      \item Picadillo (makes enough for 4-6 tostadas)
+        \begin{itemize}[label=\textbullet,leftmargin=1.5em,before=\mdseries]
+        \item 1 lb (450 g) ground beef
+        \item 1/4 white onion, diced
+        \item 2 cloves of garlic, minced
+        \item \textbf{Spices}
+          \begin{itemize}[label=\textbullet,leftmargin=1.5em,before=\mdseries]
+          \item 2 g (1 tsp) smoked paprika
+          \item 3 g (1 tsp) ancho chili pepper
+          \item Sprinkle of cinnamon
+          \item ~3/4 lb (350 g) Yukon gold potatoes, diced (about equal parts volume with the cooked beef)
+          \end{itemize}
+        \item 1/2 can of whole peeled tomatoes (about 14 oz or 1.5 cups worth)
+        \item Hot sauce of choice, to taste
+        \end{itemize}
+      \end{itemize}
+    \end{minipage}
+  }
+
+  \sbox{\myMethod}{%
+    \begin{minipage}[t]{\the\dimexpr0.6\textwidth-2em}\sffamily\raggedright\small
+      \textbf{\large Method}
+      \begin{itemize}[label=,leftmargin=1em,before=\bfseries]
+        \item Start the potatoes
+          \begin{itemize}[label=\textbullet,leftmargin=1.5em,before=\mdseries]
+            \item To begin, chop the potatoes. You can wash them, but no need to peel them.
+            \item Dice the potatoes into fairly small pieces by cutting them into planks, then strips, and finally cutting those across into cubes.
+            \item Toss the diced potatoes into a pot, set them on a stove over high heat, and cover them with water. Lastly, add a generous sprinkle of salt.
+          \end{itemize}
+        \item Start the picadillo
+          \begin{itemize}[label=\textbullet,leftmargin=1.5em,before=\mdseries]
+            \item To prepare the beef, heat a stainless steel pan with a little oil over high heat. Add ground beef to the pan, press it down, and let it sear undisturbed until it starts browning.
+            \item As it cooks, prep or gather any other ingredients.
+            \item After 5 minutes, flip the beef and cook for 2 more minutes, breaking it up some. Transfer the cooked beef to a bowl but keep any rendered fat in the pan.
+          \end{itemize}
+        \item Drain the potatoes
+          \begin{itemize}[label=\textbullet,leftmargin=1.5em,before=\mdseries]
+            \item Once the potatoes are cooked through and tender, strain them. They should be done in about 10-15 minutes, but you can test them with a knife, which should poke through with little resistance.
+          \end{itemize}
+        \item Make the picadillo sauce base
+          \begin{itemize}[label=\textbullet,leftmargin=1.5em,before=\mdseries]
+            \item In the same pan, you used to brown the beef (there should be enough fat, but add a bit of oil if necessary) add the onion and garlic mixture and let those sauté for a minute or two until fragrant.
+            \item Then add the paprika, chile powder, and cinnamon.
+            \item Next, add in ½ can of whole peeled tomatoes and mash them with a potato masher to create a sauce-like consistency.
+            \item Once the sauce has formed, add the browned beef back in, and use the potato masher to turn it into small, pebbly bits.
+          \end{itemize}
+        \item  Finish the picadillo
+          \begin{itemize}[label=\textbullet,leftmargin=1.5em,before=\mdseries]
+            \item Add the cooked and drained potatoes and mix together before adjusting the final seasoning and texture.
+            \item Add salt to taste, and optionally a squirt of hot sauce for acidity and spice. Add more of the other seasonings if desired.
+            \item Lastly, adjust the consistency as needed:
+            \item To make it more saucy, add a splash of water.
+            \item To make it thicker, let it cook down a bit longer. For tostadas, thicker is usually better.
+          \end{itemize}
+        \item  Assemble \& serve
+          \begin{itemize}[label=\textbullet,leftmargin=1.5em,before=\mdseries]
+            \item Take a tostada and add a thick layer of warm picadillo as the base.
+            \item Top with your choice of crema or sour cream, lettuce, tomatoes, pickled onions, and queso fresco. Enjoy
+          \end{itemize}
+      \end{itemize}
+    \end{minipage}
+  }
+
+\newcommand{\cmdSubText}[2]{%
+  \ifthenelse{\equal{#2}{}} {} {\cmdSubtitle{#1}{#2}}
+}
+
+\sbox{\myTitle}{%
+  \begin{minipage}[t]{0.6\textwidth}\raggedright%
+    \textbf{\LARGE\bfseries \myTitleText} \vspace{2ex} \\
+    \cmdSubText{PREP~TIME}{\myPrepTime}\quad
+    \cmdSubText{COOK~TIME}{\myCookTime}\quad
+    \cmdSubText{TOTAL~TIME}{\myTotalTime}\quad \\
+    \cmdSubText{SERVINGS}{\myServings}\vspace{0.5ex} \\
+    \cmdSubText{AUTHOR}{\myAuthor}\\
+    \cmdSubText{SOURCE}{\href{\myURLText}{\myTitleText} \vspace{1ex} \\}
+    \myPreamble{}
+  \end{minipage}
+}
+
+\sbox{\myImage}{%
+  \begin{minipage}[t]{0.35\textwidth}
+    \ifthenelse{\equal{\myFilename}{}}{}{\adjustbox{valign=t}{\includegraphics[width=\textwidth]{\myFilename}}}
+  \end{minipage}
+}
+
+\framebox{%
+  \cmdRecipe{recipelist}{\myIndexEntry}{\myTitleText}
+  \cmdRecipe{authorlist}{\myAuthor}{\myTitleText}
+\begin{tabular}{@{}llllll@{}}
+  \multicolumn{4}{@{}l@{}}{\usebox{\myTitle}} &
+  \multicolumn{2}{@{}l@{}}{\usebox{\myImage}} \\
+  \multicolumn{6}{@{}l@{}}{} \rule{0.95\linewidth}{0.4pt}\vspace{2ex} \\ 
+  \multicolumn{2}{@{}l}{\usebox{\myIngred}} &
+  \multicolumn{4}{@{}l}{\usebox{\myMethod}} \\
+\end{tabular}
+}
+
+\end{document}

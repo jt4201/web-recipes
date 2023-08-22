@@ -1,0 +1,99 @@
+% nop
+% arara: xelatex
+% arara: xelatex
+% arara: latexmk: { options: ['-c'] }
+% vim: tw=86:
+\documentclass[../cookbook]{subfiles}
+\graphicspath{{\subfix{../images/}}}
+\begin{document}
+
+\renewcommand{\myTitleText}{Korean Beef Rice Bowl}
+\renewcommand{\myURLText}{https://www.skinnytaste.com/korean-beef-rice-bowls/}
+\renewcommand{\myFilename}{skinnytaste-korean-beef-rice-bowl.jpg}
+\renewcommand{\myServings}{4 bowls}
+\renewcommand{\myAuthor}{skinnytaste}
+\renewcommand{\myCookTime}{15 mins}
+\renewcommand{\myPrepTime}{15 mins}
+\renewcommand{\myTotalTime}{30 mins}
+\renewcommand{\myIndexEntry}{Mains!Rice Bowls}
+\renewcommand{\myPreamble}{
+  Make this easy Korean Beef Rice Bowl make a quick and easy meal, loaded with flavor
+  for under 400 calories!
+}
+
+\hypersetup{%
+  pdfauthor={\myAuthor},
+  pdftitle={\myTitleText}
+}
+
+\sbox{\myIngred}{%
+  \begin{minipage}[t]{\the\dimexpr0.35\textwidth}\raggedright\sffamily\small
+    \textbf{\large Ingredients}
+    \begin{jsubitem}
+      \item 1/4 cup low sodium soy sauce*
+      \item 2 teaspoons light brown sugar
+      \item 1 teaspoon sesame oil
+      \item 1/2 teaspoon crushed red pepper flakes
+      \item cooking spray
+      \item 1 pound 93% lean ground beef
+      \item 1/4 cup chopped yellow onion
+      \item 2 garlic cloves, crushed
+      \item 1 teaspoon fresh grated ginger
+      \item 3 cups cooked brown rice
+      \item 1 small sliced cucumber, skin on
+      \item 2 tablespoons Gochujang Sauce, or more if desired*
+      \item 1/2 tablespoon sesame seeds
+      \item 2 sliced scallions, white and green parts
+    \end{jsubitem}
+  \end{minipage}
+}
+
+\sbox{\myMethod}{%
+  \begin{minipage}[t]{\the\dimexpr0.6\textwidth-2em}\raggedright\sffamily\small
+    \textbf{\large Method}
+    \begin{jnum}
+    \item Combine the soy sauce, 2 tablespoons water, brown sugar, sesame oil and red pepper flakes in a small bowl.
+    \item Heat a large deep nonstick skillet over high heat, spray with oil and add the ground beef. Cook, breaking the meat up with a wooden spoon until cooked through, about 5 minutes.
+    \item Add the onion, garlic and ginger and cook 1 minute.
+    \item Pour the sauce over the beef, cover and simmer on low heat 10 minutes.
+    \item To assemble the bowls, place 3/4 cup rice in each bowl, top with scant 2/3 cup beef, cucumbers, Gochujong, sesame seeds and scallions.
+    \end{jnum}
+  \end{minipage}
+}
+
+\newcommand{\cmdSubText}[2]{%
+  \ifthenelse{\equal{#2}{}} {} {\cmdSubtitle{#1}{#2}}
+}
+
+\sbox{\myTitle}{%
+  \begin{minipage}[t]{0.6\textwidth}\raggedright%
+    \textbf{\LARGE\bfseries \myTitleText} \vspace{2ex} \\
+    \cmdSubText{PREP~TIME}{\myPrepTime}\quad
+    \cmdSubText{COOK~TIME}{\myCookTime}\quad
+    \cmdSubText{TOTAL~TIME}{\myTotalTime}\quad \\
+    \cmdSubText{SERVINGS}{\myServings}\vspace{0.5ex} \\
+    \cmdSubText{AUTHOR}{\myAuthor}\\
+    \cmdSubText{SOURCE}{\href{\myURLText}{\myTitleText} \vspace{1ex} \\}
+    \myPreamble{}
+  \end{minipage}
+}
+
+\sbox{\myImage}{%
+  \begin{minipage}[t]{0.35\textwidth}
+    \ifthenelse{\equal{\myFilename}{}}{}{\adjustbox{valign=t}{\includegraphics[width=\textwidth]{\myFilename}}}
+  \end{minipage}
+}
+
+\framebox{%
+  \cmdRecipe{recipelist}{\myIndexEntry}{\myTitleText}
+  \cmdRecipe{authorlist}{\myAuthor}{\myTitleText}
+\begin{tabular}{@{}llllll@{}}
+  \multicolumn{4}{@{}l@{}}{\usebox{\myTitle}} &
+  \multicolumn{2}{@{}l@{}}{\usebox{\myImage}} \\
+  \multicolumn{6}{@{}l@{}}{} \rule{0.95\linewidth}{0.4pt}\vspace{2ex} \\ 
+  \multicolumn{2}{@{}l}{\usebox{\myIngred}} &
+  \multicolumn{4}{@{}l}{\usebox{\myMethod}} \\
+\end{tabular}
+}
+
+\end{document}

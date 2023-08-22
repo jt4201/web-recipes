@@ -1,0 +1,149 @@
+% nop
+% arara: xelatex
+% arara: xelatex
+% arara: latexmk: { options: ['-c'] }
+% vim: tw=86:
+\documentclass[../cookbook]{subfiles}
+\graphicspath{{\subfix{../images/}}}
+\begin{document}
+
+\renewcommand{\myTitleText}{Steak \& Corn Salsa Tostada}
+\renewcommand{\myURLText}{https://www.ethanchlebowski.com/cooking-techniques-recipes/steak-amp-corn-salsa-tostada}
+\renewcommand{\myFilename}{ethan-steak-and-corn-salsa-tostada.jpg}
+\renewcommand{\myServings}{1 tostada}
+\renewcommand{\myAuthor}{Ethan Chlebowski}
+\renewcommand{\myCookTime}{}
+\renewcommand{\myPrepTime}{}
+\renewcommand{\myTotalTime}{}
+\renewcommand{\myIndexEntry}{Mains}
+\renewcommand{\myPreamble}{
+}
+
+\hypersetup{%
+  pdfauthor={\myAuthor},
+  pdftitle={\myTitleText}
+}
+
+\sbox{\myIngred}{%
+  \begin{minipage}[t]{\the\dimexpr0.35\textwidth}\raggedright\sffamily\small
+    \textbf{\large Ingredients}
+    \begin{jitem}
+      \item Tostada Components
+        \begin{jsubitem}
+        \item Tostadas
+        \item Crema or sour cream
+        \item Chili lime corn
+        \item Sliced steak
+        \item Salsa verde (or hot sauce of choice)
+        \item Pickled onion
+        \item Queso fresco
+        \end{jsubitem}
+      \item Chili Lime Corn  (makes enough for 4-6 tostadas)
+        \begin{jsubitem}
+        \item 2 ears of corn
+        \item 1 handful of cilantro (stems only)
+        \item 6 g (1 tbsp) smoked paprika (or chili powder)
+        \item 1 lime
+        \item Salt to taste
+        \end{jsubitem}
+      \item Steak  (makes enough for 4-6 tostadas)
+        \begin{jsubitem}
+        \item 2lb (900 g) skirt or flank steak
+        \item Salt
+        \item Oil
+        \end{jsubitem}
+      \end{jitem}
+    \end{minipage}
+  }
+
+  \sbox{\myMethod}{%
+    \begin{minipage}[t]{\the\dimexpr0.6\textwidth-2em}\raggedright\sffamily\small
+      \textbf{\large Method}
+      \begin{jitem}
+      \item Prep the steak
+        \begin{jnum}[label=,labelsep=0pt,itemindent=-0.5em,leftmargin=1em,]
+          \item Pat your steak dry and then cover all sides with a sprinkle of salt.
+            Rest on a wire rack or paper towel in the fridge until ready to cook,
+            preferably for a few hours or even overnight.  This dry brining process
+            will help it sear, retain more moisture during cooking, and be evenly
+            seasoned.
+        \end{jnum}
+      \item Char the corn
+        \begin{jnum}[label=,labelsep=0pt,itemindent=-0.5em,leftmargin=1em,]
+          \item Take each ear of corn and remove the kernels by slicing them off the
+            length of the cob.
+          \item Set a pan or griddle over high heat, and toss the corn onto it with a
+            bit of cooking oil. Cook until the kernels develop some charring color on
+            each side.
+          \item Add to a mixing bowl.
+        \end{jnum}
+      \item Make the corn salad
+        \begin{jnum}[label=,labelsep=0pt,itemindent=-0.5em,leftmargin=1em,]
+          \item Clean a bunch of handful of cilantro, making sure to wash out any dirt
+            from the stem ends.
+          \item Slice the stems into small pieces, so they match the size of the corn
+            kernels. Add to the bowl with the corn.
+          \item Add the smoked paprika (and/or the chili powder for a spicy version)
+            to the corn and stir everything together.
+          \item Lastly, add the juice from 1/2 of a lime and a generous sprinkle of
+            salt. Taste and adjust with more lime, salt, or spices as needed. Set
+            aside.
+        \end{jnum}
+      \item Cook the steak
+        \begin{jnum}[label=,labelsep=0pt,itemindent=-0.5em,leftmargin=1em,]
+          \item Add a little drizzle of oil to a ripping hot griddle, pan, or grill
+          \item Add the steak and cook, flipping occasionally, until well seared and
+            charred on both sides, and the interior has reached 120-130°F (medium
+            rare).
+          \item Pull off the heat and let it rest. Meanwhile, gather the rest of the
+            tostada components.
+        \end{jnum}
+      \item Assemble \& serve
+        \begin{jnum}[label=,labelsep=0pt,itemindent=-0.5em,leftmargin=1em,]
+          \item Slice the rested steak into thin slices, across the grain.
+          \item First, add a layer of crema or sour cream and follow that with a few
+            spoonfuls of corn salsa. Make sure you get some even spread to the
+            outskirts of the tostada.
+          \item Then add a layer of the sliced steak and finish with any other
+            toppings, to preference.
+        \end{jnum}
+      \end{jitem}
+    \end{minipage}
+  }
+
+\newcommand{\cmdSubText}[2]{%
+  \ifthenelse{\equal{#2}{}} {} {\cmdSubtitle{#1}{#2}}
+}
+
+\sbox{\myTitle}{%
+  \begin{minipage}[t]{0.6\textwidth}\raggedright%
+    \textbf{\LARGE\bfseries \myTitleText} \vspace{2ex} \\
+    \cmdSubText{PREP~TIME}{\myPrepTime}\quad
+    \cmdSubText{COOK~TIME}{\myCookTime}\quad
+    \cmdSubText{TOTAL~TIME}{\myTotalTime}\quad \\
+    \cmdSubText{SERVINGS}{\myServings}\vspace{0.5ex} \\
+    \cmdSubText{AUTHOR}{\myAuthor}\\
+    \cmdSubText{SOURCE}{\href{\myURLText}{\myTitleText} \vspace{1ex} \\}
+    \myPreamble{}
+  \end{minipage}
+}
+
+\sbox{\myImage}{%
+  \begin{minipage}[t]{0.35\textwidth}
+    \ifthenelse{\equal{\myFilename}{}}{}{\adjustbox{valign=t}{\includegraphics[width=\textwidth]{\myFilename}}}
+  \end{minipage}
+}
+
+\framebox{%
+  \cmdRecipe{recipelist}{\myIndexEntry}{\myTitleText}
+  \cmdRecipe{authorlist}{\myAuthor}{\myTitleText}
+\begin{tabular}{@{}llllll@{}}
+  \multicolumn{4}{@{}l@{}}{\usebox{\myTitle}} &
+  \multicolumn{2}{@{}l@{}}{\usebox{\myImage}} \\
+  \multicolumn{6}{@{}l@{}}{} \rule{0.95\linewidth}{0.4pt}\vspace{2ex} \\ 
+  \multicolumn{2}{@{}l}{\usebox{\myIngred}} &
+  \multicolumn{4}{@{}l}{\usebox{\myMethod}} \\
+\end{tabular}
+}
+
+\end{document}

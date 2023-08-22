@@ -1,0 +1,134 @@
+% nop
+% arara: xelatex
+% arara: xelatex
+% arara: latexmk: { options: ['-c'] }
+% vim: tw=86:
+\documentclass[../cookbook]{subfiles}
+\graphicspath{{\subfix{../images/}}}
+\begin{document}
+
+\renewcommand{\myTitleText}{Bean \& Cheese Tostada}
+\renewcommand{\myURLText}{https://www.ethanchlebowski.com/cooking-techniques-recipes/bean-amp-cheese-tostada-optional-breakfast-variation}
+\renewcommand{\myFilename}{ethan-beef-and-cheese-tostada.jpg}
+\renewcommand{\myServings}{1 tostada}
+\renewcommand{\myAuthor}{Ethan Chlebowski}
+\renewcommand{\myCookTime}{}
+\renewcommand{\myPrepTime}{}
+\renewcommand{\myTotalTime}{}
+\renewcommand{\myIndexEntry}{Mains}
+\renewcommand{\myPreamble}{
+}
+
+\hypersetup{%
+  pdfauthor={\myAuthor},
+  pdftitle={\myTitleText}
+}
+
+\sbox{\myIngred}{%
+  \begin{minipage}[t]{\the\dimexpr0.35\textwidth}
+    \textbf{Ingredients}
+    \begin{jitem}
+      \item Tostada Components
+        \begin{jsubitem}
+        \item Tostada
+        \item Refried Beans
+        \item Crumbled queso fresco or Monterrey Jack cheese
+        \item Crema or sour cream
+        \end{jsubitem}
+      \item Optional Breakfast Additions
+        \begin{jsubitem}
+        \item Fried egg
+        \item Hot sauce
+        \item Cilantro
+        \end{jsubitem}
+      \item Optional Lunch Additions
+        \begin{jsubitem}
+        \item Thinly shredded lettuce
+        \item Diced tomatoes
+        \item Pickled onions
+        \end{jsubitem}
+      \item Refried Beans  (makes enough for 3-4 tostadas)
+        \begin{jsubitem}
+        \item 1 can (14 oz) of pinto beans
+        \item Drizzle of oil
+        \item 2 cloves of garlic, thinly sliced
+        \item 1 g (1/2 tsp) of whole cumin seeds
+        \item Sprinkle of smoked paprika
+        \item Salt \& lime juice to taste
+        \end{jsubitem}
+      \end{jitem}
+    \end{minipage}
+  }
+
+  \sbox{\myMethod}{%
+    \begin{minipage}[t]{\the\dimexpr0.6\textwidth-2em}
+      \textbf{Method}
+      \begin{jitem}
+      \item Start the refried beans
+        \begin{jnum}[label=,labelsep=0pt,itemindent=-0.5em,leftmargin=1em,]
+        \item To start, set a pan over medium-high heat and add a drizzle of oil to the
+          pan
+        \item Next, add the sliced garlic and cumin seeds. Let these toast for 60
+          seconds to flavor the oil.
+        \item Then, right before adding the beans, sprinkle in some smoked paprika.
+          Follow this by adding one can of pinto beans, including the liquid.
+        \item Bring this mixture to a simmer and let it cook for about 5 minutes.
+        \end{jnum}
+      \item Finish \& adjust the beans
+        \begin{jnum}[label=,labelsep=0pt,itemindent=-0.5em,leftmargin=1em,]
+        \item   Using a potato masher or fork, mash the beans until they are mostly broken down, but you can make this smoother or chunkier depending on your preference.
+        \item   If you want it thicker, let it simmer for an additional couple of minutes so more moisture evaporates.
+        \item   Once you’ve reached your desired texture, shut off the heat and taste. Adjust with salt and a squeeze of lime juice as needed.
+        \end{jnum}
+      \item Gather ingredients
+        \begin{jnum}[label=,labelsep=0pt,itemindent=-0.5em,leftmargin=1em,]
+        \item   Gather the tostadas and any toppings you want.
+        \item   If making the breakfast version, fry up an egg per tostada at this time.
+        \end{jnum}
+      \item Assemble \& serve
+        \begin{jnum}[label=,labelsep=0pt,itemindent=-0.5em,leftmargin=1em,]
+        \item   To a tostada, add your cheese first and follow that with the hot beans over the top so it starts to soften and melt a little bit.
+        \item   Once the beans are added, add a drizzle of crema or sour cream. Then finish it:
+        \item   For the breakfast version, lay the fried egg on top, and finish with any other toppings.
+        \item   For the lunch version, top with shredded lettuce, red onion, diced tomatoes, or your toppings of choice.
+        \end{jnum}
+      \end{jitem}
+    \end{minipage}
+  }
+
+\newcommand{\cmdSubText}[2]{%
+  \ifthenelse{\equal{#2}{}} {} {\cmdSubtitle{#1}{#2}}
+}
+
+\sbox{\myTitle}{%
+  \begin{minipage}[t]{0.6\textwidth}\raggedright%
+    \textbf{\LARGE\bfseries \myTitleText} \vspace{2ex} \\
+    \cmdSubText{PREP~TIME}{\myPrepTime}\quad
+    \cmdSubText{COOK~TIME}{\myCookTime}\quad
+    \cmdSubText{TOTAL~TIME}{\myTotalTime}\quad \\
+    \cmdSubText{SERVINGS}{\myServings}\vspace{0.5ex} \\
+    \cmdSubText{AUTHOR}{\myAuthor}\\
+    \cmdSubText{SOURCE}{\href{\myURLText}{\myTitleText} \vspace{1ex} \\}
+    \myPreamble{}
+  \end{minipage}
+}
+
+\sbox{\myImage}{%
+  \begin{minipage}[t]{0.35\textwidth}
+    \ifthenelse{\equal{\myFilename}{}}{}{\adjustbox{valign=t}{\includegraphics[width=\textwidth]{\myFilename}}}
+  \end{minipage}
+}
+
+\framebox{%
+  \cmdRecipe{recipelist}{\myIndexEntry}{\myTitleText}
+  \cmdRecipe{authorlist}{\myAuthor}{\myTitleText}
+\begin{tabular}{@{}llllll@{}}
+  \multicolumn{4}{@{}l@{}}{\usebox{\myTitle}} &
+  \multicolumn{2}{@{}l@{}}{\usebox{\myImage}} \\
+  \multicolumn{6}{@{}l@{}}{} \rule{0.95\linewidth}{0.4pt}\vspace{2ex} \\ 
+  \multicolumn{2}{@{}l}{\usebox{\myIngred}} &
+  \multicolumn{4}{@{}l}{\usebox{\myMethod}} \\
+\end{tabular}
+}
+
+\end{document}
